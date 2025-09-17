@@ -5,7 +5,7 @@ categories: [Peliculas, Terror, Comedia]
 tags: [monkey, terror, comedia, película, osgood, perkins]     # TAG names should always be lowercase
 thumbnail: /assets/img/posts/the_monkey.jpg
 ---
-![Poster de la película The Monkey]({{ '/assets/img/posts/the_monkey.jpg' | relative_url }})
+![Poster de la película The Monkey]({{ '/videoteca/assets/img/posts/the_monkey.jpg' | relative_url }})
 {: .img-fluid .w-75 .rounded .mx-auto .d-block }
 
 Y si no bajáis, pues por lo menos veros [The Monkey](https://www.filmaffinity.com/es/film247371.html "The Monkey"){:target="_blank"},
