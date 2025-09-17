@@ -1,0 +1,18 @@
+---
+title: Tiptoes
+date: 2025-06-12 09:49:16 +0200
+categories: [Peliculas, Drama] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
+tags: [tiptoes, drama, "matthew bright"]
+thumbnail: assets/img/posts/tiptoes_1.jpg
+---
+
+<div class="row mb-4">
+  <div class="col-md-5" markdown="1">
+![Poster de la película Tiptoes](assets/img/posts/tiptoes_2.jpg){: .img-fluid .rounded }
+  </div>
+  <div class="col-md-7" markdown="1">
+...Y si no, animaos a ver la peli de [Tiptoes](https://www.filmaffinity.com/es/film814795.html "Tiptoes"){:target="_blank"} con un reparto brutal, con Gary Oldman haciendo de enano (!) y que debió de hacer todo la actuación de rodillas! Pero también está Matthew McConaughey, Patricia Arquette, Peter Dinklage (el de juego de tronos) y hasta Santiago Segura! Que tiene un papelito haciendo de encargado de un motel.
+
+Al final es casi un telefime dramático hecho para concienciar sobre las dificultades que tienen los enanos, pero eran los 2000 y muchos de los comentarios que hacen ahora suenan a faltadas tremendas con las que te partes! Una curiosidad de película por lo absurdo de todo.
+  </div>
+</div>
