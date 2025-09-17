@@ -1,7 +1,7 @@
 ---
 title: Cool World
 date: 2025-05-22 17:05:16 +0200
-categories: [Peliculas, Animación] # PARA LAS SERIES PONER UN ESPACIO EN LA SUBCATEGORÍA PARA QUE NO SE MACHAQUE CON LAS PELICULAS. EJEMPLO [Series, "Comedia "]
+categories: [Peliculas, Animación] # PARA LAS SERIES NO PONER SUBCATEGORÍA
 tags: ["cool world", animación, comedia, "cine negro", cómic, película, "ralph bakshi"]
 thumbnail: assets/img/posts/cool_world_1.jpg
 ---

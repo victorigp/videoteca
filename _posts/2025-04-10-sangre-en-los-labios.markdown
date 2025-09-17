@@ -1,7 +1,7 @@
 ---
 title: Sangre en los labios
 date: 2025-04-10 17:41:16 +0200
-categories: [Peliculas, Thriller] # PARA LAS SERIES PONER UN ESPACIO EN LA SUBCATEGORÍA PARA QUE NO SE MACHAQUE CON LAS PELICULAS. EJEMPLO [Series, "Comedia "]
+categories: [Peliculas, Thriller] # PARA LAS SERIES NO PONER SUBCATEGORÍA
 tags: [sangre, labios, love, lies, bleeding, drama, "años 80", thriller, culturismo, homosexualidad, película, "rose glass"]
 thumbnail: assets/img/posts/sangre_en_los_labios_1.jpg
 ---
