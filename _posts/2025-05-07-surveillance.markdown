@@ -2,7 +2,7 @@
 title: Surveillance
 date: 2025-05-07 22:07:16 +0200
 categories: [Peliculas, Thriller]
-tags: [surveillance, vigilancia, thriller, película, jennifer, lynch]
+tags: [surveillance, vigilancia, thriller, película, "jennifer lynch"]
 thumbnail: assets/img/posts/surveillance_1.jpg
 ---
 
