@@ -1,7 +1,7 @@
 ---
 title: The Studio
 date: 2025-05-01 15:37:16 +0200
-categories: [Series, "Comedia "] # PARA LAS SERIES PONER UN ESPACIO EN LA SUBCATEGORÍA PARA QUE NO SE MACHAQUE CON LAS PELICULAS. EJEMPLO [Series, "Comedia "]
+categories: [Series, Thriller] # PARA LAS SERIES PONER UN ESPACIO EN LA SUBCATEGORÍA PARA QUE NO SE MACHAQUE CON LAS PELICULAS. EJEMPLO [Series, "Comedia "]
 tags: [studio, serie, comedia "seth rogen", "alex gregory", "peter huyck", "evan goldberg"] # TAG names should always be lowercase
 thumbnail: assets/img/posts/the_studio_1.jpg
 ---
