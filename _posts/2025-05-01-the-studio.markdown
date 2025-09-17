@@ -1,7 +1,7 @@
 ---
 title: The Studio
 date: 2025-05-01 15:37:16 +0200
-categories: [Series, "Thriller "] # PARA LAS SERIES NO PONER SUBCATEGORÍA Y PARA LAS PELICULAS SOLO 1 (POR EJEMPLO [Peliculas, Thriller])
+categories: [Series, "Thrillerㅤ"] # PARA LAS SERIES NO PONER SUBCATEGORÍA Y PARA LAS PELICULAS SOLO 1 (POR EJEMPLO [Peliculas, Thriller])
 tags: [studio, serie, comedia "seth rogen", "alex gregory", "peter huyck", "evan goldberg"]
 thumbnail: assets/img/posts/the_studio_1.jpg
 ---
