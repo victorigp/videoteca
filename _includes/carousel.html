@@ -39,26 +39,26 @@
     <div class="carousel__track">
       <ul>
         {% for item in page.carousels[number].images %}
-          <li class="carousel__slide" {% if item.image %}style="background-image: url('{{ item.image }}');" {% endif %}>
-            {% if item.image %}
-            <div class="center_click" onclick="openModal('{{ item.image }}');"></div>
-            {% elsif item.video %}
-            <div class="youtube-container">
-              <iframe width="100%" height="100%"
-                src="https://www.youtube-nocookie.com/embed/{{ item.video }}?rel=0&vq=hd1080"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-                allowfullscreen>
-              </iframe>
-            </div>
-            {% endif %}
-          </li>
+        <li class="carousel__slide" {% if item.image %}style="background-image: url('{{ item.image }}');" {% endif %}>
+          {% if item.image %}
+          <div class="center_click" onclick="openModal('{{ item.image }}');"></div>
+          {% elsif item.video %}
+          <div class="youtube-container">
+            <iframe width="100%" height="100%"
+                    src="https://www.youtube-nocookie.com/embed/{{ item.video }}?rel=0&vq=hd1080"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                    allowfullscreen>
+            </iframe>
+          </div>
+          {% endif %}
+        </li>
         {% endfor %}
       </ul>
     </div>
     <div class="carousel__indicators">
       {% for item in page.carousels[number].images %}
-        <label class="carousel__indicator" for="{{ number }}{{ letters[forloop.index0] }}"></label>
+      <label class="carousel__indicator" for="{{ number }}{{ letters[forloop.index0] }}"></label>
       {% endfor %}
     </div>
   </div>
@@ -69,7 +69,7 @@
   /* Valores base para las flechas del carrusel para tamaño pequeño (equivalente a móvil) */
   --min-arrow-size: 20px;
   --min-border-width: 3px;
-  
+
   /* Factores de escala basados en el viewport */
   --size-scale-factor: calc(0.5vw + var(--min-arrow-size));
   --border-scale-factor: calc(0.1vw + var(--min-border-width));
@@ -123,7 +123,7 @@
   text-align: center;
   padding-bottom: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); 
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 .close:hover,
@@ -269,7 +269,7 @@
 }
 
 .carousel__dynamic-controls .carousel__control {
-  pointer-events: auto !important; 
+  pointer-events: auto !important;
 }
 .carousel__control--backward {
   transform: rotate(-135deg);
@@ -443,4 +443,4 @@
   },{{ include.duration }}000);
   {% endif %}
 </script>
-<script src="/videoteca/assets/carousel.js"></script>
+<script src="{{ '/assets/carousel.js' | relative_url }}"></script>
