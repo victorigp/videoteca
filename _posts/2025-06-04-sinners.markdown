@@ -1,0 +1,18 @@
+---
+title: Sinners
+date: 2025-05-22 17:05:16 +0200
+categories: [Peliculas, Terror] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
+tags: [sinners, pecadores, terror, thriller, vampiros, racismo, "años 30", "ryan coogler"]
+thumbnail: assets/img/posts/sinners_1.jpg
+---
+
+<div class="row mb-4">
+  <div class="col-md-5" markdown="1">
+![Poster de la película Sinners](assets/img/posts/sinners_2.jpg){: .img-fluid .rounded }
+  </div>
+  <div class="col-md-7" markdown="1">
+...Y si no, animaos a ver [Los pecadores](https://www.filmaffinity.com/es/film699169.html "Los pecadores"){:target="_blank"} ("Sinners", el título original) aunque os aconsejo no leer nada de ella porque desvelan cosas importantes.
+
+Tremenda peli más entretenida que se acaba de sacar el director de Creed, mezclando géneros y haciendo lo que le da la gana! Ojo, tiene escenas durante los créditos finales y después de ellos. Gran sorpresa esta peli, merece la pena!
+  </div>
+</div>
