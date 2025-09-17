@@ -1,7 +1,7 @@
 ---
 title: Surveillance
 date: 2025-05-07 22:07:16 +0200
-categories: [Peliculas, Thriller] # PARA LAS SERIES NO PONER SUBCATEGORÍA
+categories: [Peliculas, Thriller] # PARA LAS SERIES NO PONER SUBCATEGORÍA Y PARA LAS PELICULAS SOLO 1 (POR EJEMPLO [Peliculas, Thriller])
 tags: [surveillance, vigilancia, thriller, película, "jennifer lynch"]
 thumbnail: assets/img/posts/surveillance_1.jpg
 ---

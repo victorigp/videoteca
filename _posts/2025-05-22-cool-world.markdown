@@ -1,7 +1,7 @@
 ---
 title: Cool World
 date: 2025-05-22 17:05:16 +0200
-categories: [Peliculas, Animación] # PARA LAS SERIES NO PONER SUBCATEGORÍA
+categories: [Peliculas, Animación] # PARA LAS SERIES NO PONER SUBCATEGORÍA Y PARA LAS PELICULAS SOLO 1 (POR EJEMPLO [Peliculas, Thriller])
 tags: ["cool world", animación, comedia, "cine negro", cómic, película, "ralph bakshi"]
 thumbnail: assets/img/posts/cool_world_1.jpg
 ---
