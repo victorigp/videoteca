@@ -1,7 +1,7 @@
 ---
 title: Cool World
 date: 2025-05-22 17:05:16 +0200
-categories: [Peliculas, Animación, Comedia, "Cine Negro", Cómic]
+categories: [Peliculas, Animación]
 tags: ["cool world", animación, comedia, "cine negro", cómic, película, "ralph bakshi"]
 thumbnail: assets/img/posts/cool_world_1.jpg
 ---
