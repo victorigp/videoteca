@@ -1,0 +1,170 @@
+<!-- Switch the mode between dark and light. -->
+
+<script type="text/javascript">
+  class ModeToggle {
+    static get MODE_KEY() {
+      return 'mode';
+    }
+    static get MODE_ATTR() {
+      return 'data-mode';
+    }
+    static get DARK_MODE() {
+      return 'dark';
+    }
+    static get LIGHT_MODE() {
+      return 'light';
+    }
+    static get ID() {
+      return 'mode-toggle';
+    }
+
+    constructor() {
+      if (this.hasMode) {
+        if (this.isDarkMode) {
+          if (!this.isSysDarkPrefer) {
+            this.setDark();
+          }
+        } else {
+          if (this.isSysDarkPrefer) {
+            this.setLight();
+          }
+        }
+      }
+
+      let self = this;
+             
+      this.sysDarkPrefers.addEventListener('change', () => {
+        if (self.hasMode) {
+          if (self.isDarkMode) {
+            if (!self.isSysDarkPrefer) {
+              self.setDark();
+            }
+          } else {
+            if (self.isSysDarkPrefer) {
+              self.setLight();
+            }
+          }
+
+          self.clearMode();
+        }
+
+        self.notify();
+      });
+    } 
+
+    get sysDarkPrefers() {
+      return window.matchMedia('(prefers-color-scheme: dark)');
+    }
+
+    get isSysDarkPrefer() {
+      return this.sysDarkPrefers.matches;
+    }
+
+    get isDarkMode() {
+      return this.mode === ModeToggle.DARK_MODE;
+    }
+
+    get isLightMode() {
+      return this.mode === ModeToggle.LIGHT_MODE;
+    }
+
+    get hasMode() {
+      return this.mode != null;
+    }
+
+    get mode() {
+      return sessionStorage.getItem(ModeToggle.MODE_KEY);
+    }
+
+    get modeStatus() {
+      if (this.isDarkMode || (!this.hasMode && this.isSysDarkPrefer)) {
+        this.setCarouselColorControls("#fafafa");
+        return ModeToggle.DARK_MODE;
+      } else {
+        this.setCarouselColorControls("#000000");
+        return ModeToggle.LIGHT_MODE;
+      }
+    }
+
+    setCarouselColorControls(color) {
+      var carouselControls = document.querySelectorAll('.carousel__control');
+      var carouselIndicators = document.querySelectorAll('.carousel__indicator');
+      var carouselIndicatorContainers = document.querySelectorAll('.carousel__indicators');
+      var controlBackgrounds = document.querySelectorAll('.control-background');
+
+      carouselControls.forEach(function (control) {
+        control.style.setProperty('border-color', color, 'important');
+      });
+      controlBackgrounds.forEach(function (bg) {
+        if (color === '#000000') {
+          bg.style.setProperty('background-color', 'rgba(255, 255, 255, 0.7)', 'important');
+        } else {
+          bg.style.setProperty('background-color', 'rgba(0, 0, 0, 0.4)', 'important');
+        }
+      });
+      carouselIndicators.forEach(function (control) {
+        control.style.setProperty('background-color', color, 'important');
+      });
+      carouselIndicatorContainers.forEach(function (container) {
+        if (color === '#000000') {
+          container.style.setProperty('background-color', 'rgba(255, 255, 255, 0.7)', 'important');
+        } else { 
+          container.style.setProperty('background-color', 'rgba(0, 0, 0, 0.4)', 'important');
+        }
+      });
+    }
+
+    setDark() {
+      document.documentElement.setAttribute(ModeToggle.MODE_ATTR, ModeToggle.DARK_MODE);
+      sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE);
+    }
+
+    setLight() {
+      document.documentElement.setAttribute(ModeToggle.MODE_ATTR, ModeToggle.LIGHT_MODE);
+      sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE);
+    }
+
+    clearMode() {
+      document.documentElement.removeAttribute(ModeToggle.MODE_ATTR);
+      sessionStorage.removeItem(ModeToggle.MODE_KEY);
+    }
+
+    notify() {
+      window.postMessage(
+        {
+          direction: ModeToggle.ID,
+          message: this.modeStatus
+        },
+        '*'
+      );
+    }
+
+    flipMode() {
+      if (this.hasMode) {
+        if (this.isSysDarkPrefer) {
+          if (this.isLightMode) {
+            this.clearMode();
+          } else {
+            this.setLight();
+          }
+        } else {
+          if (this.isDarkMode) {
+            this.clearMode();
+          } else {
+            this.setDark();
+          }
+        }
+      } else {
+        if (this.isSysDarkPrefer) {
+          this.setLight();
+        } else {
+          this.setDark();
+        }
+      }
+
+      this.notify();
+    }
+  } 
+
+  const modeToggle = new ModeToggle();
+</script>
