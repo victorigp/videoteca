@@ -2,7 +2,7 @@
 title: The Studio
 date: 2025-05-01 15:37:16 +0200
 categories: [Series, Comedia]
-tags: [studio, serie, seth, rogen, alex, gregory, peter huyck, evan goldberg]
+tags: [studio, serie, seth, rogen, alex, gregory, peter, huyck, evan, goldberg]
 thumbnail: assets/img/posts/the_studio_1.jpg
 ---
 
