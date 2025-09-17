@@ -2,7 +2,7 @@
 title: Mickey 17
 date: 2025-04-03 17:17:16 +0200
 categories: [Peliculas, Ciencia Ficción, Thriller, Comedia]
-tags: [mickey, 17, ciencia, ficción, thriller, comedia, película, bong, joon-ho]
+tags: [mickey, "17", ciencia, ficción, thriller, comedia, película, bong, joon-ho]
 thumbnail: assets/img/posts/mickey_17_1.jpg
 ---
 
