@@ -1,27 +1,18 @@
 ---
-title: Definiciones
-date: 2016-07-16 08:53:44 +0200
-categories: [Videojuegos, Android]
-tags: [definiciones, palabras]     # TAG names should always be lowercase
-thumbnail: /assets/img/definiciones/definiciones.png
-carousels:
-  - images: 
-    - image: /assets/img/definiciones/definiciones.png
-    - image: /assets/img/definiciones/definiciones2.png
-    - image: /assets/img/definiciones/definiciones3.png
-    - image: /assets/img/definiciones/definiciones4.png
-    - image: /assets/img/definiciones/definiciones5.png
+title: Sangre en los labios
+date: 2025-04-10 17:41:16 +0200
+categories: [Peliculas, Thriller, Drama, Años 80, Culturismo, Homosexualidad]
+tags: [sangre, labios, love, lies, bleeding, drama, años-80, thriller, culturismo, homosexualidad, película, rose, glass]
+thumbnail: assets/img/posts/sangre_en_los_labios_1.jpg
 ---
-Intenta acertar el mayor número de definiciones seguidas! Haz directamente login en el juego con tu cuenta de Google Juegos y verás en todo momento el ranking en el que te encuentras y los rivales cercanos a batir.
 
-- Más de 28500 palabras diferentes.
-- Sube de nivel cada vez que aciertes.
-- Desbloquea todos los logros.
-- Supera a los rivales.
+<div class="row mb-4">
+  <div class="col-md-5" markdown="1">
+![Poster de la película Sangre en los labios](assets/img/posts/sangre_en_los_labios_2.jpg){: .img-fluid .rounded }
+  </div>
+  <div class="col-md-7" markdown="1">
+... Ooooo animaros a ver la peli de [Sangre en los labios](https://www.filmaffinity.com/es/film391567.html "Sangre en los labios"){:target="_blank"} (está en Filmin) si queréis ver una peli entretenida y diferente!
 
-Descárgalo gratis desde: 
-- [Enlace Google Play](https://play.google.com/store/apps/details?id=tk.silvicgames.definiciones "Definiciones Google Play"){:target="_blank"}
-- [Enlace Amazon](https://www.amazon.com/SilvicGames-Definiciones/dp/B01J4JRSB6 "Definiciones Amazon"){:target="_blank"}
-- Buscando directamente por **Definiciones** en la Google Play o en Amazon
-
-{% include carousel.html height="60" unit="%" number="1" %}
+Están muy bien Kristen Stewart (si si, la de [Crepúsculo](https://www.filmaffinity.com/es/film146914.html "Crepúsculo"){:target="_blank"}!) y la chica culturista (la visteis en la segunda temporada de [The Mandalorian](https://www.filmaffinity.com/es/film806435.html "The Mandalorian"){:target="_blank"}) en una peli muy llamativa y, aunque no es perfecta, seguro que pasáis un buen rato.
+  </div>
+</div>
