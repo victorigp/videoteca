@@ -11,7 +11,7 @@ carousels:
     - image: /assets/img/sharkwedding/sharkwedding3.png
     - image: /assets/img/sharkwedding/sharkwedding4.png
 ---
-Un Sharknado ataca la boda de Georgina y Laurence! Ayúdales a sobrevivir, escapando de tiburones, tornados... y de su propia boda!
+Un Sharknado ataca la boda dee Georgina y Laurence! Ayúdales a sobrevivir, escapando de tiburones, tornados... y de su propia boda!
 
 Descárgalo gratis desde: 
 - [Enlace Google Play](https://play.google.com/store/apps/details?id=com.vicgames.polaravalanche&hl=es "Sharkwedding Google Play"){:target="_blank"}
