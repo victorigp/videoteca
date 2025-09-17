@@ -1,0 +1,17 @@
+---
+title: Mickey 17
+date: 2025-04-03 17:17:16 +0200
+categories: [Peliculas, Ciencia Ficción, Thriller, Comedia]
+tags: [mickey, 17, ciencia, ficción, thriller, comedia, película, bong, joon-ho]
+thumbnail: assets/img/posts/mickey_17_1.jpg
+---
+
+<div class="row mb-4">
+  <div class="col-md-5" markdown="1">
+![Poster de la película Mickey 17](assets/img/posts/mickey_17_2.jpg){: .img-fluid .rounded }
+  </div>
+  <div class="col-md-7" markdown="1">
+También podéis animaros a ver [Mickey 17](https://www.filmaffinity.com/es/film466389.html "Mickey 17"){:target="_blank"} la última peli de Bong Joon-ho (el director de [Parásitos](https://www.filmaffinity.com/es/film520465.html "Parásitos"){:target="_blank"} y de 	
+[Memories of Murder](https://www.filmaffinity.com/es/film712766.html "Memories of Murder"){:target="_blank"}, por decir sólo dos), que la primera media hora es muy buena y creo que gusta a todo el mundo. El resto de la peli depende de cómo os entre, sobretodo los "malos" que son exagerados, pero bueno, es una peli de humor y ciencia ficción, así que todo vale jeje.
+  </div>
+</div>
