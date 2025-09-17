@@ -1,6 +1,5 @@
-# SilvicGames
+# Videoteca
 
-Somos SilvicGames, un pequeño estudio de desarrollo de videojuegos independiente.   
-Mira nuestro catálogo de videojuegos en:
-
+Mini reviews de pelis y series
 [silvicgames.github.io](https://silvicgames.github.io)
+
