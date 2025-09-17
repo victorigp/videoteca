@@ -3,7 +3,7 @@ title: The Monkey
 date: 2025-03-27 16:56:22 +0200
 categories: [Peliculas, Terror, Comedia]
 tags: [monkey, terror, comedia, película, osgood, perkins]     # TAG names should always be lowercase
-thumbnail: /videoteca/assets/img/sharkwedding/sharkwedding.png
+thumbnail: /assets/img/sharkwedding/sharkwedding.png
 carousels:
   - images: 
     - image: /videoteca/assets/img/sharkwedding/sharkwedding.png
