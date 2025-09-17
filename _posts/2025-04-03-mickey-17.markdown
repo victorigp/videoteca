@@ -1,7 +1,7 @@
 ---
 title: Mickey 17
 date: 2025-04-03 17:17:16 +0200
-categories: [Peliculas, "Ciencia Ficción"]
+categories: [Peliculas, "Ciencia Ficción"] # PARA LAS SERIES PONER UN ESPACIO EN LA SUBCATEGORÍA PARA QUE NO SE MACHAQUE CON LAS PELICULAS. EJEMPLO [Series, "Comedia "]
 tags: ["mickey 17", "ciencia ficción", thriller, comedia, película, "bong joon-ho"]
 thumbnail: assets/img/posts/mickey_17_1.jpg
 ---

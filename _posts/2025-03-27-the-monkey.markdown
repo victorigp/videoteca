@@ -1,7 +1,7 @@
 ---
 title: The Monkey
 date: 2025-03-27 16:56:22 +0200
-categories: [Peliculas, Terror]
+categories: [Peliculas, Terror] # PARA LAS SERIES PONER UN ESPACIO EN LA SUBCATEGORÍA PARA QUE NO SE MACHAQUE CON LAS PELICULAS. EJEMPLO [Series, "Comedia "]
 tags: [monkey, terror, comedia, película, "osgood perkins"]
 thumbnail: assets/img/posts/the_monkey_1.jpg
 ---
