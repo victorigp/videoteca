@@ -4,6 +4,7 @@ date: 2025-07-02 22:03:16 +0200
 categories: [Peliculas, Musical] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
 tags: ["wild style", musical, drama, hip-hop, graffiti, "años 80", "charlie ahearn"]
 thumbnail: assets/img/posts/wild_style_1.jpg
+# sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO"
 ---
 
 <div class="row mb-4">

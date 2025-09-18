@@ -4,6 +4,7 @@ date: 2025-07-17 12:20:16 +0200
 categories: [Podcast] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
 tags: ["los otros", "delirios de españa", podcast, comedia, "juan sanguino"]
 thumbnail: assets/img/posts/delirios_de_espana_1.jpg
+# sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO"
 ---
 
 <div class="row mb-4">

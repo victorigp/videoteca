@@ -4,6 +4,7 @@ date: 2025-06-04 17:36:16 +0200
 categories: [Peliculas, Terror] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
 tags: [sinners, pecadores, terror, thriller, vampiros, racismo, "años 30", "ryan coogler"]
 thumbnail: assets/img/posts/sinners_1.jpg
+# sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO"
 ---
 
 <div class="row mb-4">

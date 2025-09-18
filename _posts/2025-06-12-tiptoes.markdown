@@ -4,6 +4,7 @@ date: 2025-06-12 09:49:16 +0200
 categories: [Peliculas, Drama] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
 tags: [tiptoes, drama, "matthew bright"]
 thumbnail: assets/img/posts/tiptoes_1.jpg
+# sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO"
 ---
 
 <div class="row mb-4">
