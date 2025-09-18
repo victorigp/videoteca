@@ -1,0 +1,20 @@
+---
+title: Edmond
+date: 2025-08-07 17:47:16 +0200
+categories: [Peliculas, Thriller] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
+tags: ["edmond", thriller, Drama, "stuart gordon"]
+thumbnail: assets/img/posts/edmond_1.jpg
+---
+
+<div class="row mb-4">
+  <div class="col-md-5" markdown="1">
+![Poster de la película Edmond](assets/img/posts/edmond_2.jpg){: .img-fluid .rounded }
+  </div>
+  <div class="col-md-7" markdown="1">
+... Y si no, animaos a ver [Edmond](https://www.filmaffinity.com/es/film970118.html "Edmond"){:target="_blank"}, una peli de Stuart Gordon, quién en los 80 firmó la peli de culto [Re-Animator](https://www.filmaffinity.com/es/film106438.html "Re-Animator"){:target="_blank"} y en los 2000 dirigió a Raquel Meroño y Paco Rabal en [Dagon: la secta del mar](https://www.filmaffinity.com/es/film798755.html "Dagon: la secta del mar"){:target="_blank"} (mala pero divertida).
+
+En Edmond, William H. Macy pierde el control de su vida y se lanza a por todas. El final me encantó, que vueltas da la vida, como pueden cambiar las cosas.
+
+Pues eso, muy recomendable siempre que las veáis en VOS, que acabo de ver el trailer en español y buff...
+  </div>
+</div>
