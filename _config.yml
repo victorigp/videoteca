@@ -28,8 +28,8 @@ url: "https://victorigp.github.io"
 github:
   username: victorigp # change to your github username
 
-twitter:
-  username: victorigp # change to your twitter username
+# twitter:
+  # username: victorigp # change to your twitter username
 
 social:
   # Change to your full name.
@@ -39,7 +39,7 @@ social:
   links:
     # The first element serves as the copyright owner's link
     - https://github.com/victorigp # change to your github homepage
-    - https://twitter.com/victorigp # change to your twitter homepage
+    # - https://twitter.com/victorigp # change to your twitter homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/victorigp
     # - https://www.linkedin.com/in/victorigp
