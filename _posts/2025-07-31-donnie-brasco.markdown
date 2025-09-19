@@ -4,7 +4,7 @@ date: 2025-07-31 11:31:16 +0200
 categories: [Peliculas, Mafia] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
 tags: ["donnie brasco", mafia, "hechos reales", "Años 70", "mike newell"]
 thumbnail: assets/img/posts/donnie_brasco_1.jpg
-# sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO"
+# sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
 ---
 
 <div class="row mb-4">

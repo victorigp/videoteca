@@ -4,7 +4,7 @@ date: 2025-04-10 17:41:16 +0200
 categories: [Peliculas, Thriller] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
 tags: [sangre, labios, love, lies, bleeding, drama, "años 80", thriller, culturismo, homosexualidad, película, "rose glass"]
 thumbnail: assets/img/posts/sangre_en_los_labios_1.jpg
-# sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO"
+# sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
 ---
 
 <div class="row mb-4">

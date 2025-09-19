@@ -2,9 +2,9 @@
 title: Las manzanas de Adam
 date: 2025-07-10 19:37:16 +0200
 categories: [Peliculas, Comedia] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
-tags: ["las manzanas de adam", comedia, religión, "anders thomas jensen"]
+tags: ["las manzanas de adam", recomendada, comedia, religión, "anders thomas jensen"]
 thumbnail: assets/img/posts/las_manzanas_de_adam_1.jpg
-sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO"
+sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
 ---
 
 <div class="row mb-4">

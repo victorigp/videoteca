@@ -2,9 +2,9 @@
 title: La hermanastra fea
 date: 2025-06-19 10:25:16 +0200
 categories: [Peliculas, Terror] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
-tags: ["la hermanastra fea","the ugly stepsister", terror, gore, "body horror", "emilie blichfeldt"]
+tags: ["la hermanastra fea","the ugly stepsister", recomendada, terror, gore, "body horror", "emilie blichfeldt"]
 thumbnail: assets/img/posts/la_hermanastra_fea_1.jpg
-sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO"
+sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
 ---
 
 <div class="row mb-4">

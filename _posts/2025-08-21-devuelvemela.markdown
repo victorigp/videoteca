@@ -2,9 +2,9 @@
 title: Devuélvemela
 date: 2025-08-21 01:10:16 +0200
 categories: [Peliculas, Terror] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
-tags: ["devuélvemela", terror, thriller, gore, "danny philippou", "michael philippou"]
+tags: ["devuélvemela", recomendada, terror, thriller, gore, "danny philippou", "michael philippou"]
 thumbnail: assets/img/posts/devuelvemela_1.jpg
-sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO"
+sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
 ---
 
 <div class="row mb-4">
