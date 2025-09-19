@@ -1,0 +1,21 @@
+---
+title: Weapons
+date: 2025-09-17 17:17:16 +0200
+categories: [Peliculas, Thriller] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
+tags: ["Weapons", terror, thriller, comedia, "zach cregger"]
+thumbnail: assets/img/posts/weapons_1.jpg
+# sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
+---
+
+<div class="row mb-4">
+  <div class="col-md-5" markdown="1">
+![Poster de la película Weapons](assets/img/posts/weapons_2.jpg){: .img-fluid .rounded }
+  </div>
+  <div class="col-md-7" markdown="1">
+... Y si no, animaos a ver [Weapons](https://www.filmaffinity.com/es/film809089.html "Weapons"){:target="_blank"} del mismo director de [Barbarian](https://www.filmaffinity.com/es/film880123.html "Barbarian"){:target="_blank"}. Mucho hype le tenía a Weapons, estaba aguantando a que saliera en 4K, y lo que ocurre siempre cuando hay mucha expectación, que esperas más de lo que hay...
+
+Aunque la peli está guay, mezcla comedia con terror (muy light) y está entretenida a pesar de ser 2 horas.
+
+La estética del "villano" recuerda mucho a Nicholas Cage en [Longless](https://www.filmaffinity.com/es/film595778.html "Longless"){:target="_blank"} y la trama me llamaba mucho (todos los alumnos menos 1, de una misma clase, desaparecen a las 2 de la mañana), aunque creo que tiene muchos agujeros de guión...
+  </div>
+</div>
