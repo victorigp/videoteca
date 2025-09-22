@@ -14,12 +14,12 @@ timezone: Europe/Madrid
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Videoteca # the main title
+title: La videoteca # the main title
 
 tagline: Pelis y series # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  Videoteca, pelis y series
+  La videoteca, pelis y series
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
