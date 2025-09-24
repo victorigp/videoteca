@@ -1,6 +1,6 @@
 ---
 title: La mala semilla
-date: 2025-09-24 12:13:16 +0200
+date: 2025-09-24 11:13:16 +0200
 categories: [Peliculas, Thriller] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
 tags: ["la mala semilla", terror, thriller, drama, "mervyn leroy"]
 thumbnail: assets/img/posts/la_mala_semilla_1.jpg
