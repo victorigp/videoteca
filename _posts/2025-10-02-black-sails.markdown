@@ -2,7 +2,7 @@
 title: Black sails
 date: 2025-10-02 10:48:16 +0200
 categories: [Series, "Piratasㅤ"] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
-tags: ["black sails", recomendada, aventura, piratas, "Jonathan E. Steinberg", "Robert Levine"]
+tags: ["black sails", recomendada, serie, aventura, piratas, "Jonathan E. Steinberg", "Robert Levine"]
 thumbnail: assets/img/posts/black_sails_1.jpg
 sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
 ---
