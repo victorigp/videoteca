@@ -2,7 +2,7 @@
 title: Edmond
 date: 2025-08-07 17:47:16 +0200
 categories: [Peliculas, Thriller] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
-tags: ["edmond", thriller, Drama, "stuart gordon"]
+tags: ["edmond", thriller, drama, "stuart gordon"]
 thumbnail: assets/img/posts/edmond_1.jpg
 # sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
 ---

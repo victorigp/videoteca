@@ -2,7 +2,7 @@
 title: The Studio
 date: 2025-05-01 15:37:16 +0200
 categories: [Series, "Comediaㅤ"] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
-tags: [studio, serie, comedia, "seth rogen", "alex gregory", "peter huyck", "evan goldberg"]
+tags: ["the studio", comedia, "seth rogen", "alex gregory", "peter huyck", "evan goldberg"]
 thumbnail: assets/img/posts/the_studio_1.jpg
 # sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
 ---

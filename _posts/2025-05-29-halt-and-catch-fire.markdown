@@ -2,7 +2,7 @@
 title: Halt and Catch Fire
 date: 2025-05-29 17:24:16 +0200
 categories: [Series, "Dramaㅤ"] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
-tags: ["halt and catch fire", recomendada, serie, drama, informática, internet, "años 80", "años 90", "christopher cantwell", "christopher rogers"]
+tags: ["halt and catch fire", recomendada, drama, informática, internet, "años 80", "años 90", "christopher cantwell", "christopher rogers"]
 thumbnail: assets/img/posts/halt_and_catch_fire_1.jpg
 sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
 ---
