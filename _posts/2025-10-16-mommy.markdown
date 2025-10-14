@@ -1,0 +1,25 @@
+---
+title: Mommy
+date: 2025-10-16 09:48:16 +0200
+categories: [Peliculas, Drama] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
+tags: [mommy, drama, adolescencia, "xavier dolan"]
+thumbnail: assets/img/posts/mommy_1.jpg
+# sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
+---
+
+<div class="row mb-4">
+  <div class="col-md-5" markdown="1">
+![Poster de la película Mommy](assets/img/posts/mommy_2.jpg){: .img-fluid .rounded }
+  </div>
+  <div class="col-md-7" markdown="1">
+... Y si no, animaos a ver [Mommy](https://www.filmaffinity.com/es/film656945.html "Mommy"){:target="_blank"}, de un Xavier Dolan que sorprendió al mundo con 19 años con otro peliculón, [Yo maté a mi madre](https://www.filmaffinity.com/es/film920071.html "Yo maté a mi madre"){:target="_blank"}, pero a mi me gusta más esta.
+
+No soy muy fan de los dramas, pero este mes de Halloween estoy viendo películas bastante durillas, como [El monstruo de St. Pauli](https://www.filmaffinity.com/es/film318878.html "El monstruo de St. Pauli"){:target="_blank"} (gracias Giz!) o [Henry: Retrato de un asesino](https://www.filmaffinity.com/es/film917906.html "Henry: Retrato de un asesino"){:target="_blank"}, pero no son para todos los estómagos.
+
+Esta peli hace uso de un formato de pantalla cuadrado (1:1) que ayuda a transmitir esa sensación de claustrofobia de los personajes. Y mola como cambia a formato panorámico en un momento dado, cuando el prota se siente libre y feliz, mientras suena Wonderwall.
+
+Curioso que en algún enlace de streaming no hacen el cambio de formato, espero que en las principales plataformas lo mantengan porque es una escena mítica que es totalmente imprescindible en la película.
+
+Parecía que Dolan se había retirado del cine (después de unas polémicas declaraciones) pero parece ser que va a volver en 2026, dejando de lado los dramas y con una de terror, ojalá que se le de bien ese género!
+  </div>
+</div>
