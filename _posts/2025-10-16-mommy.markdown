@@ -1,6 +1,6 @@
 ---
 title: Mommy
-date: 2025-10-16 09:48:16 +0200
+date: 2025-10-16 12:48:16 +0200
 categories: [Peliculas, Drama] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
 tags: [mommy, drama, adolescencia, "xavier dolan"]
 thumbnail: assets/img/posts/mommy_1.jpg
