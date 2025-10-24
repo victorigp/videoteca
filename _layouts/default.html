@@ -39,6 +39,20 @@ layout: compress
         background-color: transparent;
         border-radius: 0;
       }
+    /* Hacer el sidebar desplazable en pantallas con poca altura */
+    #sidebar {
+        max-height: 100dvh;        /* viewport dinámico: respeta barras del SO */
+        overflow-y: auto;          /* permite scroll vertical si no cabe */
+        overscroll-behavior: contain;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: .75rem;    /* separa el último item del borde inferior */
+    }
+
+    @supports not (height: 100dvh) {
+      #sidebar {
+        max-height: 100vh;
+      }
+    }
   </style>
   <body>
     {% include sidebar.html lang=lang %}
