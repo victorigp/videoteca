@@ -5,70 +5,34 @@ refactor: true
 
 {% include lang.html %}
 
-{% assign pinned = site.posts | where: 'pin', 'true' %}
-{% assign default = site.posts | where_exp: 'item', 'item.pin != true and item.hidden != true' %}
-
-{% assign posts = '' | split: '' %}
-
-<!-- Get pinned posts -->
-{% assign offset = paginator.page | minus: 1 | times: paginator.per_page %}
-{% assign pinned_num = pinned.size | minus: offset %}
-
-{% if pinned_num > 0 %}
-  {% for i in (offset..pinned.size) limit: pinned_num %}
-    {% assign posts = posts | push: pinned[i] %}
-  {% endfor %}
-{% else %}
-  {% assign pinned_num = 0 %}
-{% endif %}
-
-<!-- Get default posts -->
-{% assign default_beg = offset | minus: pinned.size %}
-
-{% if default_beg < 0 %}
-  {% assign default_beg = 0 %}
-{% endif %}
-
-{% assign default_num = paginator.posts | size | minus: pinned_num %}
-{% assign default_end = default_beg | plus: default_num | minus: 1 %}
-
-{% if default_num > 0 %}
-  {% for i in (default_beg..default_end) %}
-    {% assign posts = posts | push: default[i] %}
-  {% endfor %}
-{% endif %}
-
 <!--  INICIO DEL CÓDIGO para poner el sello de Recomiendo -->
-{% if paginator.posts | where_exp: "item", "item.sello == true" | size > 0 %}
-<style>
-  .recomiendo-sello {
-    position: relative;
-  }
-    .recomiendo-sello::after {
-      content: '';
-      display: block;
-      position: absolute;
-      /* --- Posición (la que ya tenías es perfecta) --- */
-      bottom: 5px;
-      right: -5px;
-      /* --- Tamaño (lo mantenemos o ajústalo si quieres) --- */
-      width: 150px;
-      height: 98px;
-      /* --- ¡LA ROTACIÓN CORREGIDA! --- */
-      transform: rotate(-15deg); /* Valor positivo para que la esquina derecha suba */
-      /* --- Resto de propiedades --- */
-      background-image: url('{{ '/assets/img/recomiendo.png' | relative_url }}');
-      background-size: contain;
-      background-repeat: no-repeat;
-      z-index: 10;
+{% assign recomendados = paginator.posts | where_exp: "item", "item.sello == true" %}
+{% if recomendados.size > 0 %}
+  <style>
+    .recomiendo-sello {
+      position: relative;
     }
-</style>
+      .recomiendo-sello::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 5px;
+        right: -5px;
+        width: 150px;
+        height: 98px;
+        transform: rotate(-15deg);
+        background-image: url('{{ '/assets/img/recomiendo.png' | relative_url }}');
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: 10;
+      }
+  </style>
 {% endif %}
 
 <!--  FIN DEL CÓDIGO Recomiendo -->
 
 <div id="post-list" class="flex-grow-1 px-xl-1">
-  {% for post in posts %}
+  {% for post in paginator.posts %}
   <article class="card-wrapper card">
     <a href="{{ post.url | relative_url }}" class="post-preview row g-0 flex-md-row-reverse">
       {% assign card_body_col = '12' %}
@@ -100,8 +64,7 @@ refactor: true
 
           <div class="card-text content mt-0 mb-3">
             <p>
-              {% include no-linenos.html content=post.content %}
-              {{ content | markdownify | strip_html | truncate: 200 | escape }}
+              {{ post.content | markdownify | strip_html | truncate: 200 | escape }}
             </p>
           </div>
 
@@ -138,7 +101,6 @@ refactor: true
   </article>
   {% endfor %}
 </div>
-<!-- #post-list -->
 {% if paginator.total_pages > 1 %}
   {% include post-paginator.html %}
 {% endif %}

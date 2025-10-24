@@ -123,7 +123,14 @@ pwa:
     deny_paths:
       # - "/example"  # URLs match `<SITE_URL>/example/*` will not be cached by the PWA
 
-paginate: 10
+pagination:
+  enabled: true
+  per_page: 10
+  permalink: '/page/:num/'
+  sort_field: 'date'
+  sort_reverse: true
+  collections:
+    - tabs
 
 # The base URL of your site
 baseurl: "/videoteca"
@@ -193,6 +200,10 @@ exclude:
   - LICENSE
   - rollup.config.js
   - package*.json
+
+plugins:
+  - jekyll-paginate-v2
+  - jekyll-archives
 
 jekyll-archives:
   enabled: [categories, tags]

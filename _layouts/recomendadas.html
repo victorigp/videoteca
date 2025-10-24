@@ -1,0 +1,218 @@
+---
+layout: default
+refactor: true
+---
+
+{% include lang.html %}
+
+<style>
+  .recom-title-badge{
+    display:inline-block;
+    height:88px;
+    width:-webkit-fill-available;
+    width:-moz-available;
+    width:fill-available;
+    background-image: url('{{ "/assets/img/recomiendo.png" | relative_url }}');
+    background-repeat:no-repeat;
+    background-size:auto 88px;
+    background-position:left center;
+    margin-left:12px;
+    vertical-align:middle;
+  }
+  /* Reducimos el espacio con una solución estable y responsiva */
+  .recom-title-h1 { margin-bottom: 1rem; }
+  /* evitar parpadeo: oculta el listado mientras se corrige el DOM */
+  #post-list.is-fixing{ visibility:hidden; }
+  .preview-img{ display:block; }
+</style>
+
+<h1 class="dynamic-title d-flex align-items-center recom-title-h1 mt-1">
+  <span>Recomendadas</span>
+  <span class="recom-title-badge" aria-hidden="true"></span>
+</h1>
+
+<div id="post-list" class="is-fixing flex-grow-1 px-xl-1 mt-1">
+  {% for post in paginator.posts %}
+  <article class="card-wrapper card">
+    <a href="{{ post.url | relative_url }}" class="post-preview row g-0 flex-md-row-reverse">
+      {% assign card_body_col = '12' %}
+
+      {% if post.thumbnail %}
+      {% assign src = post.thumbnail.path | default: post.thumbnail %}
+      {% unless src contains '//' %}
+      {% assign src = post.img_path | append: '/' | append: src | replace: '//', '/' %}
+      {% endunless %}
+
+      {% assign alt = post.thumbnail.alt | xml_escape | default: 'Preview Image' %}
+
+      <div class="col-md-5">
+        <div class="preview-img">
+          <img src="{{ src }}" alt="{{ alt }}" loading="lazy" data-no-lightbox="true">
+        </div>
+      </div>
+
+      {% assign card_body_col = '7' %}
+      {% endif %}
+
+      <div class="col-md-{{ card_body_col }}">
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">{{ post.title }}</h1>
+
+          <div class="card-text content mt-0 mb-3">
+            <p>
+              {{ post.content | markdownify | strip_html | truncate: 200 | escape }}
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              {% include datetime.html date=post.date lang=lang %}
+
+              <!-- categories -->
+              {% if post.categories.size > 0 %}
+              <i class="far fa-folder-open fa-fw me-1"></i>
+              <span class="categories">
+                {% for category in post.categories %}
+                {{ category }}
+                {%- unless forloop.last -%},{%- endunless -%}
+                {% endfor %}
+              </span>
+              {% endif %}
+            </div>
+
+            {% if post.pin %}
+            <div class="pin ms-1">
+              <i class="fas fa-thumbtack fa-fw"></i>
+              <span>{{ site.data.locales[lang].post.pin_prompt }}</span>
+            </div>
+            {% endif %}
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  </article>
+  {% endfor %}
+</div>
+{% if paginator.total_pages > 1 %}
+  {% include post-paginator.html %}
+{% endif %}
+
+<script>
+  (function(){
+    var LIST_ID = 'post-list';
+    var listEl = document.getElementById(LIST_ID);
+
+    function safeRemoveAnchor(a, img){
+      try{ if(document.activeElement === a) a.blur(); }catch(e){}
+      var wrapper = a.parentElement;
+      if(wrapper && wrapper.classList.contains('preview-img') && img){
+        a.replaceWith(img);
+      } else if(img) {
+        var w = document.createElement('div');
+        w.className = 'preview-img';
+        if(wrapper){ wrapper.parentElement.insertBefore(w, wrapper); wrapper.remove(); }
+        else { a.parentElement.insertBefore(w, a); }
+        w.appendChild(img);
+        a.remove();
+      } else {
+        a.remove();
+      }
+    }
+
+    function unwrapImgLinkIn(col){
+      if(!col) return;
+      var a1 = col.querySelector(':scope > a.img-link');
+      if(a1){
+        var img1 = a1.querySelector('img');
+        if(img1){ safeRemoveAnchor(a1, img1); }
+      }
+      var pre = col.querySelector(':scope > .preview-img');
+      if(!pre){
+        var maybe = col.querySelector(':scope > a.img-link');
+        if(maybe){
+          var img2 = maybe.querySelector('img');
+          if(img2){ safeRemoveAnchor(maybe, img2); }
+        }
+      } else {
+        var innerA = pre.querySelector(':scope > a.img-link');
+        if(innerA){
+          var img3 = innerA.querySelector('img');
+          if(img3){ safeRemoveAnchor(innerA, img3); }
+        }
+      }
+      var directImg = col.querySelector(':scope > img');
+      if(directImg){
+        var w = document.createElement('div');
+        w.className = 'preview-img';
+        col.insertBefore(w, directImg);
+        w.appendChild(directImg);
+      }
+    }
+
+    function fixCards(){
+      document.querySelectorAll('#'+LIST_ID+' article.card-wrapper').forEach(function(article){
+        var a = article.querySelector('a.post-preview');
+        if(!a) return;
+        var sib = a.nextElementSibling;
+        while(sib && (/col-md-\d+/.test(sib.className))){
+          var next = sib.nextElementSibling;
+          a.appendChild(sib);
+          sib = next;
+        }
+        var imgCol = a.querySelector('.col-md-5') || a.querySelector('.col-md-4');
+        unwrapImgLinkIn(imgCol);
+      });
+    }
+
+    function allFixed(){
+      var ok = true;
+      document.querySelectorAll('#'+LIST_ID+' article.card-wrapper').forEach(function(article){
+        var a = article.querySelector('a.post-preview');
+        var hasImg = a && a.querySelector('.col-md-5 .preview-img > img');
+        var hasBody = a && a.querySelector('.col-md-7');
+        if(!hasImg || !hasBody) ok = false;
+      });
+      return ok;
+    }
+
+    function showList(){
+      listEl && listEl.classList.remove('is-fixing');
+      // quitamos enfoque automático para evitar borde/outline en la primera tarjeta
+    }
+
+    function scheduleFixes(){
+      if(!listEl) return;
+      fixCards();
+      if(allFixed()) return showList();
+      setTimeout(function(){ fixCards(); if(allFixed()) return showList(); }, 0);
+      setTimeout(function(){ fixCards(); if(allFixed()) return showList(); }, 100);
+      setTimeout(function(){ fixCards(); if(allFixed()) return showList(); }, 300);
+      setTimeout(function(){ fixCards(); showList(); }, 800);
+    }
+
+    function startFixing(){
+      if(!listEl) return;
+      listEl.classList.add('is-fixing');
+      try{
+        var ae = document.activeElement;
+        if(ae && listEl.contains(ae)) ae.blur();
+      }catch(e){}
+    }
+
+    if(document.readyState==='loading'){
+      document.addEventListener('DOMContentLoaded', scheduleFixes);
+    } else { scheduleFixes(); }
+    window.addEventListener('load', scheduleFixes);
+    document.addEventListener('pjax:send', startFixing);
+    document.addEventListener('pjax:complete', scheduleFixes);
+
+    if('MutationObserver' in window && listEl){
+      var obs = new MutationObserver(function(){ fixCards(); });
+      obs.observe(listEl, { childList: true, subtree: true });
+    }
+  })();
+</script>

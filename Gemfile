@@ -2,7 +2,8 @@
 
 source "https://rubygems.org"
 
-gem "jekyll-theme-chirpy", "~> 6.5", ">= 6.5.5"
+# gem "jekyll-theme-chirpy", "~> 6.5", ">= 6.5.5"
+gem "jekyll-theme-chirpy", ">= 7.3.1"
 
 group :test do
   gem "html-proofer", "~> 5.0"
@@ -21,3 +22,5 @@ gem "wdm", :platforms => [:mingw, :x64_mingw, :mswin]
 # Lock `http_parser.rb` gem to `v0.6.x` on JRuby builds since newer versions of the gem
 # do not have a Java counterpart.
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
+
+gem "jekyll-paginate-v2"
