@@ -55,7 +55,20 @@
   {% assign urls = urls | append: ',' | append: site.data.origin[type].mermaid.js %}
 {% endif %}
 
-{% include jsdelivr-combine.html urls=urls %}
+{%- comment -%}
+  Disabled jsDelivr combine: load scripts individually to avoid 404s when any segment fails (e.g., missing locale).
+{%- endcomment -%}
+{% assign _urls = urls | split: ',' %}
+{% for u in _urls %}
+  {% assign u = u | strip %}
+  {% if u and u != '' %}
+    {% assign src = u %}
+    {% unless src contains '://' %}
+      {% assign src = src | relative_url %}
+    {% endunless %}
+    <script defer src="{{ src }}"></script>
+  {% endif %}
+{% endfor %}
 
 {% case page.layout %}
   {% when 'home', 'categories', 'post', 'page' %}
