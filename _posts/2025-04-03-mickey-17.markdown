@@ -3,13 +3,13 @@ title: Mickey 17
 date: 2025-04-03 17:17:16 +0200
 categories: [Peliculas, "Ciencia Ficción"] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
 tags: ["mickey 17", "ciencia ficción", thriller, comedia, "bong joon-ho"]
-thumbnail: assets/img/posts/mickey_17_1.jpg
+thumbnail: /assets/img/posts/mickey_17_1.jpg
 # sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
 ---
 
 <div class="row mb-4">
   <div class="col-md-5" markdown="1">
-![Poster de la película Mickey 17](assets/img/posts/mickey_17_2.jpg){: .img-fluid .rounded }
+![Poster de la película Mickey 17](/assets/img/posts/mickey_17_2.jpg){: .img-fluid .rounded }
   </div>
   <div class="col-md-7" markdown="1">
 También podéis animaros a ver [Mickey 17](https://www.filmaffinity.com/es/film466389.html "Mickey 17"){:target="_blank"} la última peli de Bong Joon-ho (el director de [Parásitos](https://www.filmaffinity.com/es/film520465.html "Parásitos"){:target="_blank"} y de 	

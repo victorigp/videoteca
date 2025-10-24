@@ -3,13 +3,13 @@ title: Sangre en los labios
 date: 2025-04-10 17:41:16 +0200
 categories: [Peliculas, Thriller] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
 tags: ["sangre en los labios", drama, "años 80", thriller, culturismo, homosexualidad, "rose glass"]
-thumbnail: assets/img/posts/sangre_en_los_labios_1.jpg
+thumbnail: /assets/img/posts/sangre_en_los_labios_1.jpg
 # sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
 ---
 
 <div class="row mb-4">
   <div class="col-md-5" markdown="1">
-![Poster de la película Sangre en los labios](assets/img/posts/sangre_en_los_labios_2.jpg){: .img-fluid .rounded }
+![Poster de la película Sangre en los labios](/assets/img/posts/sangre_en_los_labios_2.jpg){: .img-fluid .rounded }
   </div>
   <div class="col-md-7" markdown="1">
 ... Ooooo animaros a ver la peli de [Sangre en los labios](https://www.filmaffinity.com/es/film391567.html "Sangre en los labios"){:target="_blank"} (está en Filmin) si queréis ver una peli entretenida y diferente!
