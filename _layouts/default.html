@@ -53,6 +53,14 @@ layout: compress
         max-height: 100vh;
       }
     }
+
+    /* Reducir padding vertical de los enlaces del menú solo en pantallas con poca altura */
+    @media (max-height: 800px) {
+      #sidebar ul li.nav-item a.nav-link {
+        padding-top: .35rem;
+        padding-bottom: .35rem;
+      }
+    }
   </style>
   <body>
     {% include sidebar.html lang=lang %}
