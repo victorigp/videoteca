@@ -1,10 +1,15 @@
 <div id="comment-form-wrapper" class="px-lg-2">
   <h3 class="font-weight-bold">Deja un comentario</h3>
   <form id="comment-form" class="needs-validation" novalidate>
-    <!-- Campo Honeypot para prevención de spam -->
+    <!-- Campos de control anti-spam -->
     <input type="hidden" name="honeypot" />
+    <input type="hidden" name="ts" value="" />
+    <div class="visually-hidden">
+      <label for="website">Sitio web</label>
+      <input type="text" id="website" name="website" autocomplete="off" tabindex="-1" aria-hidden="true" />
+    </div>
 
-    <!-- Campos ocultos necesarios para el backend -->
+    <!-- These hidden fields are necessary for the backend -->
     <input type="hidden" name="repo" value="{{ site.comments.custom.repo }}" />
     <input type="hidden" name="slug" value="{{ page.slug | slugify }}" />
     <input type="hidden" name="url" value="{{ page.url | absolute_url }}" />
@@ -36,7 +41,7 @@
       </button>
     </div>
   </form>
-  <div id="comment-form-alert" class="alert mt-3 d-none" role="alert"></div>
+  <div id="comment-form-alert" class="alert mt-3 d-none" role="alert" aria-live="polite"></div>
 </div>
 
 <script>
@@ -45,6 +50,10 @@
     const submitBtn = document.getElementById("comment-submit-btn");
     const alertContainer = document.getElementById("comment-form-alert");
     const spinner = submitBtn.querySelector(".spinner-border");
+
+    // Marca de tiempo anti-bot (time-trap)
+    const tsField = form.querySelector('input[name="ts"]');
+    tsField.value = Date.now().toString();
 
     form.addEventListener("submit", function (event) {
       event.preventDefault();
@@ -55,7 +64,6 @@
         return;
       }
 
-      // Deshabilitar botón y mostrar spinner
       submitBtn.disabled = true;
       spinner.classList.remove("d-none");
       alertContainer.classList.add("d-none");
@@ -71,28 +79,59 @@
         },
         body: JSON.stringify(data),
       })
-      .then(response => response.json().then(result => ({ status: response.status, body: result })))
+      .then(async (response) => {
+        const body = await response.json().catch(() => ({ message: "" }));
+        return { status: response.status, body };
+      })
       .then(({ status, body }) => {
-        let message = body.message;
-        let alertClass = "alert-danger";
+        if (status === 201 && body && body.ok) {
+          // Append optimista (no ancla, según lo solicitado)
+          try {
+            const list = document.querySelector('.comment-list');
+            if (list) {
+              const div = document.createElement('div');
+              div.className = 'comment';
+              div.id = `comment-${body.id}`;
+              const emailHash = body.emailHash || '';
+              const avatar = emailHash
+                ? `https://www.gravatar.com/avatar/${emailHash}?s=80&d=identicon`
+                : `https://www.gravatar.com/avatar/?s=80&d=identicon`;
+              const safeName = (data.name || '').replace(/[&<>]/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[s]));
+              const safeMsg = (data.message || '')
+                .replace(/\r\n/g, "\n").replace(/\r/g, "\n")
+                .replace(/[&<>]/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[s]))
+                .replace(/\n/g, '<br>');
+              div.innerHTML = `
+                <div class="comment-avatar">
+                  <img src="${avatar}" alt="${safeName} avatar">
+                </div>
+                <div class="comment-content">
+                  <div class="comment-header">
+                    <span class="comment-author font-weight-bold">${safeName}</span>
+                    <span class="comment-date text-muted">justo ahora</span>
+                  </div>
+                  <div class="comment-body">${safeMsg}</div>
+                </div>`;
+              if (!list.parentElement) return;
+              list.appendChild(div);
+            }
+          } catch {}
 
-        if (status === 201) {
-          alertClass = "alert-success";
           form.reset();
           form.classList.remove("was-validated");
-          message = "¡Gracias por tu comentario! Se publicará en breve.";
+          showAlert("¡Gracias por tu comentario! Puede tardar unos segundos en aparecer para todos.", "alert-success");
+        } else {
+          showAlert(body && body.message ? body.message : "No se pudo enviar el comentario.", "alert-danger");
         }
-
-        showAlert(message, alertClass);
       })
       .catch(error => {
         console.error("Error submitting comment:", error);
         showAlert("Ha ocurrido un error al enviar tu comentario. Por favor, inténtalo de nuevo.", "alert-danger");
       })
       .finally(() => {
-        // Rehabilitar botón y ocultar spinner
         submitBtn.disabled = false;
         spinner.classList.add("d-none");
+        alertContainer.focus?.();
       });
     });
 
