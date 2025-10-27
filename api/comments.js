@@ -1,4 +1,3 @@
-
 const { Octokit } = require("@octokit/rest");
 const { AkismetClient } = require("akismet-api");
 const md5 = require("md5");
@@ -38,13 +37,13 @@ module.exports = async (req, res) => {
         blog: akismetBlog,
       });
 
-      const isSpam = await akismetClient.verifyKey() && await akismetClient.checkSpam({
+      const isSpam = (await akismetClient.verifyKey()) && (await akismetClient.checkSpam({
         user_ip: req.headers["x-forwarded-for"] || req.socket.remoteAddress,
         user_agent: req.headers["user-agent"],
         comment_author: name,
         comment_author_email: email,
         comment_content: message,
-      });
+      }));
 
       if (isSpam) {
         return res.status(400).json({ message: "Spam detected by Akismet" });
@@ -63,12 +62,19 @@ module.exports = async (req, res) => {
 
     const date = new Date();
     const emailHash = email ? md5(email.trim().toLowerCase()) : "";
-    
+
+    // Normalize newlines and indent block for YAML literal style so blank lines are preserved
+    const normalizedMessage = String(message).replace(/\r\n/g, "\n").replace(/\r/g, "\n");
+    const indentedMessage = normalizedMessage
+      .split("\n")
+      .map((line) => `  ${line}`)
+      .join("\n");
+
     const commentContent = `_id: ${date.getTime()}
 date: "${toIso8601(date)}"
 name: "${name}"
-${emailHash ? `email: "${emailHash}"\n` : ""}
-message: "${message}"
+${emailHash ? `email: "${emailHash}"\n` : ""}message: |-
+${indentedMessage}
 `;
 
     const filePath = `_data/comments/${slug}/${date.getTime()}.yml`;
@@ -85,7 +91,6 @@ message: "${message}"
     });
 
     return res.status(201).json({ message: "Comment submitted successfully" });
-
   } catch (error) {
     console.error(error);
     return res.status(500).json({ message: "An internal error occurred" });
