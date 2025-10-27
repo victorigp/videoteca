@@ -1,0 +1,105 @@
+<div id="comment-form-wrapper" class="px-lg-2">
+  <h3 class="font-weight-bold">Deja un comentario</h3>
+  <form id="comment-form" class="needs-validation" novalidate>
+    <!-- Campo Honeypot para prevención de spam -->
+    <input type="hidden" name="honeypot" />
+
+    <!-- Campos ocultos necesarios para el backend -->
+    <input type="hidden" name="repo" value="{{ site.comments.custom.repo }}" />
+    <input type="hidden" name="slug" value="{{ page.slug | slugify }}" />
+    <input type="hidden" name="url" value="{{ page.url | absolute_url }}" />
+
+    <div class="form-group">
+      <label for="comment-name">Nombre <span class="text-danger">*</span></label>
+      <input type="text" class="form-control" id="comment-name" name="name" required />
+      <div class="invalid-feedback">El nombre es obligatorio.</div>
+    </div>
+
+    <div class="form-group">
+      <label for="comment-email">Email</label>
+      <input type="email" class="form-control" id="comment-email" name="email" />
+      <small class="form-text text-muted">
+        Introduce tu email (opcional) para mostrar un avatar único. Esto ayuda a diferenciarte de otros usuarios con el mismo nombre. Tu email nunca será público.
+      </small>
+    </div>
+
+    <div class="form-group">
+      <label for="comment-message">Mensaje <span class="text-danger">*</span></label>
+      <textarea class="form-control" id="comment-message" name="message" rows="5" required></textarea>
+      <div class="invalid-feedback">El mensaje no puede estar vacío.</div>
+    </div>
+
+    <div class="form-group">
+      <button type="submit" id="comment-submit-btn" class="btn btn-primary">
+        <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+        Enviar Comentario
+      </button>
+    </div>
+  </form>
+  <div id="comment-form-alert" class="alert mt-3 d-none" role="alert"></div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("comment-form");
+    const submitBtn = document.getElementById("comment-submit-btn");
+    const alertContainer = document.getElementById("comment-form-alert");
+    const spinner = submitBtn.querySelector(".spinner-border");
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+
+      if (form.checkValidity() === false) {
+        form.classList.add("was-validated");
+        return;
+      }
+
+      // Deshabilitar botón y mostrar spinner
+      submitBtn.disabled = true;
+      spinner.classList.remove("d-none");
+      alertContainer.classList.add("d-none");
+
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+
+      fetch("{{ site.comments.custom.endpoint }}", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+      .then(response => response.json().then(result => ({ status: response.status, body: result })))
+      .then(({ status, body }) => {
+        let message = body.message;
+        let alertClass = "alert-danger";
+
+        if (status === 201) {
+          alertClass = "alert-success";
+          form.reset();
+          form.classList.remove("was-validated");
+          message = "¡Gracias por tu comentario! Se publicará en breve.";
+        }
+
+        showAlert(message, alertClass);
+      })
+      .catch(error => {
+        console.error("Error submitting comment:", error);
+        showAlert("Ha ocurrido un error al enviar tu comentario. Por favor, inténtalo de nuevo.", "alert-danger");
+      })
+      .finally(() => {
+        // Rehabilitar botón y ocultar spinner
+        submitBtn.disabled = false;
+        spinner.classList.add("d-none");
+      });
+    });
+
+    function showAlert(message, type) {
+      alertContainer.textContent = message;
+      alertContainer.className = `alert ${type} mt-3`;
+      alertContainer.classList.remove("d-none");
+    }
+  });
+</script>

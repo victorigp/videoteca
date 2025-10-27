@@ -1,0 +1,6 @@
+{% if site.comments.provider == 'custom' %}
+  {% include custom-comments-list.html %}
+  {% include comment-form.html %}
+{% else %}
+  <p>Error: Unknown comment provider.</p>
+{% endif %}

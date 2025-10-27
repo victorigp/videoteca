@@ -1,0 +1,65 @@
+/* Estilos de la lista de comentarios */
+.comment-list {
+  margin-top: 2rem;
+}
+
+.comment {
+  display: flex;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+  .comment:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+.comment-avatar {
+  flex-shrink: 0;
+  margin-right: 1rem;
+}
+
+  .comment-avatar img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+
+.comment-content {
+  flex-grow: 1;
+}
+
+.comment-header {
+  margin-bottom: 0.5rem;
+}
+
+.comment-author {
+  font-size: 1.1rem;
+}
+
+.comment-date {
+  font-size: 0.85rem;
+  margin-left: 0.5rem;
+}
+
+.comment-body {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Ajustes del formulario de comentarios */
+#comment-form-wrapper {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #eee;
+}
+
+#comment-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+#comment-submit-btn .spinner-border {
+  margin-right: 0.5rem;
+}
