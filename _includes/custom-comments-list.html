@@ -12,9 +12,13 @@
 </div>
 <!-- DEBUGGING BLOCK END -->
 
-{% assign slug_comments = site.data.comments[page.slug | slugify] %}
-{% if slug_comments and slug_comments.size > 0 %}
-  {% assign comments = slug_comments | sort: 'date' %}
+{% assign slug_comments_hash = site.data.comments[page.slug | slugify] %}
+{% if slug_comments_hash and slug_comments_hash.size > 0 %}
+  {% assign comments_array = "" | split: "" %}
+  {% for item in slug_comments_hash %}
+    {% assign comments_array = comments_array | push: item[1] %}
+  {% endfor %}
+  {% assign comments = comments_array | sort: 'date' %}
 {% else %}
   {% assign comments = "" | split: "" %}
 {% endif %}
