@@ -21,8 +21,6 @@ tagline: Pelis y series # it will display as the sub-title
 description: >- # used by seo meta and the atom feed
   La videoteca, pelis y series
 
-image: /assets/img/avatar.png
-
 # Public site URL for Vercel (default)
 url: "https://videoteca-wine.vercel.app"
 
