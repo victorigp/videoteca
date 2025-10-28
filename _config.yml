@@ -119,6 +119,9 @@ pwa:
   enabled: true # the option for PWA feature (installable)
   cache:
     enabled: true # the option for PWA offline cache
+    deny_paths:
+      - /posts/
+      - /pages/
 
 pagination:
   enabled: true
