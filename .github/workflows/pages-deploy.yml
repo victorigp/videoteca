@@ -57,7 +57,7 @@ jobs:
             --disable-external \
             --assume-extension \
             --enforce-https \
-            --ignore-urls "/^\/videoteca\//,http://127.0.0.1,http://0.0.0.0,http://localhost" \
+            --url-prefix "${{ steps.pages.outputs.base_path }}" \
             ./_site
 
       - name: Upload site artifact
