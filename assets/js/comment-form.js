@@ -64,9 +64,64 @@
 
     var ENDPOINT = '{{ site.comments.custom.endpoint | relative_url }}';
 
+    // Helper: test if value has any non-whitespace character
+    function hasNonWhitespace(value){
+      if (!value) return false;
+      // remove all unicode whitespace characters
+      return /\S/.test(value);
+    }
+
     form.addEventListener("submit", function (event) {
+      console.log('[comment-form] submit event');
       event.preventDefault();
       event.stopPropagation();
+
+      // Validate trimmed / whitespace-only values
+      var nameRaw = nameInput && nameInput.value ? nameInput.value : '';
+      var msgRaw = msgInput && msgInput.value ? msgInput.value : '';
+
+      // TRACE: show raw values and length
+      console.log('[comment-form] nameRaw:', JSON.stringify(nameRaw), 'len:', nameRaw.length);
+      console.log('[comment-form] msgRaw:', JSON.stringify(msgRaw), 'len:', msgRaw.length);
+
+      var nameOk = hasNonWhitespace(nameRaw);
+      var msgOk = hasNonWhitespace(msgRaw);
+
+      console.log('[comment-form] nameOk:', nameOk, 'msgOk:', msgOk);
+
+      // Use setCustomValidity so browser :valid/:invalid reflects our whitespace check
+      if (nameInput) {
+        if (!nameOk) {
+          nameInput.setCustomValidity('Por favor ingresa un nombre válido.');
+        } else {
+          nameInput.setCustomValidity('');
+        }
+      }
+      if (msgInput) {
+        if (!msgOk) {
+          msgInput.setCustomValidity('Por favor ingresa un mensaje válido.');
+        } else {
+          msgInput.setCustomValidity('');
+        }
+      }
+
+      if (!nameOk) {
+        if (nameInput) nameInput.classList.add('is-invalid');
+        form.classList.add('was-validated');
+        if (nameInput) nameInput.focus();
+        return;
+      } else {
+        if (nameInput) nameInput.classList.remove('is-invalid');
+      }
+
+      if (!msgOk) {
+        if (msgInput) msgInput.classList.add('is-invalid');
+        form.classList.add('was-validated');
+        if (msgInput) msgInput.focus();
+        return;
+      } else {
+        if (msgInput) msgInput.classList.remove('is-invalid');
+      }
 
       if (form.checkValidity() === false) {
         form.classList.add("was-validated");
@@ -135,6 +190,23 @@
       })
       .finally(function(){
         stopSubmitting();
+      });
+    });
+
+    // clear invalid state while typing (consider whitespace)
+    var inputs = form.querySelectorAll(".form-control");
+    inputs.forEach(function(input){
+      input.addEventListener('input', function(){
+        if (form.classList.contains('was-validated')){
+          var ok = /\S/.test(input.value || '');
+          if (ok) {
+            input.classList.remove('is-invalid');
+            // clear custom validity so browser :valid updates
+            try { input.setCustomValidity(''); } catch(e){}
+          }
+          // TRACE current value
+          console.log('[comment-form] input', input.id, 'value:', JSON.stringify(input.value), 'ok:', ok);
+        }
       });
     });
   });

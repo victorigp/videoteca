@@ -128,3 +128,13 @@
   color: #721c24;
   border: 1px solid #f5c6cb;
 }
+
+/* Ocultar mensajes de validación inicialmente */
+#comment-form .invalid-feedback {
+  display: none;
+}
+
+/* Mostrar mensajes de validación solo después de intentar enviar */
+#comment-form.was-validated .form-control:invalid ~ .invalid-feedback {
+  display: block;
+}
