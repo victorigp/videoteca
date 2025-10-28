@@ -21,8 +21,8 @@
 <!-- Variables resueltas por Liquid (fuera de raw) -->
 <script>
   const SEARCH_JSON = '{{ '/assets/js/data/search.json' | relative_url }}';
-  const SEARCH_RESULT_TEMPLATE = `{{ result_elem | strip_newlines }}`;
-  const SEARCH_NO_RESULTS = `{{ not_found }}`;
+  const SEARCH_RESULT_TEMPLATE = {{ result_elem | strip_newlines | jsonify }};
+  const SEARCH_NO_RESULTS = {{ not_found | jsonify }};
 </script>
 
 <!-- Bloque JS protegido para evitar que el compresor/LIQUID altere la sintaxis -->
