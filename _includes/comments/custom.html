@@ -1,5 +1,5 @@
 {% if site.comments.provider == 'custom' %}
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/comments.css">
+  <link rel="stylesheet" href="{{ '/assets/css/comments.css' | relative_url }}">
   {% include custom-comments-list.html %}
   {% include comment-form.html %}
 {% else %}
