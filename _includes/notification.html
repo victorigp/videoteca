@@ -33,7 +33,10 @@
     var silentFlag = false;
 
     function fetchLastCommitMessage() {
-      var url = '{{ '/version.json' | relative_url }}';
+      // Construir URL respetando baseurl (soporta despliegues en subcarpetas)
+      var base = '{{ site.baseurl | default: "" }}';
+      if (base && base.endsWith('/')) base = base.slice(0, -1);
+      var url = (base || '') + '/version.json';
       // Bypass caches agresivos (SW/HTTP)
       url += (url.indexOf('?') === -1 ? '?' : '&') + '_=' + Date.now();
       return fetch(url, { cache: 'no-store' })
