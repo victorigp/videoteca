@@ -136,7 +136,7 @@ pagination:
     - tabs
 
 # The base URL of your site
-baseurl: "/videoteca"
+baseurl: ""
 
 # ------------ The following options are not recommended to be modified ------------------
 
