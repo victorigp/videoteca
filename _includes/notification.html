@@ -25,19 +25,14 @@
 
 <script>
   (function () {
-    // Silenciar aviso de actualización si el último commit es un comentario
     var toastEl = document.getElementById('notification');
-
     if (!toastEl) return;
 
     var silentFlag = false;
 
     function fetchLastCommitMessage() {
-      // Construir URL respetando baseurl (soporta despliegues en subcarpetas)
-      var base = '{{ site.baseurl | default: "" }}';
-      if (base && base.endsWith('/')) base = base.slice(0, -1);
-      var url = (base || '') + '/version.json';
-      // Bypass caches agresivos (SW/HTTP)
+      // Llama al endpoint serverless, independiente de baseurl
+      var url = '/api/version';
       url += (url.indexOf('?') === -1 ? '?' : '&') + '_=' + Date.now();
       return fetch(url, { cache: 'no-store' })
         .then(function (r) { return r.ok ? r.json() : {}; })
@@ -64,7 +59,7 @@
           inst.hide();
         }
         toastEl.classList.add('d-none');
-      } catch (e) { /* noop */ }
+      } catch (e) { }
     }
 
     document.addEventListener('show.bs.toast', function (ev) {
@@ -79,15 +74,11 @@
         silentFlag = shouldSilentUpdate(msg);
         if (silentFlag) {
           hideToastIfNeeded();
-          // Si hay un SW en espera, realizar activación silenciosa
           navigator.serviceWorker.getRegistration().then(function (reg) {
             if (reg && reg.waiting) askSkipWaiting(reg.waiting);
           }).catch(function () {});
         }
       });
-
-      // No recargar automáticamente en modo silencioso. Si el tema recarga en controllerchange,
-      // esta lógica no la fuerza; solo se oculta el aviso.
     }
   })();
 </script>
