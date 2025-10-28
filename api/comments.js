@@ -19,6 +19,22 @@ function normalizeOriginStr(s) {
   }
 }
 
+// Normaliza y valida entradas de usuario: elimina espacios, rechaza caracteres de control no imprimibles.
+// Devuelve string normalizado o null si contiene caracteres inválidos.
+function normalizeInput(input) {
+  if (input === undefined || input === null) return "";
+  let s = typeof input === "string" ? input : String(input);
+  s = s.trim();
+
+  // Rechazar caracteres de control ASCII (excepto tabulación, salto de línea y retorno de carro)
+  // 0x00-0x08, 0x0B, 0x0C, 0x0E-0x1F y 0x7F son no imprimibles
+  if (["string"].includes(typeof s) && /[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/.test(s)) {
+    return null;
+  }
+
+  return s;
+}
+
 function setCors(res, origin, allowedOrigins) {
   if (origin && allowedOrigins.includes(origin)) {
     res.setHeader("Access-Control-Allow-Origin", origin);
