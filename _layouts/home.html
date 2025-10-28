@@ -46,19 +46,21 @@ refactor: true
       {% assign alt = post.thumbnail.alt | xml_escape | default: 'Preview Image' %}
 
       {% assign lqip = null %}
-
       {% if post.thumbnail.lqip %}
       {% capture lqip %}lqip="{{ post.thumbnail.lqip }}"{% endcapture %}
       {% endif %}
 
-      {%- comment -%} Normalize src to avoid double baseurl when piping through relative_url {%- endcomment -%}
+      {%- comment -%} Normaliza src quitando baseurl si ya viniera aplicado {%- endcomment -%}
       {% assign normalized_src = src %}
       {% if site.baseurl and site.baseurl != '' %}
         {% assign normalized_src = normalized_src | replace_first: site.baseurl, '' %}
       {% endif %}
 
+      {%- comment -%} Genera URL final con el include oficial del tema (respeta baseurl/CDN) {%- endcomment -%}
+      {% capture final_img_src %}{% include media-url.html src=normalized_src %}{% endcapture %}
+
       <div class="col-md-5 {% if post.sello %}recomiendo-sello{% endif %}">
-        <img src="{{ normalized_src | relative_url }}" alt="{{ alt }}" {{ lqip }}>
+        <img src="{{ final_img_src | strip }}" alt="{{ alt }}" {{ lqip }}>
       </div>
 
       {% assign card_body_col = '7' %}

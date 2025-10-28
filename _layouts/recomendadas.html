@@ -45,15 +45,16 @@ refactor: true
 
       {% assign alt = post.thumbnail.alt | xml_escape | default: 'Preview Image' %}
 
-      {%- comment -%} Normalize src to avoid double baseurl when piping through relative_url {%- endcomment -%}
+      {%- comment -%} Normaliza src y genera URL final con include del tema {%- endcomment -%}
       {% assign normalized_src = src %}
       {% if site.baseurl and site.baseurl != '' %}
         {% assign normalized_src = normalized_src | replace_first: site.baseurl, '' %}
       {% endif %}
+      {% capture final_img_src %}{% include media-url.html src=normalized_src %}{% endcapture %}
 
       <div class="col-md-5">
         <div class="preview-img">
-          <img src="{{ normalized_src | relative_url }}" alt="{{ alt }}" loading="lazy" data-no-lightbox="true">
+          <img src="{{ final_img_src | strip }}" alt="{{ alt }}" loading="lazy" data-no-lightbox="true">
         </div>
       </div>
 
