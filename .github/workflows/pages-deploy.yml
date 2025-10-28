@@ -42,11 +42,11 @@ jobs:
           ruby-version: '3.2'
           bundler-cache: true
 
-      - name: Build site (GitHub overrides)
+      - name: Build site
         run: |
-          bundle exec jekyll b \
+          bundle exec jekyll build \
             --config _config.yml,_config.github.yml \
-            -d _site${{ steps.pages.outputs.base_path }}
+            -d "_site${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
 
@@ -56,12 +56,12 @@ jobs:
             --disable-external \
             --assume-extension \
             --enforce-https \
-            ./_site${{ steps.pages.outputs.base_path }}
+            "./_site${{ steps.pages.outputs.base_path }}"
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: _site${{ steps.pages.outputs.base_path }}
+          path: "_site${{ steps.pages.outputs.base_path }}"
 
   deploy:
     environment:
