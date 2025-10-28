@@ -1,0 +1,90 @@
+<aside
+  id="notification"
+  class="toast"
+  role="alert"
+  aria-live="assertive"
+  aria-atomic="true"
+  data-bs-animation="true"
+  data-bs-autohide="false"
+>
+  <div class="toast-header">
+    <button
+      type="button"
+      class="btn-close ms-auto"
+      data-bs-dismiss="toast"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div class="toast-body text-center pt-0">
+    <p class="px-2 mb-3">{{ site.data.locales[include.lang].notification.update_found }}</p>
+    <button type="button" class="btn btn-primary" aria-label="Update">
+      {{ site.data.locales[include.lang].notification.update }}
+    </button>
+  </div>
+</aside>
+
+<script>
+  (function () {
+    // Silenciar aviso de actualización si el último commit es un comentario
+    var toastEl = document.getElementById('notification');
+
+    if (!toastEl) return;
+
+    var silentFlag = false;
+
+    function fetchLastCommitMessage() {
+      var url = '{{ '/version.json' | relative_url }}';
+      // Bypass caches agresivos (SW/HTTP)
+      url += (url.indexOf('?') === -1 ? '?' : '&') + '_=' + Date.now();
+      return fetch(url, { cache: 'no-store' })
+        .then(function (r) { return r.ok ? r.json() : {}; })
+        .then(function (j) { return (j && j.message) ? String(j.message) : ''; })
+        .catch(function () { return ''; });
+    }
+
+    function shouldSilentUpdate(message) {
+      try { return /\bNew comment by\b/i.test(message || ''); } catch (e) { return false; }
+    }
+
+    function askSkipWaiting(sw) {
+      try {
+        sw.postMessage({ type: 'SKIP_WAITING' });
+        sw.postMessage({ action: 'skipWaiting' });
+      } catch (e) {}
+    }
+
+    function hideToastIfNeeded() {
+      if (!silentFlag) return;
+      try {
+        if (window.bootstrap && window.bootstrap.Toast) {
+          var inst = window.bootstrap.Toast.getOrCreateInstance(toastEl, { autohide: false });
+          inst.hide();
+        }
+        toastEl.classList.add('d-none');
+      } catch (e) { /* noop */ }
+    }
+
+    document.addEventListener('show.bs.toast', function (ev) {
+      if (ev.target === toastEl) hideToastIfNeeded();
+    });
+    document.addEventListener('shown.bs.toast', function (ev) {
+      if (ev.target === toastEl) hideToastIfNeeded();
+    });
+
+    if ('serviceWorker' in navigator) {
+      fetchLastCommitMessage().then(function (msg) {
+        silentFlag = shouldSilentUpdate(msg);
+        if (silentFlag) {
+          hideToastIfNeeded();
+          // Si hay un SW en espera, realizar activación silenciosa
+          navigator.serviceWorker.getRegistration().then(function (reg) {
+            if (reg && reg.waiting) askSkipWaiting(reg.waiting);
+          }).catch(function () {});
+        }
+      });
+
+      // No recargar automáticamente en modo silencioso. Si el tema recarga en controllerchange,
+      // esta lógica no la fuerza; solo se oculta el aviso.
+    }
+  })();
+</script>
