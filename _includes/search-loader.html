@@ -18,41 +18,12 @@
 
 {% capture not_found %}<p class="mt-5">{{ site.data.locales[include.lang].search.no_results }}</p>{% endcapture %}
 
-<!-- Variables resueltas por Liquid (fuera de raw) -->
+<!-- Variables resueltas por Liquid (sin JS inline complejo) -->
 <script>
   const SEARCH_JSON = '{{ '/assets/js/data/search.json' | relative_url }}';
   const SEARCH_RESULT_TEMPLATE = {{ result_elem | strip_newlines | jsonify }};
   const SEARCH_NO_RESULTS = {{ not_found | jsonify }};
 </script>
 
-<!-- Bloque JS protegido para evitar que el compresor/LIQUID altere la sintaxis -->
-<script>
-  {% raw %}
-  document.addEventListener('DOMContentLoaded', () => {
-    SimpleJekyllSearch({
-      searchInput: document.getElementById('search-input'),
-      resultsContainer: document.getElementById('search-results'),
-      json: SEARCH_JSON,
-      searchResultTemplate: SEARCH_RESULT_TEMPLATE,
-      noResultsText: SEARCH_NO_RESULTS,
-      templateMiddleware: function(prop, value, template) {
-        if (prop === 'categories') {
-          if (value === '') {
-            return `${value}`;
-          } else {
-            return `<div class="me-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`;
-          }
-        }
-
-        if (prop === 'tags') {
-          if (value === '') {
-            return `${value}`;
-          } else {
-            return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`;
-          }
-        }
-      }
-    });
-  });
-  {% endraw %}
-</script>
+<!-- Cargar inicialización desde JS externo para evitar compresión/conflictos -->
+<script defer src="{{ '/assets/js/search-init.js' | relative_url }}"></script>
