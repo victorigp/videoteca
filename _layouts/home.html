@@ -39,8 +39,8 @@ refactor: true
 
       {% if post.thumbnail %}
       {% assign src = post.thumbnail.path | default: post.thumbnail %}
-      {% unless src contains '//' %}
-      {% assign src = post.img_path | append: '/' | append: src | replace: '//', '/' %}
+      {% unless src contains '://' %}
+        {% assign src = '/' | append: src | replace: '//', '/' %}
       {% endunless %}
 
       {% assign alt = post.thumbnail.alt | xml_escape | default: 'Preview Image' %}
