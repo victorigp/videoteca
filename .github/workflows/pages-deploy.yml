@@ -56,7 +56,7 @@ jobs:
             --disable-external \
             --assume-extension \
             --enforce-https \
-            "./_site${{ steps.pages.outputs.base_path }}"
+            ./_site
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
