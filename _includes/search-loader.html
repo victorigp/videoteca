@@ -1,0 +1,58 @@
+<!--
+  Jekyll Simple Search loader
+  See: <https://github.com/christian-fei/Simple-Jekyll-Search>
+-->
+
+{% capture result_elem %}
+  <article class="px-1 px-sm-2 px-lg-4 px-xl-0">
+    <header>
+      <h2><a href="{url}">{title}</a></h2>
+      <div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1">
+        {categories}
+        {tags}
+      </div>
+    </header>
+    <p>{content}</p>
+  </article>
+{% endcapture %}
+
+{% capture not_found %}<p class="mt-5">{{ site.data.locales[include.lang].search.no_results }}</p>{% endcapture %}
+
+<!-- Variables resueltas por Liquid (fuera de raw) -->
+<script>
+  const SEARCH_JSON = '{{ '/assets/js/data/search.json' | relative_url }}';
+  const SEARCH_RESULT_TEMPLATE = `{{ result_elem | strip_newlines }}`;
+  const SEARCH_NO_RESULTS = `{{ not_found }}`;
+</script>
+
+<!-- Bloque JS protegido para evitar que el compresor/LIQUID altere la sintaxis -->
+<script>
+  {% raw %}
+  document.addEventListener('DOMContentLoaded', () => {
+    SimpleJekyllSearch({
+      searchInput: document.getElementById('search-input'),
+      resultsContainer: document.getElementById('search-results'),
+      json: SEARCH_JSON,
+      searchResultTemplate: SEARCH_RESULT_TEMPLATE,
+      noResultsText: SEARCH_NO_RESULTS,
+      templateMiddleware: function(prop, value, template) {
+        if (prop === 'categories') {
+          if (value === '') {
+            return `${value}`;
+          } else {
+            return `<div class="me-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`;
+          }
+        }
+
+        if (prop === 'tags') {
+          if (value === '') {
+            return `${value}`;
+          } else {
+            return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`;
+          }
+        }
+      }
+    });
+  });
+  {% endraw %}
+</script>
