@@ -6,6 +6,3 @@ url: "https://victorigp.github.io"
 
 # Subpath for project pages
 baseurl: "/videoteca"
-
-# Avatar relative path (sidebar applies | relative_url). Works on GH Pages and Vercel without absolute URLs.
-avatar: /videoteca/assets/img/avatar.png
