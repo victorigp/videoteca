@@ -42,19 +42,21 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.2
+          ruby-version: '3.2'
           bundler-cache: true
 
       - name: Build site
         run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
         env:
-          JEKYLL_ENV: "production"
+          JEKYLL_ENV: production
+          JEKYLL_CONFIG: _config.yml,_config.github.yml
 
       - name: Test site
         run: |
-          bundle exec htmlproofer _site \
-            \-\-disable-external \
-            \-\-ignore-urls "/^\/videoteca\//,/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
+          bundle exec htmlproofer ./_site \
+            --disable-external \
+            --assume-extension \
+            --ignore-urls "/^\/videoteca\//,/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3

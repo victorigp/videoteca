@@ -1,3 +1,5 @@
+---
+---
 (function(){
   var desired = '{{ "/recomendadas/" | relative_url }}';
   var wrongA = '{{ "/recomendada/" | relative_url }}';

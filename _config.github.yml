@@ -7,5 +7,6 @@ url: "https://victorigp.github.io"
 # Subpath for project pages
 baseurl: "/videoteca"
 
-# Paths that must include baseurl in GH Pages (theme applies relative_url usually)
-avatar: /assets/img/avatar.png
+# Avatar path must include baseurl on GH Pages because some theme spots don't pipe through `relative_url`.
+# This avoids htmlproofer failing with "/assets/img/avatar.png does not exist" in _site/videoteca/* pages.
+avatar: /videoteca/assets/img/avatar.png
