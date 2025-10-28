@@ -1,3 +1,5 @@
+---
+---
 (function(){
   document.addEventListener("DOMContentLoaded", function () {
     var form = document.getElementById("comment-form");
@@ -60,6 +62,8 @@
       if (spinner) spinner.classList.add('d-none');
     }
 
+    var ENDPOINT = '{{ site.comments.custom.endpoint | relative_url }}';
+
     form.addEventListener("submit", function (event) {
       event.preventDefault();
       event.stopPropagation();
@@ -75,7 +79,7 @@
 
       var data = toJSON(form);
 
-      fetch("{{ site.comments.custom.endpoint }}", {
+      fetch(ENDPOINT, {
         method: "POST",
         headers: { "Content-Type": "application/json", "Accept": "application/json" },
         body: JSON.stringify(data)
