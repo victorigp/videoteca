@@ -45,9 +45,15 @@ refactor: true
 
       {% assign alt = post.thumbnail.alt | xml_escape | default: 'Preview Image' %}
 
+      {%- comment -%} Normalize src to avoid double baseurl when piping through relative_url {%- endcomment -%}
+      {% assign normalized_src = src %}
+      {% if site.baseurl and site.baseurl != '' %}
+        {% assign normalized_src = normalized_src | replace_first: site.baseurl, '' %}
+      {% endif %}
+
       <div class="col-md-5">
         <div class="preview-img">
-          <img src="{{ src | relative_url }}" alt="{{ alt }}" loading="lazy" data-no-lightbox="true">
+          <img src="{{ normalized_src | relative_url }}" alt="{{ alt }}" loading="lazy" data-no-lightbox="true">
         </div>
       </div>
 

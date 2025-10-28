@@ -51,8 +51,14 @@ refactor: true
       {% capture lqip %}lqip="{{ post.thumbnail.lqip }}"{% endcapture %}
       {% endif %}
 
+      {%- comment -%} Normalize src to avoid double baseurl when piping through relative_url {%- endcomment -%}
+      {% assign normalized_src = src %}
+      {% if site.baseurl and site.baseurl != '' %}
+        {% assign normalized_src = normalized_src | replace_first: site.baseurl, '' %}
+      {% endif %}
+
       <div class="col-md-5 {% if post.sello %}recomiendo-sello{% endif %}">
-        <img src="{{ src | relative_url }}" alt="{{ alt }}" {{ lqip }}>
+        <img src="{{ normalized_src | relative_url }}" alt="{{ alt }}" {{ lqip }}>
       </div>
 
       {% assign card_body_col = '7' %}
