@@ -38,27 +38,13 @@ refactor: true
       {% assign card_body_col = '12' %}
 
       {% if post.thumbnail %}
-      {% assign src = post.thumbnail.path | default: post.thumbnail %}
-      {% unless src contains '://' %}
-        {% assign src = '/' | append: src | replace: '//', '/' %}
-      {% endunless %}
-
-      {% assign alt = post.thumbnail.alt | xml_escape | default: 'Preview Image' %}
-
-      {%- comment -%} Normaliza src y genera URL final con include del tema {%- endcomment -%}
-      {% assign normalized_src = src %}
-      {% if site.baseurl and site.baseurl != '' %}
-        {% assign normalized_src = normalized_src | replace_first: site.baseurl, '' %}
-      {% endif %}
-      {% capture final_img_src %}{% include media-url.html src=normalized_src %}{% endcapture %}
-
-      <div class="col-md-5">
-        <div class="preview-img">
-          <img src="{{ final_img_src | strip }}" alt="{{ alt }}" loading="lazy" data-no-lightbox="true">
+        {% assign alt = post.thumbnail.alt | xml_escape | default: 'Preview Image' %}
+        <div class="col-md-5">
+          <div class="preview-img">
+            <img src="{{ post.thumbnail | relative_url }}" alt="{{ alt }}" loading="lazy" data-no-lightbox="true">
+          </div>
         </div>
-      </div>
-
-      {% assign card_body_col = '7' %}
+        {% assign card_body_col = '7' %}
       {% endif %}
 
       <div class="col-md-{{ card_body_col }}">
