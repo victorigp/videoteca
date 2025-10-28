@@ -9,3 +9,9 @@ baseurl: ""
 
 # Paths that must be absolute from root on Vercel
 avatar: /assets/img/avatar.png
+
+# Disable offline cache on Vercel to avoid serving stale HTML/assets with old baseurl
+pwa:
+  enabled: true
+  cache:
+    enabled: false
