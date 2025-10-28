@@ -8,6 +8,17 @@ const toIso8601 = (date) => {
   return date.toISOString().split(".")[0] + "Z";
 };
 
+// Normalize an origin/string to plain origin without trailing slash and in lower-case
+function normalizeOriginStr(s) {
+  if (!s || typeof s !== "string") return "";
+  try {
+    const u = new URL(s);
+    return u.origin.toLowerCase();
+  } catch {
+    return s.replace(/\/$/, "").toLowerCase();
+  }
+}
+
 function setCors(res, origin, allowedOrigins) {
   if (origin && allowedOrigins.includes(origin)) {
     res.setHeader("Access-Control-Allow-Origin", origin);
@@ -21,27 +32,16 @@ function parseAllowedOrigins() {
   const raw = process.env.ALLOWED_ORIGINS || "";
   return raw
     .split(",")
-    .map((s) => s.trim())
+    .map((s) => normalizeOriginStr(s.trim()))
     .filter((s) => s.length > 0);
 }
 
 function getOrigin(req) {
-  const origin = req.headers["origin"]; 
-  if (origin) return origin;
-  const referer = req.headers["referer"]; 
-  if (!referer) return null;
-  try { return new URL(referer).origin; } catch { return null; }
-}
-
-function normalizeInput(s) {
-  if (typeof s !== "string") return "";
-  // Normalize unicode and trim
-  const trimmed = s.trim().normalize("NFC");
-  // Reject control characters other than tab, newline, carriage return
-  if (/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/.test(trimmed)) {
-    return null;
-  }
-  return trimmed;
+  const originHdr = req.headers["origin"]; // already an origin
+  if (originHdr) return normalizeOriginStr(originHdr);
+  const referer = req.headers["referer"]; // full URL
+  if (!referer) return "";
+  try { return new URL(referer).origin.toLowerCase(); } catch { return ""; }
 }
 
 // Main serverless function handler
