@@ -1,5 +1,4 @@
 ---
-layout: compress
 ---
 
 <!doctype html>
@@ -126,73 +125,10 @@ layout: compress
 
     {% include_cached search-loader.html %}
 
-    <!--  script para corregir enlaces mal formados a la página de Recomendadas  -->
-    <script>
- (function () { var desired = '{{ "/recomendadas/" | relative_url }}'; var wrongA = '{{ "/recomendada/" | relative_url }}'; var wrongB = '{{ "/recomendadas-tab/" | relative_url }}';
-function fixLinks(root) { try { var scope = root || document; var anchors = scope.querySelectorAll('nav.flex-column a, ul.nav a, a.nav-link'); anchors.forEach(function(a){ var txt = (a.textContent || '').replace(/\s+/g,' ').trim().toLowerCase(); var href = a.getAttribute('href') || ''; if (txt.indexOf('recomendadas') !== -1 || href === wrongA || href === wrongB) { a.setAttribute('href', desired); } }); } catch(e) {} }
-function setupObserver() { try { var nav = document.querySelector('nav.flex-column, ul.nav'); if (!nav) return; var obs = new MutationObserver(function(muts){ muts.forEach(function(m){ if (m.type === 'childList') fixLinks(nav); }); }); obs.observe(nav, { childList: true, subtree: true }); } catch(e) {} }
-if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', function(){ fixLinks(); setupObserver(); }); } else { fixLinks(); setupObserver(); }
-document.addEventListener('pjax:success', function(){ fixLinks(); setupObserver(); }); document.addEventListener('pjax:complete', function(){ fixLinks(); setupObserver(); }); })(); </script>
-
-    <!-- Accesibilidad: si #main-wrapper se oculta con aria-hidden, evita foco dentro -->
-    <script>
-      (function () {
-        var main = document.getElementById('main-wrapper');
-        if (!main || !('MutationObserver' in window)) return;
-        function defocusIfHidden() {
-          try {
-            if (main.getAttribute('aria-hidden') === 'true') {
-              var ae = document.activeElement;
-              if (ae && main.contains(ae)) {
-                ae.blur();
-                var mask = document.getElementById('mask') || document.body;
-                mask.setAttribute('tabindex', '-1');
-                mask.focus({ preventScroll: true });
-                mask.removeAttribute('tabindex');
-              }
-            }
-          } catch (e) { }
-        }
-        defocusIfHidden();
-        var obs = new MutationObserver(function (muts) {
-          for (var i = 0; i < muts.length; i++) {
-            if (muts[i].attributeName === 'aria-hidden') { defocusIfHidden(); break; }
-          }
-        });
-        obs.observe(main, { attributes: true, attributeFilter: ['aria-hidden'] });
-      })();
-    </script>
-
-    <!-- Añade meta "mobile-web-app-capable" para evitar deprecation warning -->
-    <script>
-      (function () {
-        try {
-          if (!document.querySelector('meta[name="mobile-web-app-capable"]')) {
-            var m = document.createElement('meta');
-            m.setAttribute('name', 'mobile-web-app-capable');
-            m.setAttribute('content', 'yes');
-            document.head.appendChild(m);
-          }
-        } catch (e) { }
-      })();
-    </script>
-
-    <!-- Debug: detectar cuál script inline rompe por sintaxis -->
-    <script>
-      (function(){
-        try {
-          var list = document.querySelectorAll('script');
-          for (var i=0;i<list.length;i++){
-            var s = list[i];
-            if (s.src) continue;
-            var code = s.textContent || '';
-            try { new Function(code); }
-            catch(e){
-              console.error('[SCRIPT-SYNTAX]', { index:i, error:e && (e.message||e), snippet: code.slice(0,300) });
-            }
-          }
-        } catch(e) {}
-      })();
-    </script>
+    <!-- Scripts movidos a archivos externos para evitar truncados -->
+    <script defer src="{{ '/assets/js/fix-recomendadas.js' | relative_url }}"></script>
+    <script defer src="{{ '/assets/js/defocus-aria-hidden.js' | relative_url }}"></script>
+    <script defer src="{{ '/assets/js/mobile-web-app-meta.js' | relative_url }}"></script>
+    <script defer src="{{ '/assets/js/script-syntax-debug.js' | relative_url }}"></script>
   </body>
 </html>

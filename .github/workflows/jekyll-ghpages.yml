@@ -30,6 +30,5 @@ jobs:
           bundle exec htmlproofer ./_site \
             --assume-extension \
             --disable-external \
-            --check-img-http \
             --allow-missing-href \
             --enforce-https
