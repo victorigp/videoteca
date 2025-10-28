@@ -7,6 +7,7 @@
   "dependencies": {
     "@octokit/rest": "^20.0.2",
     "akismet-api": "^5.0.0",
-    "md5": "^2.3.0"
+    "md5": "^2.3.0",
+    "js-yaml": "^4.1.0"
   }
 }

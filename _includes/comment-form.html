@@ -16,21 +16,21 @@
 
     <div class="form-group">
       <label for="comment-name">Nombre <span class="text-danger">*</span></label>
-      <input type="text" class="form-control" id="comment-name" name="name" required />
+      <input type="text" class="form-control" id="comment-name" name="name" required maxlength="80" />
       <div class="invalid-feedback">El nombre es obligatorio.</div>
     </div>
 
     <div class="form-group">
       <label for="comment-email">Email</label>
-      <input type="email" class="form-control" id="comment-email" name="email" />
+      <input type="email" class="form-control" id="comment-email" name="email" maxlength="254" />
       <small class="form-text text-muted">
         Introduce tu email (opcional) para mostrar un avatar único. Esto ayuda a diferenciarte de otros usuarios con el mismo nombre. Tu email nunca será público.
       </small>
     </div>
 
     <div class="form-group">
-      <label for="comment-message">Mensaje <span class="text-danger">*</span></label>
-      <textarea class="form-control" id="comment-message" name="message" rows="5" required></textarea>
+      <label for="comment-message">Mensaje <span class="text-danger">*</span> <small class="text-muted">(<span id="msg-remaining">4000</span>/4000)</small></label>
+      <textarea class="form-control" id="comment-message" name="message" rows="5" required maxlength="4000"></textarea>
       <div class="invalid-feedback">El mensaje no puede estar vacío.</div>
     </div>
 
@@ -54,6 +54,34 @@
     // Marca de tiempo anti-bot (time-trap)
     const tsField = form.querySelector('input[name="ts"]');
     tsField.value = Date.now().toString();
+
+    // Contadores y hard limits
+    const nameInput = document.getElementById('comment-name');
+    const emailInput = document.getElementById('comment-email');
+    const msgInput = document.getElementById('comment-message');
+    const remaining = document.getElementById('msg-remaining');
+
+    const hardLimit = (el) => {
+      el.addEventListener('input', () => {
+        const max = el.maxLength;
+        if (el.value.length > max) el.value = el.value.slice(0, max);
+        if (el === msgInput && remaining) remaining.textContent = String(max - el.value.length);
+      });
+      el.addEventListener('paste', (e) => {
+        const paste = (e.clipboardData || window.clipboardData).getData('text');
+        const max = el.maxLength;
+        const start = el.selectionStart;
+        const end = el.selectionEnd;
+        const current = el.value;
+        const next = current.slice(0, start) + paste + current.slice(end);
+        if (next.length > max) {
+          e.preventDefault();
+          const slice = paste.slice(0, max - (current.length - (end - start)));
+          document.execCommand('insertText', false, slice);
+        }
+      });
+    };
+    [nameInput, emailInput, msgInput].forEach(hardLimit);
 
     form.addEventListener("submit", function (event) {
       event.preventDefault();
@@ -85,7 +113,7 @@
       })
       .then(({ status, body }) => {
         if (status === 201 && body && body.ok) {
-          // Append optimista (no ancla, según lo solicitado)
+          // Append optimista
           try {
             const list = document.querySelector('.comment-list');
             if (list) {
@@ -112,12 +140,12 @@
                   </div>
                   <div class="comment-body">${safeMsg}</div>
                 </div>`;
-              if (!list.parentElement) return;
               list.appendChild(div);
             }
           } catch {}
 
           form.reset();
+          if (remaining) remaining.textContent = '4000';
           form.classList.remove("was-validated");
           showAlert("¡Gracias por tu comentario! Puede tardar unos segundos en aparecer para todos.", "alert-success");
         } else {
