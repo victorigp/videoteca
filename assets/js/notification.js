@@ -49,6 +49,10 @@
         hideToastIfNeeded();
         navigator.serviceWorker.getRegistration().then(function (reg) {
           if (reg && reg.waiting) askSkipWaiting(reg.waiting);
+          // Recargar la página para mostrar los nuevos comentarios
+          setTimeout(function() {
+            location.reload();
+          }, 500); // Pequeño delay para que el SW se active
         }).catch(function () {});
       }
     });
