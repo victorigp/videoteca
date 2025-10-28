@@ -1,0 +1,6 @@
+# Jekyll build on Vercel with environment-specific config and production mode
+# Requires `vercel build` to run: JEKYLL_ENV=production JEKYLL_CONFIG="_config.yml,_config.vercel.yml"
+
+[build]
+  command = "JEKYLL_ENV=production JEKYLL_CONFIG=\"_config.yml,_config.vercel.yml\" jekyll build"
+  publish = "_site"

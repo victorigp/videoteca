@@ -1,0 +1,11 @@
+# Overrides for Vercel deployment
+# Use together with _config.yml via JEKYLL_CONFIG="_config.yml,_config.vercel.yml"
+
+# Public site URL on Vercel
+url: "https://videoteca-wine.vercel.app"
+
+# Root deploy, no subpath
+baseurl: ""
+
+# Paths that must be absolute from root on Vercel
+avatar: /assets/img/avatar.png

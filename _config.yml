@@ -23,7 +23,7 @@ description: >- # used by seo meta and the atom feed
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
-url: "https://videoteca-wine.vercel.app"
+url: "https://victorigp.github.io"
 
 github:
   username: victorigp # change to your github username
@@ -76,7 +76,8 @@ theme_mode: # [light | dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: /assets/img/avatar.png
+# Para GitHub Pages (baseurl '/videoteca') usar ruta absoluta con baseurl incluida
+avatar: /videoteca/assets/img/avatar.png
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
@@ -135,8 +136,8 @@ pagination:
   collections:
     - tabs
 
-# The base URL of your site
-baseurl: ""
+# The base URL of your site (GitHub Pages)
+baseurl: "/videoteca"
 
 # ------------ The following options are not recommended to be modified ------------------
 
