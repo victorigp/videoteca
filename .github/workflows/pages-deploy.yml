@@ -57,7 +57,7 @@ jobs:
             --disable-external \
             --assume-extension \
             --enforce-https \
-            --url-prefix "${{ steps.pages.outputs.base_path }}" \
+            --ignore-files "/.*\/videoteca\/assets\/img\/avatar\.png/" \
             ./_site
 
       - name: Upload site artifact
