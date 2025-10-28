@@ -53,10 +53,12 @@ jobs:
 
       - name: Test site
         run: |
-          bundle exec htmlproofer ./_site \
+          bundle exec htmlproofer \
             --disable-external \
             --assume-extension \
-            --ignore-urls "/^\/videoteca\//,/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
+            --enforce-https \
+            --ignore-urls "/^\/videoteca\//,http://127.0.0.1,http://0.0.0.0,http://localhost" \
+            ./_site
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
