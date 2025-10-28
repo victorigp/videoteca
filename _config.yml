@@ -76,8 +76,8 @@ theme_mode: # [light | dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-# Para GitHub Pages (baseurl '/videoteca') usar ruta absoluta con baseurl incluida
-avatar: /videoteca/assets/img/avatar.png
+# Usar ruta raíz; el tema aplica `relative_url`, por lo que funcionará en GH Pages (añadirá baseurl) y en Vercel
+avatar: /assets/img/avatar.png
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
