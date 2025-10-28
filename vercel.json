@@ -2,6 +2,6 @@
   "version": 2,
   "framework": "jekyll",
   "installCommand": "bundle install",
-  "buildCommand": "JEKYLL_ENV=production JEKYLL_CONFIG=\"_config.yml,_config.vercel.yml\" bundle exec jekyll build",
+  "buildCommand": "JEKYLL_ENV=production JEKYLL_CONFIG=_config.yml,_config.vercel.yml bundle exec jekyll build",
   "outputDirectory": "_site"
 }
