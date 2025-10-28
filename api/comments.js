@@ -110,13 +110,13 @@ module.exports = async (req, res) => {
     if (!name || !message || !slug || !repo) {
       return res.status(400).json({ ok: false, code: "missing_fields", message: "Missing required fields" });
     }
-    if (name.length > 80) {
+    if (name.length > 40) {
       return res.status(400).json({ ok: false, code: "name_too_long", message: "Name too long" });
     }
     if (message.length > 4000) {
       return res.status(400).json({ ok: false, code: "message_too_long", message: "Message too long" });
     }
-    if (email && email.length > 254) {
+    if (email && email.length > 100) {
       return res.status(400).json({ ok: false, code: "email_too_long", message: "Email too long" });
     }
 

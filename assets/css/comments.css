@@ -82,3 +82,21 @@
 #comment-submit-btn .spinner-border {
   margin-right: 0.5rem;
 }
+
+/* Campo señuelo visible por CSS (pero oculto para lectores de pantalla) */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; /* evita que el contenido se ajuste */
+}
+
+/* Alternativa: hacer el señuelo visible para bots por CSS general del sitio
+   Añadir en una hoja diferente si se quiere mostrar visualmente el señuelo */
+.honeypot-visible {
+  position: static !important;
+  height: auto; width: auto;
+  overflow: visible; clip: auto;
+  white-space: normal;
+}

@@ -16,21 +16,21 @@
 
     <div class="form-group">
       <label for="comment-name">Nombre <span class="text-danger">*</span></label>
-      <input type="text" class="form-control" id="comment-name" name="name" required maxlength="80" />
+      <input type="text" class="form-control" id="comment-name" name="name" required maxlength="40" />
       <div class="invalid-feedback">El nombre es obligatorio.</div>
     </div>
 
     <div class="form-group">
       <label for="comment-email">Email</label>
-      <input type="email" class="form-control" id="comment-email" name="email" maxlength="254" />
-      <small class="form-text text-muted">
-        Introduce tu email (opcional) para mostrar un avatar único. Esto ayuda a diferenciarte de otros usuarios con el mismo nombre. Tu email nunca será público.
+      <input type="email" class="form-control" id="comment-email" name="email" maxlength="100" aria-describedby="email-help" />
+      <small id="email-help" class="form-text text-muted">
+        Email (opcional, no se hará público) para mostrar un avatar para diferenciarte de otros usuarios con el mismo nombre.
       </small>
     </div>
 
     <div class="form-group">
       <label for="comment-message">Mensaje <span class="text-danger">*</span> <small class="text-muted">(<span id="msg-remaining">4000</span>/4000)</small></label>
-      <textarea class="form-control" id="comment-message" name="message" rows="5" required maxlength="4000"></textarea>
+      <textarea class="form-control" id="comment-message" name="message" rows="5" required maxlength="4000" aria-describedby="msg-remaining"></textarea>
       <div class="invalid-feedback">El mensaje no puede estar vacío.</div>
     </div>
 
@@ -41,7 +41,7 @@
       </button>
     </div>
   </form>
-  <div id="comment-form-alert" class="alert mt-3 d-none" role="alert" aria-live="polite"></div>
+  <div id="comment-form-alert" class="alert mt-3 d-none" role="alert" aria-live="polite" tabindex="-1"></div>
 </div>
 
 <script>
