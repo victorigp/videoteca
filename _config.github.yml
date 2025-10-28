@@ -1,0 +1,11 @@
+# Overrides for GitHub Pages deployment
+# Use together with _config.yml via JEKYLL_CONFIG="_config.yml,_config.github.yml"
+
+# Public site URL on GitHub Pages
+url: "https://victorigp.github.io"
+
+# Subpath for project pages
+baseurl: "/videoteca"
+
+# Paths that must include baseurl in GH Pages (theme applies relative_url usually)
+avatar: /assets/img/avatar.png

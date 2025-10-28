@@ -21,9 +21,8 @@ tagline: Pelis y series # it will display as the sub-title
 description: >- # used by seo meta and the atom feed
   La videoteca, pelis y series
 
-# Fill in the protocol & hostname for your site.
-# e.g. 'https://username.github.io', note that it does not end with a '/'.
-url: "https://victorigp.github.io"
+# Public site URL for Vercel (default)
+url: "https://videoteca-wine.vercel.app"
 
 github:
   username: victorigp # change to your github username
@@ -76,7 +75,6 @@ theme_mode: # [light | dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-# Usar ruta raíz; el tema aplica `relative_url`, por lo que funcionará en GH Pages (añadirá baseurl) y en Vercel
 avatar: /assets/img/avatar.png
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
@@ -121,11 +119,6 @@ pwa:
   enabled: true # the option for PWA feature (installable)
   cache:
     enabled: true # the option for PWA offline cache
-    # Paths defined here will be excluded from the PWA cache.
-    # Usually its value is the `baseurl` of another website that
-    # shares the same domain name as the current website.
-    deny_paths:
-      # - "/example"  # URLs match `<SITE_URL>/example/*` will not be cached by the PWA
 
 pagination:
   enabled: true
@@ -136,8 +129,8 @@ pagination:
   collections:
     - tabs
 
-# The base URL of your site (GitHub Pages)
-baseurl: "/videoteca"
+# Root deploy by default (Vercel)
+baseurl: ""
 
 # ------------ The following options are not recommended to be modified ------------------
 
