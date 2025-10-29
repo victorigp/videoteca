@@ -72,7 +72,6 @@
     }
 
     form.addEventListener("submit", function (event) {
-      console.log('[comment-form] submit event');
       event.preventDefault();
       event.stopPropagation();
 
@@ -80,14 +79,8 @@
       var nameRaw = nameInput && nameInput.value ? nameInput.value : '';
       var msgRaw = msgInput && msgInput.value ? msgInput.value : '';
 
-      // TRACE: show raw values and length
-      console.log('[comment-form] nameRaw:', JSON.stringify(nameRaw), 'len:', nameRaw.length);
-      console.log('[comment-form] msgRaw:', JSON.stringify(msgRaw), 'len:', msgRaw.length);
-
       var nameOk = hasNonWhitespace(nameRaw);
       var msgOk = hasNonWhitespace(msgRaw);
-
-      console.log('[comment-form] nameOk:', nameOk, 'msgOk:', msgOk);
 
       // Use setCustomValidity so browser :valid/:invalid reflects our whitespace check
       if (nameInput) {
@@ -145,10 +138,14 @@
         });
       })
       .then(function(res){
+        console.log('[CommentForm] Response received:', res); // TRACE: Log full response
         var status = res.status, body = res.body || {};
         if (status === 201 && body.ok) {
+          console.log('[CommentForm] Status is 201 and OK. Starting optimistic append.'); // TRACE: Status OK
           try {
             var list = document.querySelector('.comment-list');
+            console.log('[CommentForm] Comment list container:', list); // TRACE: Log the container element
+
             if (list) {
               var div = document.createElement('div');
               div.className = 'comment';
@@ -172,15 +169,21 @@
                 '  </div>\n' +
                 '  <div class="comment-body">' + safeMsg + '</div>\n' +
                 '</div>';
+              
+              console.log('[CommentForm] Appending new comment element:', div); // TRACE: Log the new element
               list.appendChild(div);
+              console.log('[CommentForm] Append successful.'); // TRACE: Confirm append
             }
-          } catch(e) {}
+          } catch(e) {
+            console.error('[CommentForm] Error during optimistic append:', e); // TRACE: Log any error
+          }
 
           form.reset();
           if (remaining) remaining.textContent = '4000';
           form.classList.remove('was-validated');
           showAlert('¡Gracias por tu comentario! Puede tardar unos segundos en aparecer para todos.', 'alert-success');
         } else {
+          console.log('[CommentForm] Status not 201 or not OK. Message:', body.message); // TRACE: Log failure reason
           showAlert(body && body.message ? body.message : 'No se pudo enviar el comentario.', 'alert-danger');
         }
       })
@@ -204,8 +207,6 @@
             // clear custom validity so browser :valid updates
             try { input.setCustomValidity(''); } catch(e){}
           }
-          // TRACE current value
-          console.log('[comment-form] input', input.id, 'value:', JSON.stringify(input.value), 'ok:', ok);
         }
       });
     });
