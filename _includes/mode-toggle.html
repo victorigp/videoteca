@@ -9,12 +9,26 @@
     static get ID() { return 'mode-toggle'; }
 
     constructor() {
+      // 1) If the user has a stored preference, use it
       if (this.hasMode) {
         this.applyMode(this.mode);
-      } else {
+        return;
+      }
+
+      // 2) If the HTML already has a data-mode attribute (from theme_mode in _config.yml), respect it
+      try {
+        var htmlAttr = document.documentElement.getAttribute(ModeToggle.MODE_ATTR);
+        if (htmlAttr === ModeToggle.DARK_MODE || htmlAttr === ModeToggle.LIGHT_MODE) {
+          this.applyMode(htmlAttr);
+        } else {
+          // 3) Fallback to system preference
+          this.applyMode(this.isSysDarkPrefer ? ModeToggle.DARK_MODE : ModeToggle.LIGHT_MODE);
+        }
+      } catch (e) {
         this.applyMode(this.isSysDarkPrefer ? ModeToggle.DARK_MODE : ModeToggle.LIGHT_MODE);
       }
 
+      // Listen to system preference changes (only used when user has not set a preference)
       this.sysDarkPrefers.addEventListener('change', () => {
         if (!this.hasMode) {
           this.applyMode(this.isSysDarkPrefer ? ModeToggle.DARK_MODE : ModeToggle.LIGHT_MODE);
