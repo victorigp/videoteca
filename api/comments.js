@@ -71,7 +71,7 @@ module.exports = async (req, res) => {
   }
 
   if (req.method !== "POST") {
-    return res.status(405).json({ ok: false, code: "method_not_allowed", message: "Method Not Allowed" });
+    return res.status(405).json({ ok: false, code: "method_not_allowed", message: "Método no permitido" });
   }
 
   try {
@@ -80,18 +80,18 @@ module.exports = async (req, res) => {
 
     // Basic origin/referrer protection
     if (allowedOrigins.length && (!origin || !allowedOrigins.includes(origin))) {
-      return res.status(403).json({ ok: false, code: "forbidden_origin", message: "Forbidden origin" });
+      return res.status(403).json({ ok: false, code: "forbidden_origin", message: "Origen proohibido" });
     }
 
     // Honeypots and antibot time-trap
     if (honeypot || (website && website.trim().length > 0)) {
-      return res.status(400).json({ ok: false, code: "bot_detected", message: "Spam detected" });
+      return res.status(400).json({ ok: false, code: "bot_detected", message: "Spam detectado" });
     }
     const minDelayMs = 3000;
     const submittedAt = Number(ts);
     if (!Number.isNaN(submittedAt)) {
       if (Date.now() - submittedAt < minDelayMs) {
-        return res.status(400).json({ ok: false, code: "too_fast", message: "Form submitted too quickly" });
+        return res.status(400).json({ ok: false, code: "too_fast", message: "Formulario enviado demasiado rápido" });
       }
     }
 
@@ -103,21 +103,21 @@ module.exports = async (req, res) => {
     email = typeof email === "string" ? email.trim() : "";
 
     if (name === null || message === null || slug === null) {
-      return res.status(400).json({ ok: false, code: "invalid_chars", message: "Invalid characters in input" });
+      return res.status(400).json({ ok: false, code: "invalid_chars", message: "Caracteres inválidos" });
     }
 
     // Length checks
     if (!name || !message || !slug || !repo) {
-      return res.status(400).json({ ok: false, code: "missing_fields", message: "Missing required fields" });
+      return res.status(400).json({ ok: false, code: "missing_fields", message: "Campos requeridos faltantes" });
     }
     if (name.length > 40) {
-      return res.status(400).json({ ok: false, code: "name_too_long", message: "Name too long" });
+      return res.status(400).json({ ok: false, code: "name_too_long", message: "Nombre demasiado largo" });
     }
     if (message.length > 4000) {
-      return res.status(400).json({ ok: false, code: "message_too_long", message: "Message too long" });
+      return res.status(400).json({ ok: false, code: "message_too_long", message: "Mensaje demasiado largo" });
     }
     if (email && email.length > 100) {
-      return res.status(400).json({ ok: false, code: "email_too_long", message: "Email too long" });
+      return res.status(400).json({ ok: false, code: "email_too_long", message: "Email demasiado largo" });
     }
 
     // Akismet Spam Verification (enhanced)
@@ -144,7 +144,7 @@ module.exports = async (req, res) => {
             blog_charset: "UTF-8",
           });
           if (isSpam) {
-            return res.status(400).json({ ok: false, code: "akismet_spam", message: "Spam detected by Akismet" });
+            return res.status(400).json({ ok: false, code: "akismet_spam", message: "Spam detectado por Akismet" });
           }
         }
       } catch (e) {
@@ -157,7 +157,7 @@ module.exports = async (req, res) => {
     const githubToken = process.env.GITHUB_TOKEN;
     const [owner, repoName] = String(repo).split("/");
     if (!githubToken || !owner || !repoName) {
-      return res.status(500).json({ ok: false, code: "server_config", message: "Server configuration error" });
+      return res.status(500).json({ ok: false, code: "server_config", message: "Error en la configuración del servidor" });
     }
 
     const DEFAULT_BRANCH = process.env.DEFAULT_BRANCH || "main";
