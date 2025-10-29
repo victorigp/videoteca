@@ -2,6 +2,10 @@ const { Octokit } = require("@octokit/rest");
 const { AkismetClient } = require("akismet-api");
 const md5 = require("md5");
 const yaml = require("js-yaml");
+const { Resend } = require("resend");
+
+// Inicializar el cliente de Resend con la API Key
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 // Helper function to format the date
 const toIso8601 = (date) => {
@@ -191,6 +195,23 @@ module.exports = async (req, res) => {
       content: Buffer.from(commentContent).toString("base64"),
       branch: DEFAULT_BRANCH,
     });
+
+    // Enviar correo con Resend
+    try {
+      await resend.emails.send({
+        from: "Resend <onboarding@resend.dev>", 
+        to: "victorigp@gmail.com",
+        subject: `Videoteca: Comentario de ${name}`,
+        html: `<p><strong>Nombre:</strong> ${name}</p>
+               <p><strong>Email:</strong> ${email || ""}</p>
+               <p><strong>Mensaje:</strong></p>
+               <p>${message.replace(/\n/g, '<br>')}</p>`,
+      });
+      console.log("Email enviado exitosamente con Resend");
+    } catch (emailError) {
+      console.error("Error al enviar email con Resend:", emailError);
+      // No fallar la respuesta si el email falla
+    }
 
     return res.status(201).json({ ok: true, message: "Comment submitted successfully", id, date: toIso8601(date), emailHash, name, slug });
   } catch (error) {
