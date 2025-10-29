@@ -2,27 +2,16 @@
 
 <script type="text/javascript">
   class ModeToggle {
-    static get MODE_KEY() {
-      return 'mode'; // Clave para almacenar la preferencia en localStorage
-    }
-    static get MODE_ATTR() {
-      return 'data-mode';
-    }
-    static get DARK_MODE() {
-      return 'dark';
-    }
-    static get LIGHT_MODE() {
-      return 'light';
-    }
-    static get ID() {
-      return 'mode-toggle';
-    }
+    static get MODE_KEY() { return 'mode'; }
+    static get MODE_ATTR() { return 'data-mode'; }
+    static get DARK_MODE() { return 'dark'; }
+    static get LIGHT_MODE() { return 'light'; }
+    static get ID() { return 'mode-toggle'; }
 
     constructor() {
       if (this.hasMode) {
         this.applyMode(this.mode);
       } else {
-        // Si no hay preferencia almacenada, usa el modo predeterminado del sistema
         this.applyMode(this.isSysDarkPrefer ? ModeToggle.DARK_MODE : ModeToggle.LIGHT_MODE);
       }
 
@@ -33,33 +22,24 @@
       });
     }
 
-    get sysDarkPrefers() {
-      return window.matchMedia('(prefers-color-scheme: dark)');
-    }
-
-    get isSysDarkPrefer() {
-      return this.sysDarkPrefers.matches;
-    }
-
-    get mode() {
-      return localStorage.getItem(ModeToggle.MODE_KEY); // Leer preferencia desde localStorage
-    }
-
-    get hasMode() {
-      return this.mode != null;
-    }
+    get sysDarkPrefers() { return window.matchMedia('(prefers-color-scheme: dark)'); }
+    get isSysDarkPrefer() { try { return this.sysDarkPrefers.matches; } catch (e) { return false; } }
+    get mode() { try { return localStorage.getItem(ModeToggle.MODE_KEY); } catch (e) { return null; } }
+    get hasMode() { return this.mode != null; }
 
     applyMode(mode) {
-      document.documentElement.setAttribute(ModeToggle.MODE_ATTR, mode);
+      if (mode === ModeToggle.DARK_MODE || mode === ModeToggle.LIGHT_MODE) {
+        document.documentElement.setAttribute(ModeToggle.MODE_ATTR, mode);
+      }
     }
 
     setMode(mode) {
-      localStorage.setItem(ModeToggle.MODE_KEY, mode); // Guardar preferencia en localStorage
+      try { localStorage.setItem(ModeToggle.MODE_KEY, mode); } catch (e) {}
       this.applyMode(mode);
     }
 
     clearMode() {
-      localStorage.removeItem(ModeToggle.MODE_KEY); // Eliminar preferencia del usuario
+      try { localStorage.removeItem(ModeToggle.MODE_KEY); } catch (e) {}
       this.applyMode(this.isSysDarkPrefer ? ModeToggle.DARK_MODE : ModeToggle.LIGHT_MODE);
     }
 
@@ -74,7 +54,6 @@
 
   const modeToggle = new ModeToggle();
 
-  // Binding robusto del botón (DOM y navegaciones PJAX)
   function bindToggleButton() {
     try {
       var btn = document.getElementById(ModeToggle.ID);
@@ -92,17 +71,12 @@
     bindToggleButton();
   }
 
-  // Asegurar que el modo y el binding se apliquen tras navegación PJAX
   document.addEventListener('pjax:success', () => {
-    if (modeToggle.hasMode) {
-      modeToggle.applyMode(modeToggle.mode);
-    }
+    if (modeToggle.hasMode) modeToggle.applyMode(modeToggle.mode);
     bindToggleButton();
   });
   document.addEventListener('pjax:complete', () => {
-    if (modeToggle.hasMode) {
-      modeToggle.applyMode(modeToggle.mode);
-    }
+    if (modeToggle.hasMode) modeToggle.applyMode(modeToggle.mode);
     bindToggleButton();
   });
 </script>

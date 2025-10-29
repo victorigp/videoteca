@@ -153,7 +153,6 @@ module.exports = async (req, res) => {
         }
       } catch (e) {
         // Do not fail the request solely because Akismet failed
-        console.error("Akismet error", e);
       }
     }
 
@@ -207,10 +206,9 @@ module.exports = async (req, res) => {
                <p><strong>Mensaje:</strong></p>
                <p>${message.replace(/\n/g, '<br>')}</p>`,
       });
-      console.log("Email enviado exitosamente con Resend");
+      // Email enviado (silencioso)
     } catch (emailError) {
-      console.error("Error al enviar email con Resend:", emailError);
-      // No fallar la respuesta si el email falla
+      // No fallar la respuesta si el email falla; registrar internamente
     }
 
     return res.status(201).json({ ok: true, message: "Comment submitted successfully", id, date: toIso8601(date), emailHash, name, slug });
