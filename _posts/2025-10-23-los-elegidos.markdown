@@ -4,7 +4,7 @@ date: 2025-10-23 12:01:16 +0200
 categories: [Peliculas, Acción] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
 tags: ["los elegidos", acción, mafia, "troy duffy"]
 thumbnail: /assets/img/posts/los_elegidos_1.jpg
-# sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
+# sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada 
 ---
 
 <div class="row mb-4">
