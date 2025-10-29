@@ -141,12 +141,15 @@
         console.log('[CommentForm] Response received:', res); // TRACE: Log full response
         var status = res.status, body = res.body || {};
         if (status === 201 && body.ok) {
-          console.log('[CommentForm] Status is 201 and OK. Starting optimistic append.'); // TRACE: Status OK
           try {
             var list = document.querySelector('.comment-list');
-            console.log('[CommentForm] Comment list container:', list); // TRACE: Log the container element
-
             if (list) {
+              // Remove "no comments" message if it exists
+              var noComments = list.querySelector('.no-comments');
+              if (noComments) {
+                noComments.remove();
+              }
+
               var div = document.createElement('div');
               div.className = 'comment';
               div.id = 'comment-' + body.id;
@@ -172,11 +175,14 @@
               
               console.log('[CommentForm] Appending new comment element:', div); // TRACE: Log the new element
               list.appendChild(div);
-              console.log('[CommentForm] Append successful.'); // TRACE: Confirm append
+
+              // Update comment count
+              var countSpan = document.getElementById('comment-count');
+              if (countSpan) {
+                countSpan.textContent = parseInt(countSpan.textContent, 10) + 1;
+              }
             }
-          } catch(e) {
-            console.error('[CommentForm] Error during optimistic append:', e); // TRACE: Log any error
-          }
+          } catch(e) {}
 
           form.reset();
           if (remaining) remaining.textContent = '4000';

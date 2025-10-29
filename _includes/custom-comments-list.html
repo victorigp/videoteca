@@ -11,34 +11,34 @@
 {% endif %}
 
 <div id="comments" class="px-lg-2">
-  <h3 class="font-weight-bold">{{ comments.size }} Comentarios</h3>
+  <h3 class="font-weight-bold"><span id="comment-count">{{ comments.size }}</span> Comentarios</h3>
 
-  {% if comments.size > 0 %}
   <div class="comment-list">
-    {% for comment in comments %}
-    <div class="comment" id="comment-{{ comment._id }}">
-      <div class="comment-avatar">
-        {% if comment.email %}
-        <img src="https://www.gravatar.com/avatar/{{ comment.email }}?s=80&d=identicon" alt="{{ comment.name }} avatar">
-        {% else %}
-        <img src="https://www.gravatar.com/avatar/?s=80&d=identicon" alt="Default avatar">
-        {% endif %}
-      </div>
-      <div class="comment-content">
-        <div class="comment-header">
-          <span class="comment-author font-weight-bold">{{ comment.name }}</span>
-          <span class="comment-date text-muted">
-            {{ comment.date | date: "%-d de %B de %Y a las %H:%M" }}
-          </span>
+    {% if comments.size > 0 %}
+      {% for comment in comments %}
+      <div class="comment" id="comment-{{ comment._id }}">
+        <div class="comment-avatar">
+          {% if comment.email %}
+          <img src="https://www.gravatar.com/avatar/{{ comment.email }}?s=80&d=identicon" alt="{{ comment.name }} avatar">
+          {% else %}
+          <img src="https://www.gravatar.com/avatar/?s=80&d=identicon" alt="Default avatar">
+          {% endif %}
         </div>
-        <div class="comment-body">
-          {{ comment.message | escape | newline_to_br }}
+        <div class="comment-content">
+          <div class="comment-header">
+            <span class="comment-author font-weight-bold">{{ comment.name }}</span>
+            <span class="comment-date text-muted">
+              {{ comment.date | date: "%-d de %B de %Y a las %H:%M" }}
+            </span>
+          </div>
+          <div class="comment-body">
+            {{ comment.message | escape | newline_to_br }}
+          </div>
         </div>
       </div>
-    </div>
-    {% endfor %}
+      {% endfor %}
+    {% else %}
+      <p class="no-comments">Todavía no hay comentarios. ¡Sé el primero en comentar!</p>
+    {% endif %}
   </div>
-  {% else %}
-  <p>Todavía no hay comentarios. ¡Sé el primero en comentar!</p>
-  {% endif %}
 </div>
