@@ -4,6 +4,9 @@
 
   var silentFlag = false;
 
+  // Check if notification has already been shown in this session
+  var notificationShown = sessionStorage.getItem('notificationShown');
+
   function fetchLastCommitMessage() {
     var url = '/api/version';
     url += (url.indexOf('?') === -1 ? '?' : '&') + '_=' + Date.now();
@@ -25,21 +28,35 @@
   }
 
   function hideToastIfNeeded() {
-    if (!silentFlag) return;
-    try {
-      if (window.bootstrap && window.bootstrap.Toast) {
-        var inst = window.bootstrap.Toast.getOrCreateInstance(toastEl, { autohide: false });
-        inst.hide();
-      }
-      toastEl.classList.add('d-none');
-    } catch (e) { }
+    if (!silentFlag && notificationShown) {
+      // Hide if not silent and already shown
+      try {
+        if (window.bootstrap && window.bootstrap.Toast) {
+          var inst = window.bootstrap.Toast.getOrCreateInstance(toastEl, { autohide: false });
+          inst.hide();
+        }
+        toastEl.classList.add('d-none');
+      } catch (e) { }
+    } else if (silentFlag) {
+      // Hide if silent
+      try {
+        if (window.bootstrap && window.bootstrap.Toast) {
+          var inst = window.bootstrap.Toast.getOrCreateInstance(toastEl, { autohide: false });
+          inst.hide();
+        }
+        toastEl.classList.add('d-none');
+      } catch (e) { }
+    }
   }
 
   document.addEventListener('show.bs.toast', function (ev) {
     if (ev.target === toastEl) hideToastIfNeeded();
   });
   document.addEventListener('shown.bs.toast', function (ev) {
-    if (ev.target === toastEl) hideToastIfNeeded();
+    if (ev.target === toastEl && !silentFlag) {
+      // Mark as shown for non-silent updates
+      sessionStorage.setItem('notificationShown', 'true');
+    }
   });
 
   if ('serviceWorker' in navigator) {
