@@ -9,6 +9,8 @@
     static get ID() { return 'mode-toggle'; }
 
     constructor() {
+      this._lockUntil = 0; // timestamp to avoid rapid external overrides after user action
+
       // 1) If the user has a stored preference, use it
       if (this.hasMode) {
         this.applyMode(this.mode);
@@ -49,7 +51,26 @@
 
     setMode(mode) {
       try { localStorage.setItem(ModeToggle.MODE_KEY, mode); } catch (e) {}
+      // set a short lock so external scripts can't immediately override the user's action
+      try { this._lockUntil = Date.now() + 150; } catch (e) {}
+
+      // If we have an observer running, disconnect it briefly to avoid reacting to external rapid changes
+      try {
+        if (window.__modeObserver) {
+          window.__modeObserver.disconnect();
+        }
+      } catch (e) {}
+
       this.applyMode(mode);
+
+      // Reconnect the observer shortly after to resume enforcement
+      try {
+        if (window.__modeObserver) {
+          setTimeout(function(){
+            try { window.__modeObserver.observe(document.documentElement, { attributes: true }); } catch(e){}
+          }, 150);
+        }
+      } catch (e) {}
     }
 
     clearMode() {
@@ -93,4 +114,33 @@
     if (modeToggle.hasMode) modeToggle.applyMode(modeToggle.mode);
     bindToggleButton();
   });
+
+  // Observe changes to <html data-mode> and enforce stored preference if present
+  (function(){
+    try {
+      var observer = new MutationObserver(function(muts){
+        try { var stored = modeToggle.mode; } catch(e){ stored = null; }
+        if (!stored) return;
+        muts.forEach(function(m){
+          if (m.type === 'attributes' && m.attributeName === ModeToggle.MODE_ATTR) {
+            var current = document.documentElement.getAttribute(ModeToggle.MODE_ATTR);
+            // If user recently set a mode, prefer it and ignore rapid external overrides
+            var now = Date.now();
+            if (now < (modeToggle._lockUntil || 0)) {
+              // re-apply stored to counter the external change
+              modeToggle.applyMode(stored);
+              return;
+            }
+            if (current !== stored) {
+              // enforce stored preference
+              modeToggle.applyMode(stored);
+            }
+          }
+        });
+      });
+      observer.observe(document.documentElement, { attributes: true });
+      // expose observer so setMode can disconnect/reconnect it briefly
+      try { window.__modeObserver = observer; } catch(e){}
+    } catch(e){}
+  })();
 </script>
