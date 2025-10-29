@@ -21,3 +21,6 @@ package-lock.json
 assets/js/dist
 /.vs
 _LEEME.txt
+
+# Archivos de datos generados por el tema
+_data/version.json

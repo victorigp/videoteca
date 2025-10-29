@@ -3,7 +3,7 @@
 <script type="text/javascript">
   class ModeToggle {
     static get MODE_KEY() {
-      return 'mode';
+      return 'mode'; // Clave para almacenar la preferencia en localStorage
     }
     static get MODE_ATTR() {
       return 'data-mode';
@@ -20,37 +20,18 @@
 
     constructor() {
       if (this.hasMode) {
-        if (this.isDarkMode) {
-          if (!this.isSysDarkPrefer) {
-            this.setDark();
-          }
-        } else {
-          if (this.isSysDarkPrefer) {
-            this.setLight();
-          }
-        }
+        this.applyMode(this.mode);
+      } else {
+        // Si no hay preferencia almacenada, usa el modo predeterminado del sistema
+        this.applyMode(this.isSysDarkPrefer ? ModeToggle.DARK_MODE : ModeToggle.LIGHT_MODE);
       }
 
-      let self = this;
-             
       this.sysDarkPrefers.addEventListener('change', () => {
-        if (self.hasMode) {
-          if (self.isDarkMode) {
-            if (!self.isSysDarkPrefer) {
-              self.setDark();
-            }
-          } else {
-            if (self.isSysDarkPrefer) {
-              self.setLight();
-            }
-          }
-
-          self.clearMode();
+        if (!this.hasMode) {
+          this.applyMode(this.isSysDarkPrefer ? ModeToggle.DARK_MODE : ModeToggle.LIGHT_MODE);
         }
-
-        self.notify();
       });
-    } 
+    }
 
     get sysDarkPrefers() {
       return window.matchMedia('(prefers-color-scheme: dark)');
@@ -60,111 +41,68 @@
       return this.sysDarkPrefers.matches;
     }
 
-    get isDarkMode() {
-      return this.mode === ModeToggle.DARK_MODE;
-    }
-
-    get isLightMode() {
-      return this.mode === ModeToggle.LIGHT_MODE;
+    get mode() {
+      return localStorage.getItem(ModeToggle.MODE_KEY); // Leer preferencia desde localStorage
     }
 
     get hasMode() {
       return this.mode != null;
     }
 
-    get mode() {
-      return sessionStorage.getItem(ModeToggle.MODE_KEY);
+    applyMode(mode) {
+      document.documentElement.setAttribute(ModeToggle.MODE_ATTR, mode);
     }
 
-    get modeStatus() {
-      if (this.isDarkMode || (!this.hasMode && this.isSysDarkPrefer)) {
-        this.setCarouselColorControls("#fafafa");
-        return ModeToggle.DARK_MODE;
-      } else {
-        this.setCarouselColorControls("#000000");
-        return ModeToggle.LIGHT_MODE;
-      }
-    }
-
-    setCarouselColorControls(color) {
-      var carouselControls = document.querySelectorAll('.carousel__control');
-      var carouselIndicators = document.querySelectorAll('.carousel__indicator');
-      var carouselIndicatorContainers = document.querySelectorAll('.carousel__indicators');
-      var controlBackgrounds = document.querySelectorAll('.control-background');
-
-      carouselControls.forEach(function (control) {
-        control.style.setProperty('border-color', color, 'important');
-      });
-      controlBackgrounds.forEach(function (bg) {
-        if (color === '#000000') {
-          bg.style.setProperty('background-color', 'rgba(255, 255, 255, 0.7)', 'important');
-        } else {
-          bg.style.setProperty('background-color', 'rgba(0, 0, 0, 0.4)', 'important');
-        }
-      });
-      carouselIndicators.forEach(function (control) {
-        control.style.setProperty('background-color', color, 'important');
-      });
-      carouselIndicatorContainers.forEach(function (container) {
-        if (color === '#000000') {
-          container.style.setProperty('background-color', 'rgba(255, 255, 255, 0.7)', 'important');
-        } else { 
-          container.style.setProperty('background-color', 'rgba(0, 0, 0, 0.4)', 'important');
-        }
-      });
-    }
-
-    setDark() {
-      document.documentElement.setAttribute(ModeToggle.MODE_ATTR, ModeToggle.DARK_MODE);
-      sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE);
-    }
-
-    setLight() {
-      document.documentElement.setAttribute(ModeToggle.MODE_ATTR, ModeToggle.LIGHT_MODE);
-      sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE);
+    setMode(mode) {
+      localStorage.setItem(ModeToggle.MODE_KEY, mode); // Guardar preferencia en localStorage
+      this.applyMode(mode);
     }
 
     clearMode() {
-      document.documentElement.removeAttribute(ModeToggle.MODE_ATTR);
-      sessionStorage.removeItem(ModeToggle.MODE_KEY);
+      localStorage.removeItem(ModeToggle.MODE_KEY); // Eliminar preferencia del usuario
+      this.applyMode(this.isSysDarkPrefer ? ModeToggle.DARK_MODE : ModeToggle.LIGHT_MODE);
     }
 
-    notify() {
-      window.postMessage(
-        {
-          direction: ModeToggle.ID,
-          message: this.modeStatus
-        },
-        '*'
-      );
-    }
-
-    flipMode() {
-      if (this.hasMode) {
-        if (this.isSysDarkPrefer) {
-          if (this.isLightMode) {
-            this.clearMode();
-          } else {
-            this.setLight();
-          }
-        } else {
-          if (this.isDarkMode) {
-            this.clearMode();
-          } else {
-            this.setDark();
-          }
-        }
+    toggleMode() {
+      if (this.mode === ModeToggle.DARK_MODE) {
+        this.setMode(ModeToggle.LIGHT_MODE);
       } else {
-        if (this.isSysDarkPrefer) {
-          this.setLight();
-        } else {
-          this.setDark();
-        }
+        this.setMode(ModeToggle.DARK_MODE);
       }
-
-      this.notify();
     }
-  } 
+  }
 
   const modeToggle = new ModeToggle();
+
+  // Binding robusto del botón (DOM y navegaciones PJAX)
+  function bindToggleButton() {
+    try {
+      var btn = document.getElementById(ModeToggle.ID);
+      if (!btn) return;
+      if (!btn.dataset.bound) {
+        btn.addEventListener('click', function(){ modeToggle.toggleMode(); });
+        btn.dataset.bound = '1';
+      }
+    } catch(e) {}
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bindToggleButton);
+  } else {
+    bindToggleButton();
+  }
+
+  // Asegurar que el modo y el binding se apliquen tras navegación PJAX
+  document.addEventListener('pjax:success', () => {
+    if (modeToggle.hasMode) {
+      modeToggle.applyMode(modeToggle.mode);
+    }
+    bindToggleButton();
+  });
+  document.addEventListener('pjax:complete', () => {
+    if (modeToggle.hasMode) {
+      modeToggle.applyMode(modeToggle.mode);
+    }
+    bindToggleButton();
+  });
 </script>
