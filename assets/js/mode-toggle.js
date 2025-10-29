@@ -78,7 +78,9 @@
     }
 
     toggleMode() {
-      if (this.mode === ModeToggle.DARK_MODE) {
+      // Determine current effective mode: prefer stored value, else HTML attribute, else system
+      var current = this.mode || document.documentElement.getAttribute(ModeToggle.MODE_ATTR) || (this.isSysDarkPrefer ? ModeToggle.DARK_MODE : ModeToggle.LIGHT_MODE);
+      if (current === ModeToggle.DARK_MODE) {
         this.setMode(ModeToggle.LIGHT_MODE);
       } else {
         this.setMode(ModeToggle.DARK_MODE);
