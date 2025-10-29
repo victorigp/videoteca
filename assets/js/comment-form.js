@@ -138,7 +138,6 @@
         });
       })
       .then(function(res){
-        console.log('[CommentForm] Response received:', res); // TRACE: Log full response
         var status = res.status, body = res.body || {};
         if (status === 201 && body.ok) {
           try {
@@ -182,12 +181,11 @@
                 '<div class="comment-content">\n' +
                 '  <div class="comment-header">\n' +
                 '    <span class="comment-author font-weight-bold">' + safeName + '</span>\n' +
-                '    <span class="comment-date text-muted">justo ahora</span>\n' +
+                '    <span class="comment-date text-muted">publicándose...</span>\n' +
                 '  </div>\n' +
                 '  <div class="comment-body">' + safeMsg + '</div>\n' +
                 '</div>';
-              
-              console.log('[CommentForm] Appending new comment element:', div); // TRACE: Log the new element
+
               list.appendChild(div);
 
               // Update comment count
@@ -203,12 +201,10 @@
           form.classList.remove('was-validated');
           showAlert('¡Gracias por tu comentario! Puede tardar unos segundos en aparecer para todos.', 'alert-success');
         } else {
-          console.log('[CommentForm] Status not 201 or not OK. Message:', body.message); // TRACE: Log failure reason
           showAlert(body && body.message ? body.message : 'No se pudo enviar el comentario.', 'alert-danger');
         }
       })
       .catch(function(err){
-        console.error('Error submitting comment:', err);
         showAlert('Ha ocurrido un error al enviar tu comentario. Por favor, inténtalo de nuevo.', 'alert-danger');
       })
       .finally(function(){
