@@ -142,6 +142,20 @@
         var status = res.status, body = res.body || {};
         if (status === 201 && body.ok) {
           try {
+            // Store pending comment in localStorage
+            const PENDING_COMMENTS_KEY = 'pending_comments';
+            const allPending = JSON.parse(localStorage.getItem(PENDING_COMMENTS_KEY) || '{}');
+            if (!allPending[body.slug]) {
+              allPending[body.slug] = [];
+            }
+            allPending[body.slug].push({
+              id: body.id,
+              name: data.name,
+              emailHash: body.emailHash,
+              message: data.message
+            });
+            localStorage.setItem(PENDING_COMMENTS_KEY, JSON.stringify(allPending));
+
             var list = document.querySelector('.comment-list');
             if (list) {
               // Remove "no comments" message if it exists
