@@ -1,0 +1,144 @@
+// Mode toggle behavior moved from template include to external file.
+(function(){
+  class ModeToggle {
+    static get MODE_KEY() { return 'mode'; }
+    static get MODE_ATTR() { return 'data-mode'; }
+    static get DARK_MODE() { return 'dark'; }
+    static get LIGHT_MODE() { return 'light'; }
+    static get ID() { return 'mode-toggle'; }
+
+    constructor() {
+      this._lockUntil = 0; // timestamp to avoid rapid external overrides after user action
+
+      // 1) If the user has a stored preference, use it
+      if (this.hasMode) {
+        this.applyMode(this.mode);
+        return;
+      }
+
+      // 2) If the HTML already has a data-mode attribute (from theme_mode in _config.yml), respect it
+      try {
+        var htmlAttr = document.documentElement.getAttribute(ModeToggle.MODE_ATTR);
+        if (htmlAttr === ModeToggle.DARK_MODE || htmlAttr === ModeToggle.LIGHT_MODE) {
+          this.applyMode(htmlAttr);
+        } else {
+          // 3) Fallback to system preference
+          this.applyMode(this.isSysDarkPrefer ? ModeToggle.DARK_MODE : ModeToggle.LIGHT_MODE);
+        }
+      } catch (e) {
+        this.applyMode(this.isSysDarkPrefer ? ModeToggle.DARK_MODE : ModeToggle.LIGHT_MODE);
+      }
+
+      // Listen to system preference changes (only used when user has not set a preference)
+      this.sysDarkPrefers.addEventListener('change', () => {
+        if (!this.hasMode) {
+          this.applyMode(this.isSysDarkPrefer ? ModeToggle.DARK_MODE : ModeToggle.LIGHT_MODE);
+        }
+      });
+    }
+
+    get sysDarkPrefers() { return window.matchMedia('(prefers-color-scheme: dark)'); }
+    get isSysDarkPrefer() { try { return this.sysDarkPrefers.matches; } catch (e) { return false; } }
+    get mode() { try { return localStorage.getItem(ModeToggle.MODE_KEY); } catch (e) { return null; } }
+    get hasMode() { return this.mode != null; }
+
+    applyMode(mode) {
+      if (mode === ModeToggle.DARK_MODE || mode === ModeToggle.LIGHT_MODE) {
+        document.documentElement.setAttribute(ModeToggle.MODE_ATTR, mode);
+      }
+    }
+
+    setMode(mode) {
+      try { localStorage.setItem(ModeToggle.MODE_KEY, mode); } catch (e) {}
+      // set a short lock so external scripts can't immediately override the user's action
+      try { this._lockUntil = Date.now() + 150; } catch (e) {}
+
+      // If we have an observer running, disconnect it briefly to avoid reacting to external rapid changes
+      try {
+        if (window.__modeObserver) {
+          window.__modeObserver.disconnect();
+        }
+      } catch (e) {}
+
+      this.applyMode(mode);
+
+      // Reconnect the observer shortly after to resume enforcement
+      try {
+        if (window.__modeObserver) {
+          setTimeout(function(){
+            try { window.__modeObserver.observe(document.documentElement, { attributes: true }); } catch(e){}
+          }, 150);
+        }
+      } catch (e) {}
+    }
+
+    clearMode() {
+      try { localStorage.removeItem(ModeToggle.MODE_KEY); } catch (e) {}
+      this.applyMode(this.isSysDarkPrefer ? ModeToggle.DARK_MODE : ModeToggle.LIGHT_MODE);
+    }
+
+    toggleMode() {
+      if (this.mode === ModeToggle.DARK_MODE) {
+        this.setMode(ModeToggle.LIGHT_MODE);
+      } else {
+        this.setMode(ModeToggle.DARK_MODE);
+      }
+    }
+  }
+
+  var modeToggle = new ModeToggle();
+
+  function bindToggleButton() {
+    try {
+      var btn = document.getElementById(ModeToggle.ID);
+      if (!btn) return;
+      if (!btn.dataset.bound) {
+        btn.addEventListener('click', function(){ modeToggle.toggleMode(); });
+        btn.dataset.bound = '1';
+      }
+    } catch(e) {}
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bindToggleButton);
+  } else {
+    bindToggleButton();
+  }
+
+  document.addEventListener('pjax:success', () => {
+    if (modeToggle.hasMode) modeToggle.applyMode(modeToggle.mode);
+    bindToggleButton();
+  });
+  document.addEventListener('pjax:complete', () => {
+    if (modeToggle.hasMode) modeToggle.applyMode(modeToggle.mode);
+    bindToggleButton();
+  });
+
+  // Observe changes to <html data-mode> and enforce stored preference if present
+  (function(){
+    try {
+      var observer = new MutationObserver(function(muts){
+        try { var stored = modeToggle.mode; } catch(e){ stored = null; }
+        if (!stored) return;
+        muts.forEach(function(m){
+          if (m.type === 'attributes' && m.attributeName === ModeToggle.MODE_ATTR) {
+            var current = document.documentElement.getAttribute(ModeToggle.MODE_ATTR);
+            // If user recently set a mode, prefer it and ignore rapid external overrides
+            var now = Date.now();
+            if (now < (modeToggle._lockUntil || 0)) {
+              // re-apply stored to counter the external change
+              modeToggle.applyMode(stored);
+              return;
+            }
+            if (current !== stored) {
+              // enforce stored preference
+              modeToggle.applyMode(stored);
+            }
+          }
+        });
+      });
+      observer.observe(document.documentElement, { attributes: true });
+      try { window.__modeObserver = observer; } catch(e){}
+    } catch(e){}
+  })();
+})();
