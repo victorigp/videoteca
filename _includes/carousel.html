@@ -1,10 +1,12 @@
 {% assign letterstring = "a,b,c,d,e,f,g,h,i,j,k,l,m,n" %}
 {% assign letters = letterstring | split: ',' %}
 {% assign number = include.number | minus: 1 %}
-<div class="carousel__holder">
+{% assign items_count = page.carousels[number].images.size %}
+<div class="carousel__holder" data-items-count="{{ items_count }}">
   {% for item in page.carousels[number].images %}
   <input class="carousel__activator" type="radio" name="carousel{{ number }}" id="{{ number }}{{ letters[forloop.index0] }}" {% if forloop.first %}checked="checked" {% endif %} />
   {% endfor %}
+  {% if items_count > 1 %}
   <div class="carousel__dynamic-controls">
     {% for item in page.carousels[number].images %}
     {% if forloop.index == forloop.length %}
@@ -35,6 +37,7 @@
     </div>
     {% endfor %}
   </div>
+  {% endif %}
   <div id="carousel{{ number }}" class="carousel">
     <div class="carousel__track">
       <ul>
@@ -43,12 +46,28 @@
           {% if item.image %}
           <div class="center_click" onclick="openModal('{{ item.image }}');"></div>
           {% elsif item.video %}
+          {% assign video_parts = item.video | split: '?' %}
+          {% assign video_id = video_parts[0] %}
+          {% assign video_params = '' %}
+          
+          {% if video_parts.size > 1 %}
+            {% assign params = video_parts[1] | split: '&' %}
+            {% for param in params %}
+              {% assign kv = param | split: '=' %}
+              {% if kv[0] == 't' %}
+                {% assign video_params = video_params | append: '&start=' | append: kv[1] %}
+              {% else %}
+                {% assign video_params = video_params | append: '&' | append: param %}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+          
           <div class="youtube-container">
             <iframe width="100%" height="100%"
-                    src="https://www.youtube-nocookie.com/embed/{{ item.video }}?rel=0&vq=hd1080"
+                    src="https://www.youtube-nocookie.com/embed/{{ video_id }}?origin={{ site.url | uri_escape }}{{ video_params }}"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-                    allowfullscreen>
+                    referrerpolicy="no-referrer-when-downgrade">
             </iframe>
           </div>
           {% endif %}
@@ -56,11 +75,13 @@
         {% endfor %}
       </ul>
     </div>
+    {% if items_count > 1 %}
     <div class="carousel__indicators">
       {% for item in page.carousels[number].images %}
       <label class="carousel__indicator" for="{{ number }}{{ letters[forloop.index0] }}"></label>
       {% endfor %}
     </div>
+    {% endif %}
   </div>
 </div>
 
@@ -367,6 +388,12 @@
   top: 50%;
   transform: translateY(-50%);
 }
+
+/* Ocultar controles cuando solo hay un elemento */
+.carousel__holder[data-items-count="1"] .carousel__dynamic-controls,
+.carousel__holder[data-items-count="1"] .carousel__indicators {
+  display: none !important;
+}
 </style>
 
 <script>
@@ -397,41 +424,6 @@
         }
   }
 
-  window.addEventListener('DOMContentLoaded', (event) => {
-    var carouselControls = document.querySelectorAll('.carousel__control');
-    var carouselIndicators = document.querySelectorAll('.carousel__indicator');
-    var carouselIndicatorContainers = document.querySelectorAll('.carousel__indicators');
-    var controlBackgrounds = document.querySelectorAll('.control-background');
-
-    carouselControls.forEach(function (control) {
-      if (sessionStorage.getItem(ModeToggle.MODE_KEY) == 'light') {
-        control.style.borderColor = '#000';
-      } else {
-        control.style.borderColor = '#fafafa';
-      }
-    });
-    controlBackgrounds.forEach(function (bg) {
-      if (sessionStorage.getItem(ModeToggle.MODE_KEY) == 'light') {
-        bg.style.backgroundColor = 'rgba(255, 255, 255, 0.7)';
-      } else {
-        bg.style.backgroundColor = 'rgba(0, 0, 0, 0.4)';
-      }
-    });
-    carouselIndicators.forEach(function (control) {
-      if (sessionStorage.getItem(ModeToggle.MODE_KEY) == 'light') {
-        control.style.backgroundColor = '#000';
-      } else {
-        control.style.backgroundColor = '#fafafa';
-      }
-    });
-    carouselIndicatorContainers.forEach(function (container) {
-      if (sessionStorage.getItem(ModeToggle.MODE_KEY) == 'light') {
-        container.style.backgroundColor = 'rgba(255, 255, 255, 0.7)';
-      } else {
-        container.style.backgroundColor = 'rgba(0, 0, 0, 0.4)';
-      }
-    });
-  });
   {% if include.duration %}
   setInterval(function(){
     var j=0;
