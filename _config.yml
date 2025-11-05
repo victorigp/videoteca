@@ -192,6 +192,8 @@ compress_html:
     envs: [development]
 
 exclude:
+  - .vs/
+  - _data/version.json
   - "*.gem"
   - "*.gemspec"
   - docs
