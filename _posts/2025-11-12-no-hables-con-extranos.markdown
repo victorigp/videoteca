@@ -16,6 +16,6 @@ thumbnail: /assets/img/posts/speak_no_evil_1.jpg
 
 Protagonizada por unos actores que me encantan: Mackenzie Davis y Scoot McNairy de [Halt and Catch Fire](/posts/halt-and-catch-fire/) y, por supuesto, James McAvoy, que lo bordó en [Múltiple](https://www.filmaffinity.com/es/film992586.html "Múltiple"){:target="_blank"} haciendo "23 personalidades distintas".
 
-Es la típica peli que va con las luces de emergencia puestas, avisándote que va a haber un giro de guión. Pero si no te imaginas el que es, la ostia te la llevas igual.
+Es la típica peli que va con las luces de emergencia puestas, avisándote que va a haber un giro importante. Pero si no te imaginas el que es, la ostia te la llevas igual.
   </div>
 </div>
