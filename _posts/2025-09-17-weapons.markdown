@@ -12,7 +12,7 @@ thumbnail: /assets/img/posts/weapons_1.jpg
 ![Poster de la película Weapons](/assets/img/posts/weapons_2.jpg){: .img-fluid .rounded }
   </div>
   <div class="col-md-7" markdown="1">
-... Y si no, animaos a ver [Weapons](https://www.filmaffinity.com/es/film809089.html "Weapons"){:target="_blank"} del mismo director de [Barbarian](https://www.filmaffinity.com/es/film880123.html "Barbarian"){:target="_blank"}. Mucho hype le tenía a Weapons, estaba aguantando a que saliera en 4K, y lo que ocurre siempre cuando hay mucha expectación, que esperas más de lo que hay...
+... Y si no, animaos a ver [Weapons](https://www.filmaffinity.com/es/film809089.html "Weapons"){:target="_blank"}, del mismo director de [Barbarian](https://www.filmaffinity.com/es/film880123.html "Barbarian"){:target="_blank"}. Mucho hype le tenía a Weapons, estaba aguantando a que saliera en 4K, y lo que ocurre siempre cuando hay mucha expectación, que esperas más de lo que hay...
 
 Aunque la peli está guay, mezcla comedia con terror (muy light) y está entretenida a pesar de ser 2 horas.
 

@@ -12,7 +12,7 @@ thumbnail: /assets/img/posts/sinners_1.jpg
 ![Poster de la película Sinners](/assets/img/posts/sinners_2.jpg){: .img-fluid .rounded }
   </div>
   <div class="col-md-7" markdown="1">
-... Y si no, animaos a ver [Los pecadores](https://www.filmaffinity.com/es/film699169.html "Los pecadores"){:target="_blank"} ("Sinners", el título original) aunque os aconsejo no leer nada de ella porque desvelan cosas importantes.
+... Y si no, animaos a ver [Los pecadores](https://www.filmaffinity.com/es/film699169.html "Los pecadores"){:target="_blank"} ("Sinners", el título original), aunque os aconsejo no leer nada de ella porque desvelan cosas importantes.
 
 Tremenda peli más entretenida que se acaba de sacar el director de [Creed](https://www.filmaffinity.com/es/film943315.html "Creed"){:target="_blank"}, mezclando géneros y haciendo lo que le da la gana! Ojo, tiene escenas durante los créditos finales y después de ellos. Gran sorpresa esta peli, merece la pena!
   </div>

@@ -12,7 +12,7 @@ sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
 ![Poster de la película Devuélvemela](/assets/img/posts/devuelvemela_2.jpg){: .img-fluid .rounded }
   </div>
   <div class="col-md-7" markdown="1">
-... Y si no, animaos a ver [Devuélvemela](https://www.filmaffinity.com/es/film102649.html "Devuélvemela"){:target="_blank"} una muy buena peli de terror de este año, de los directores de [Háblame](https://www.filmaffinity.com/es/film394613.html "Háblame"){:target="_blank"}, que me gustó y tuvo mucho éxito, pero creo que esta es mejor.
+... Y si no, animaos a ver [Devuélvemela](https://www.filmaffinity.com/es/film102649.html "Devuélvemela"){:target="_blank"}, una muy buena peli de terror de este año, de los directores de [Háblame](https://www.filmaffinity.com/es/film394613.html "Háblame"){:target="_blank"}, que me gustó y tuvo mucho éxito, pero creo que esta es mejor.
 
 Va a ser difícil olvidar al niño de "Devuélvemela", que mal rollo. Me funcionó todo, y la madre hace un papelazo...
 

@@ -12,7 +12,7 @@ thumbnail: /assets/img/posts/wild_style_1.jpg
 ![Poster de la película Wild Style](/assets/img/posts/wild_style_2.jpg){: .img-fluid .rounded }
   </div>
   <div class="col-md-7" markdown="1">
-... Y si no, animaos a ver [Wild Style](https://www.filmaffinity.com/es/film883236.html "Wild Style"){:target="_blank"} una peli del Nueva York de los 80, donde salen muchos grafiteros, dj's y mc's de gran fama... para los que conozcan el mundo del hip-hop.
+... Y si no, animaos a ver [Wild Style](https://www.filmaffinity.com/es/film883236.html "Wild Style"){:target="_blank"}, una peli del Nueva York de los 80, donde salen muchos grafiteros, dj's y mc's de gran fama... para los que conozcan el mundo del hip-hop.
 
 Y para los que no lo conocemos, se disfruta igualmente la película gracias a ese rollo tan puro, que parece que estás viendo un documental de los 80.
   </div>
