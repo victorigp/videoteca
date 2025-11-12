@@ -12,7 +12,7 @@ thumbnail: /assets/img/posts/speak_no_evil_1.jpg
 ![Poster de la película No hables con extraños](/assets/img/posts/speak_no_evil_2.jpg){: .img-fluid .rounded }
   </div>
   <div class="col-md-7" markdown="1">
-... Y si no, animaos a ver [No hables con extraños](https://www.filmaffinity.com/es/film928692.html "No hables con extraños"){:target="_blank"} remake de la peli danesa [Gæsterne](https://www.filmaffinity.com/es/film634122.html "Gæsterne"){:target="_blank"} y que los americanos no han estropeado, como suelen hacer.
+... Y si no, animaos a ver [No hables con extraños](https://www.filmaffinity.com/es/film928692.html "No hables con extraños"){:target="_blank"}, remake de la peli danesa [Gæsterne](https://www.filmaffinity.com/es/film634122.html "Gæsterne"){:target="_blank"} y que los americanos no han estropeado, como suelen hacer.
 
 Protagonizada por unos actores que me encantan: Mackenzie Davis y Scoot McNairy de [Halt and Catch Fire](/posts/halt-and-catch-fire/) y, por supuesto, James McAvoy, que lo bordó en [Múltiple](https://www.filmaffinity.com/es/film992586.html "Múltiple"){:target="_blank"} haciendo "23 personalidades distintas".
 
