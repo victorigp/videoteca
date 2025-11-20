@@ -5,6 +5,9 @@ categories: [Peliculas, Drama] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PO
 tags: [mommy, drama, adolescencia, "xavier dolan"]
 thumbnail: /assets/img/posts/mommy_1.jpg
 # sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
+carousels:  
+  - images:
+    - video: _dS7VJK_QD0
 ---
 
 <div class="row mb-4">
@@ -22,4 +25,5 @@ Curioso que en algún enlace de streaming no hacen el cambio de formato, espero 
 
 Parecía que Dolan se había retirado del cine (después de unas polémicas declaraciones) pero parece ser que va a volver en 2026, dejando de lado los dramas y con una de terror, ojalá que se le de bien ese género!
   </div>
+  {% include carousel.html height="60" unit="%" number="1" %}
 </div>
