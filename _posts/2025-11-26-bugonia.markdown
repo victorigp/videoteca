@@ -1,0 +1,22 @@
+---
+title: Bugonia
+date: 2025-11-26 22:50:16 +0200
+categories: [Peliculas, Thriller] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
+tags: ["bugonia", thriller, comedia, ciencia ficción, "yorgos lanthimos"]
+thumbnail: /assets/img/posts/bugonia_1.jpg
+# sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
+---
+
+<div class="row mb-4">
+  <div class="col-md-5" markdown="1">
+![Poster de la película Bugonia](/assets/img/posts/bugonia_2.jpg){: .img-fluid .rounded }
+  </div>
+  <div class="col-md-7" markdown="1">
+... Y si no, animaos a ver [Bugonia](https://www.filmaffinity.com/es/film964057.html "Bugonia"){:target="_blank"}, aunque pensé que no me iba a gustar por el hype y por algunas críticas. Pero me moló. Me recuerda más al Yorgos Lanthimos de la época de [Canino](https://www.filmaffinity.com/es/film270437.html "Canino"){:target="_blank"} (para mí, su mejor peli) que a su etapa reciente con [Kinds of Kindness](https://www.filmaffinity.com/es/film361960.html "Kinds of Kindness"){:target="_blank"} o [Pobres criaturas](https://www.filmaffinity.com/es/film270023.html "Pobres criaturas"){:target="_blank"}.
+
+Y aunque es un remake de la coreana [Salvar el planeta Tierra](https://www.filmaffinity.com/es/film965959.html "Salvar el planeta Tierra"){:target="_blank"} (que aún tengo pendiente) y que dicen que es tan rara como las pelis que hace el propio Lanthimos, lo que más me
+gustó es que se mojara. No te deja un final abierto ni detalles ambiguos para que tú decidas; te lo tira todo a la cara, aunque no queda tan "elegante" para algunos.
+
+También tiene su crítica a los terraplanistas, conspiranoicos, negacionistas, etc. pero para mí es lo de menos: me quedo con su manera peculiar de contar historias peculiares.
+  </div>
+</div>
