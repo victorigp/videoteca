@@ -2,7 +2,7 @@
 title: Bugonia
 date: 2025-11-26 22:50:16 +0200
 categories: [Peliculas, Thriller] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
-tags: ["bugonia", thriller, comedia, ciencia ficción, "yorgos lanthimos"]
+tags: ["bugonia", thriller, comedia, "ciencia ficción", "yorgos lanthimos"]
 thumbnail: /assets/img/posts/bugonia_1.jpg
 # sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
 ---
