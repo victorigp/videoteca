@@ -1,0 +1,23 @@
+---
+title: Pluribus
+date: 2025-12-03 10:28:16 +0200
+categories: [Series, "Ciencia ficciónㅤ"] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
+tags: ["pluribus", "ciencia ficción", distopía, intriga, "vince gilligan"]
+thumbnail: /assets/img/posts/pluribus_1.jpg
+# sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
+---
+
+<div class="row mb-4">
+  <div class="col-md-5" markdown="1">
+![Poster de la película Pluribus](/assets/img/posts/pluribus_2.jpg){: .img-fluid .rounded }
+  </div>
+  <div class="col-md-7" markdown="1">
+... Y si no, animaos a ver [Pluribus](https://www.filmaffinity.com/es/film488506.html "Pluribus"){:target="_blank"}, la nueva serie de Vince Gilligan, creador de las tremendas [Breaking Bad](https://www.filmaffinity.com/es/film489970.html "Breaking Bad"){:target="_blank"} y [Better Call Saul](https://www.filmaffinity.com/es/film203401.html "Better Call Saul"){:target="_blank"}, de la que rescata a Rhea Seehorn como protagonista.
+
+Es una inquietante distopía en la que toda la humanidad, menos 13 personas, se unen a una mente colmena teniendo así la misma conciencia y recuerdos. Pero no son agresivos, sino que viven en paz y armonía y buscan la "cura" para esas 13 personas que aún mantienen su individualidad.
+
+Se plantean interesantes dilemas como la libertad individual frente al bien común, ya que con la colmena no hay guerras, violencia, pobreza, etc. pero también deja entrever ciertas "peculiaridades" de la colmena que ayudan a la prota a poder avanzar en su cruzada para mantener su individualidad.
+
+A día de hoy han sacado 5 episodios y podéis verla en Apple TV+.
+  </div>
+</div>
