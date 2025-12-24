@@ -1,0 +1,23 @@
+---
+title: Canino
+date: 2025-12-24 10:50:16 +0200
+categories: [Peliculas, Drama] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
+tags: ["canino", recomendada, drama, comedia, "yorgos lanthimos"]
+thumbnail: /assets/img/posts/canino_1.jpg
+sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
+---
+
+<div class="row mb-4">
+  <div class="col-md-5" markdown="1">
+![Poster de la película Canino](/assets/img/posts/canino_2.jpg){: .img-fluid .rounded }
+  </div>
+  <div class="col-md-7" markdown="1">
+... Y si no, animaos a ver [Canino](https://www.filmaffinity.com/es/film270437.html "Canino"){:target="_blank"}, que como en [Bienvenido Mr. Chance](/posts/bienvenido-mr-chance/), la educación peculiar de los protagonistas es clave. También la pongo porque hace poco he visto [Bugonia](/posts/bugonia/) y me apetece recordar la que para mí es la mejor peli de Yorgos Lanthimos.
+
+Aunque ya tiene 16 años, aún hay gente que no la ha descubierto y es la que me viene a la cabeza cuando alguien busca cine no comercial ([El ciempiés humano](https://www.filmaffinity.com/es/film112220.html "El ciempiés humano"){:target="_blank"} tampoco lo es, pero no sé por qué no suele gustar...).
+
+Si eres de los que piensa que la sobreprotección de los hijos se nos está yendo de las manos, aquí lo verás llevado al extremo. Unos padres encierran y educan a sus hijos construyéndoles una realidad a medida: les dicen que el mar es un tipo de silla, que los zombies son flores amarillas... y no quiero destripar más.
+
+Una de esas pelis que se te mete bajo la piel y te deja una peculiar cicatriz mental.
+  </div>
+</div>
