@@ -16,7 +16,7 @@ thumbnail: /assets/img/posts/it_ends_1.jpg
 
 La carretera infinita parece tener sus propias reglas: la gasolina nunca se termina, los pasajeros no tienen hambre y todo está dispuesto para que tengan que seguir conduciendo. Porque cada minuto y medio parados en la carretera, aparecen grupos de personas tratando de entrar en el coche.
 
-La vi en un momento en el que estaba jugando a un videojuego pixel art llamado [Keep driving](https://store.steampowered.com/app/2756920/Keep_Driving/ "Keep driving"){:target="_blank"}: es genial mezclar cine y videojuegos de temática similar, y aquí lo importante es que debéis seguir conduciendo una y otra vez con la esperanza de encontrar una salida que evite que tengáis que volver al principio... Y si no, animaos a ver [It ends](/posts/it-ends/)...
+La vi en un momento en el que estaba jugando a un videojuego llamado [Keep driving](https://store.steampowered.com/app/2756920/Keep_Driving/ "Keep driving"){:target="_blank"}: es genial mezclar cine y videojuegos de temática similar, y aquí lo importante es que debéis seguir conduciendo una y otra vez con la esperanza de encontrar una salida que evite que tengáis que volver al principio... Y si no, animaos a ver [It ends](/posts/it-ends/)...
 
   </div>
 </div>
