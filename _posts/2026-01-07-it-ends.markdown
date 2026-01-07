@@ -1,0 +1,22 @@
+---
+title: It ends
+date: 2026-01-07 11:20:16 +0200
+categories: [Peliculas, Thriller] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
+tags: ["it ends", thriller, intriga, "alex ullom"]
+thumbnail: /assets/img/posts/it_ends_1.jpg
+# sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
+---
+
+<div class="row mb-4">
+  <div class="col-md-5" markdown="1">
+![Poster de la película It ends](/assets/img/posts/it_ends_2.jpg){: .img-fluid .rounded }
+  </div>
+  <div class="col-md-7" markdown="1">
+... Y si no, animaos a ver [It ends](https://www.filmaffinity.com/es/film582441.html "It ends"){:target="_blank"}, una película indie en la que unos amigos van en coche a comprar algo de picar y acaban en una carretera que nunca termina, un high concept que se justifica como una metáfora del propio recorrido de la vida.
+
+La carretera infinita parece que tiene sus propias reglas: la gasolina nunca se termina, los pasajeros no tienen hambre y todo dispuesto para que tengan que seguir conduciendo. Porque cada minuto y medio parados en la carretera, aparecen grupos de personas tratando de entrar en el coche.
+
+La vi en un momento en el que estaba jugando a un videojuego pixel art llamado [Keep driving](https://store.steampowered.com/app/2756920/Keep_Driving/ "Keep driving"){:target="_blank"}: es genial mezclar cine y videojuegos de temática similar, y aquí lo importante es que debéis seguir conduciendo una y otra vez con la esperanza de encontrar una salida que evite que tengáis que volver al principio... Y si no, animaos a ver [It ends](/posts/it-ends/)...
+
+  </div>
+</div>
