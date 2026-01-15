@@ -15,7 +15,7 @@ carousels:
 ![Poster de la película Beau tiene miedo](/assets/img/posts/beau_is_afraid_2.jpg){: .img-fluid .rounded }
   </div>
   <div class="col-md-7" markdown="1">
-... Y si no, animaos a ver [Beau tiene miedo](https://www.filmaffinity.com/es/film566951.html "Beau tiene miedo"){:target="_blank"}, una película del director de las geniales [Hereditary](https://www.filmaffinity.com/es/film118012.html "Hereditary"){:target="_blank"} o [Midsommar](https://www.filmaffinity.com/es/film599419.html "Midsommar"){:target="_blank"}.
+... Y si no, animaos a ver [Beau tiene miedo](https://www.filmaffinity.com/es/film566951.html "Beau tiene miedo"){:target="_blank"}, una película del director de las geniales [Hereditary](https://www.filmaffinity.com/es/film118012.html "Hereditary"){:target="_blank"} y [Midsommar](https://www.filmaffinity.com/es/film599419.html "Midsommar"){:target="_blank"}.
 
 Los primeros 45 minutos se salen, mostrando todo el miedo y la paranoia que sufre Joaquin Phoenix y cómo dejar su apartamento es toda una odisea. Lo veo como una presentación larga del protagonista antes de mostrarnos la peli de verdad, que es más onírica y genera disparidad de opiniones.
 
