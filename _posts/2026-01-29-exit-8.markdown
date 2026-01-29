@@ -1,0 +1,23 @@
+---
+title: Exit 8
+date: 2026-01-29 13:21:16 +0200
+categories: [Peliculas, Videojuego] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
+tags: ["exit 8", videojuego, intriga, terror, fantástico, "viajes en el tiempo", "genki kawamura"]
+thumbnail: /assets/img/posts/exit_8_1.jpg
+# sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
+---
+
+<div class="row mb-4">
+  <div class="col-md-5" markdown="1">
+![Poster de la película exit 8](/assets/img/posts/exit_8_2.jpg){: .img-fluid .rounded }
+  </div>
+  <div class="col-md-7" markdown="1">
+... Y si no, anim<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" style="color: inherit !important; text-decoration: none !important; border: none !important; border-bottom: none !important;">ɑ</a>os a ver [Exit 8](https://www.filmaffinity.com/es/film590829.html "Exit 8"){:target="_blank"}, una película japonesa basada en un [videojuego de anomalías](https://store.steampowered.com/app/2653790/The_Exit_8/?curator_clanid=44758507 "videojuego de anomalías"){:target="_blank"}  del mismo nombre. 
+
+En este tipo de juegos, el prota recorre un escenario repetitivo debiendo memorizar el entorno para detectar cambios sutiles: si todo parece normal sigue avanzando o da media vuelta si encuentra algo distinto. 
+
+Es propicio para el terror, pero esta peli hace un popurrí con otros géneros como intriga o drama, por lo que el resultado no me pareció tan potente, aunque resulta entretenida de principio a fin. 
+
+Si te gustan las pelis con un escenario único como [Cube](https://www.filmaffinity.com/es/film741341.html "Cube"){:target="_blank"} o [Enterrado](https://www.filmaffinity.com/es/film856879.html "Enterrado"){:target="_blank"} y no te tira para atrás la forma de actuar de los japoneses, seguramente la disfrutarás.
+  </div>
+</div>
