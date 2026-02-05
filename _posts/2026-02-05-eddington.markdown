@@ -14,7 +14,7 @@ thumbnail: /assets/img/posts/eddington_1.jpg
   <div class="col-md-7" markdown="1">
 ... Y si no, animaos a ver [Eddington](https://www.filmaffinity.com/es/film309408.html "Eddington"){:target="_blank"}, la última película de Ari Aster, del que ya reseñamos hace poco [Beau tiene miedo](/posts/beau-is-afraid/). Sigue siendo un director con un estilo único que, por el momento, divide a la crítica entre el amor y el odio, pero estoy seguro de que le falta poco para sacar la peli que lo va a encumbrar.
 
-Como con su director, la trama de esta peli también tiene dos bandos representados en el pueblo. Por un lado está el Sheriff (Joaquin Phoenix), a quien unos verán como un héroe trágico que intenta mantener la libertad individual, mientras otros verán a un paranoico anticuado armado con una placa. Y por otro lado está el Alcalde (Pedro Pascal): para unos es la voz de la razón y el progreso frente a la barbarie; para otros, un político elitista y condescendiente que busca su beneficio personal.
+Como con su director, la trama de esta peli también tiene dos bandos representados en el pueblo de Eddington. Por un lado está el Sheriff (Joaquin Phoenix), a quien unos verán como un héroe trágico que intenta mantener la libertad individual, mientras otros verán a un paranoico anticuado armado con una placa. Y por otro lado está el Alcalde (Pedro Pascal): para unos es la voz de la razón y el progreso; para otros, un político elitista y condescendiente que busca su beneficio personal.
 
 La tensión entre ambos bandos va escalando mientras se caricaturizan temas sociales como el COVID, Black Lives Matter, los abusos sexuales o los gurús estafadores, hasta que todo explota a lo Tarantino: no importa quién dispara primero, sino que todos acaban reventados.
   </div>
