@@ -7,7 +7,9 @@ thumbnail: /assets/img/posts/shock_treatment_1.jpg
 # sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
 carousels:  
   - images:
-    - video: iGoUwRkT56k?t=18
+      - video: 8yaTE2RorJQ
+        embed: false
+        title: Shock Treatment - Title Song
 ---
 
 <div class="row mb-4">
