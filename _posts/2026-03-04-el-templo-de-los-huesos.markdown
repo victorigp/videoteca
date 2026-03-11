@@ -2,7 +2,7 @@
 title: "28 años después: El templo de los huesos"
 date: 2026-03-04 09:21:16 +0200
 categories: [Peliculas, Zombis] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
-tags: ["28 años después: el templo de los huesos", zombis, terror, gore, secuela, "Nia DaCosta"]
+tags: ["28 años después: el templo de los huesos", zombis, terror, gore, secuela, "nia dacosta"]
 thumbnail: /assets/img/posts/el_templo_de_los_huesos_1.jpg
 # sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
 carousels:  
