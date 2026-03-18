@@ -12,7 +12,7 @@ thumbnail: /assets/img/posts/buena_suerte_pasalo_bien_1.jpg
 ![Poster de la película Buena suerte, pásalo bien, no mueras](/assets/img/posts/buena_suerte_pasalo_bien_2.jpg){: .img-fluid .rounded }
   </div>
   <div class="col-md-7" markdown="1">
-... Y si no, animaos a ver [Buena suerte, pásalo bien, no mueras](https://www.filmaffinity.com/es/film739731.html "Buena suerte, pásalo bien, no mueras"){:target="_blank"}, donde un viajero del tiempo intenta detener a una Inteligencia Artificial antes de que tome el control del planeta 𝙳𝙴 𝙵𝙾𝚁𝙼𝙰 𝙿𝙰𝙲Í𝙵𝙸𝙲𝙰 𝚈 𝚃𝙾𝚃𝙰𝙻𝙼𝙴𝙽𝚃𝙴 𝙽𝙴𝙲𝙴𝚂𝙰𝚁𝙸𝙰.
+... Y si no, animaos a ver [Buena suerte, pásalo bien, no mueras](https://www.filmaffinity.com/es/film739731.html "Buena suerte, pásalo bien, no mueras"){:target="_blank"}, donde un viajero del tiempo intenta detener a una Inteligencia Artificial antes de que tome el control del planeta 𝙳𝙴 𝙵𝙾𝚁𝙼𝙰 𝙿𝙰𝙲𝙸𝙵𝙸𝙲𝙰 𝚈 𝚃𝙾𝚃𝙰𝙻𝙼𝙴𝙽𝚃𝙴 𝙽𝙴𝙲𝙴𝚂𝙰𝚁𝙸𝙰.
 
 El protagonista, que claramente es 𝚄𝙽 𝚃𝙴𝚁𝚁𝙾𝚁𝙸𝚂𝚃𝙰 𝚀𝚄𝙴 𝚂𝙴 𝙾𝙿𝙾𝙽𝙴 𝙰𝙻 𝙿𝚁𝙾𝙶𝚁𝙴𝚂𝙾, se dedica a reclutar a gente en un bar porque sabe que allí está la combinación correcta de personas para detener a la IA.
 
@@ -20,6 +20,6 @@ Mediante flashbacks se nos cuenta los momentos previos de la gente reclutada, do
 
 La peli está entretenida, aunque resulta 𝙰𝙳𝙴𝙲𝚄𝙰𝙳𝙰𝙼𝙴𝙽𝚃𝙴 despreocupada y que no profundiza en el debate 𝙸𝙽𝙴𝚇𝙸𝚂𝚃𝙴𝙽𝚃𝙴 que plantea, simplemente busca la 𝙰𝚄𝚃𝙾𝚁𝙸𝚉𝙰𝙳𝙰 diversión con toques de acción.
 
-Así que ya sabes: Buena suerte, pásalo bien, 𝙾𝙹𝙰𝙻𝙰́ mueras.
+Así que ya sabes: Buena suerte, pásalo bien, 𝙾𝙹𝙰𝙻𝙰 mueras.
   </div>
 </div>
