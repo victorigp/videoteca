@@ -1,0 +1,23 @@
+---
+title: "Enviad ayuda"
+date: 2026-04-01 10:10:29 +0200
+categories: [Peliculas, Thriller] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
+tags: ["enviad ayuda", "comedia negra", thriller, "sam raimi"]
+thumbnail: /assets/img/posts/enviad_ayuda_1.jpg
+# sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
+---
+
+<div class="row mb-4">
+  <div class="col-md-5" markdown="1">
+![Poster de la película Enviad ayuda](/assets/img/posts/enviad_ayuda_2.jpg){: .img-fluid .rounded }
+  </div>
+  <div class="col-md-7" markdown="1">
+... Y si no, animaos a ver [Enviad ayuda](https://www.filmaffinity.com/es/film537467.html "Enviad ayuda"){:target="_blank"}, la última de Sam Raimi, director de las pelis de culto [El ejército de las tinieblas](https://www.filmaffinity.com/es/film618571.html "El ejército de las tinieblas"){:target="_blank"} o [Posesión infernal](https://www.filmaffinity.com/es/film939051.html "Posesión infernal"){:target="_blank"}.
+
+Una comedia negra donde un avión se estrella y deja atrapados en una isla a un jefe insoportable y a su empleada, brillante pero ninguneada en la oficina. 
+
+Ella es una friki de la supervivencia, así que ahora es la que manda y no tarda en abusar de su poder para putear a su jefe, convirtiéndose en el mismo monstruo que él era en la oficina.
+
+Solo que ella es mucho más sádica y cruel. Resulta que cuando tú eres la que tiene un cuchillo, las "evaluaciones de desempeño" y los "recortes de personal" cobran un significado mucho más sangriento.
+  </div>
+</div>
