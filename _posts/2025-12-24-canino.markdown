@@ -2,7 +2,7 @@
 title: Canino
 date: 2025-12-24 10:50:16 +0200
 categories: [Peliculas, Drama] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
-tags: ["canino", recomendada, drama, comedia, "yorgos lanthimos"]
+tags: ["canino", recomendada, drama, "comedia negra", "yorgos lanthimos"]
 thumbnail: /assets/img/posts/canino_1.jpg
 sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
 ---

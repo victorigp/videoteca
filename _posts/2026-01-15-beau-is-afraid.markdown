@@ -2,7 +2,7 @@
 title: Beau tiene miedo
 date: 2026-01-15 10:57:16 +0200
 categories: [Peliculas, Drama] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
-tags: ["beau tiene miedo", drama, comedia, terror, "ari aster"]
+tags: ["beau tiene miedo", drama, terror, "ari aster"]
 thumbnail: /assets/img/posts/beau_is_afraid_1.jpg
 # sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
 carousels:  

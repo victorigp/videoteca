@@ -2,7 +2,7 @@
 title: Una batalla tras otra
 date: 2025-11-19 11:52:16 +0200
 categories: [Peliculas, Thriller] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
-tags: ["una batalla tras otra", thriller, acción, comedia, "paul thomas anderson"]
+tags: ["una batalla tras otra", thriller, acción, "comedia negra", "paul thomas anderson"]
 thumbnail: /assets/img/posts/one_battle_after_another_1.jpg
 # sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
 carousels:

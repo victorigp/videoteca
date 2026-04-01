@@ -2,7 +2,7 @@
 title: "El último vikingo"
 date: 2026-03-11 13:15:29 +0200
 categories: [Peliculas, Comedia] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
-tags: ["el último vikingo", comedia, drama, recomendada, "anders thomas jensen"]
+tags: ["el último vikingo", "comedia negra", drama, recomendada, "anders thomas jensen"]
 thumbnail: /assets/img/posts/el_ultimo_vikingo_1.jpg
 sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
 ---
