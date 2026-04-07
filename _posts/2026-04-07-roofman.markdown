@@ -19,7 +19,7 @@ carousels:
 
 Llevamos 10 años riéndonos del meme de Channing Tatum diciendo "My name is Jeff" y va y hace una peli donde su nombre es Jeffrey y es igual de poco intimidante que en el meme: es tan educado que, cuando encerraba a los empleados en la cámara frigorífica del restaurante, les daba abrigos para que no pasaran frío...
 
-La peli es entretenida y sirve para reinvindicar a Channing Tatum, que me sorprendió que funcionara bien en el drama. Parece que no tiene techo como actor (Ba dum tss).
+La peli es entretenida y sirve para reivindicar a Channing Tatum, que me sorprendió que funcionara bien en el drama. Parece que no tiene techo como actor (Ba dum tss).
   </div>
   {% include carousel.html height="60" unit="%" number="1" %}
 </div>
