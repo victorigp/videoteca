@@ -1,0 +1,25 @@
+---
+title: "Roofman: Un ladrón en el tejado"
+date: 2026-04-07 18:10:29 +0200
+categories: [Peliculas, "Drama"] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
+tags: ["roofman: un ladrón en el tejado", drama, thriller, "hechos reales", "derek cianfrance"]
+thumbnail: /assets/img/posts/roofman_1.jpg
+# sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
+carousels:  
+  - images:
+    - video: qkBx0gMGuhY
+---
+
+<div class="row mb-4">
+  <div class="col-md-5" markdown="1">
+![Poster de la película Roofman: Un ladrón en el tejado](/assets/img/posts/roofman_2.jpg){: .img-fluid .rounded }
+  </div>
+  <div class="col-md-7" markdown="1">
+... Y si no, animaos a ver [Roofman: Un ladrón en el tejado](https://www.filmaffinity.com/es/film355514.html "Roofman: Un ladrón en el tejado"){:target="_blank"}, que cuenta la historia real de un atracador que robaba McDonald's descolgándose por el techo y que llegó a vivir meses escondido en un Toys "R" Us después de escapar de prisión.
+
+Llevamos 10 años riéndonos del meme de Channing Tatum diciendo "My name is Jeff" y va y hace una peli donde su nombre es Jeffrey y es igual de poco intimidante que en el meme: es tan educado que, cuando encerraba a los empleados en la cámara frigorífica del restaurante, les daba abrigos para que no pasaran frío...
+
+La peli es entretenida y sirve para reinvindicar a Channing Tatum, que me sorprendió que funcionara bien en el drama. Parece que no tiene techo como actor (Ba dum tss).
+  </div>
+  {% include carousel.html height="60" unit="%" number="1" %}
+</div>
