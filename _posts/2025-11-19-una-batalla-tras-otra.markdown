@@ -7,9 +7,9 @@ thumbnail: /assets/img/posts/one_battle_after_another_1.jpg
 # sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
 carousels:
   - images:
-      - video: UYT_bn4LXpw
-        embed: false
-        title: Lockjaw Walking 4K | One Battle After Another
+      - video: RaJgGyhM954
+        embed: true
+        title: Lockjaw Epic Walk | One Battle After Another
 ---
 
 <div class="row mb-4">
