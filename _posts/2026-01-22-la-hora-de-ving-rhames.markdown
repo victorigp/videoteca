@@ -1,8 +1,8 @@
 ---
 title: La hora de Ving Rhames
 date: 2026-01-21 10:20:16 +0200
-categories: [Podcast, "Odioㅤㅤ"] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
-tags: ["la hora de ving rhames", comedia, odio, recomendada, "victor olid"]
+categories: [Podcast, "Cineㅤㅤ"] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
+tags: ["la hora de ving rhames", comedia, cine, odio, recomendada, "victor olid"]
 thumbnail: /assets/img/posts/ving_rhames_1.jpg
 sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
 ---
