@@ -16,10 +16,10 @@ timezone: Europe/Madrid
 
 title: La videoteca # the main title
 
-tagline: Pelis y series # it will display as the sub-title
+tagline: Pelis, series y podcasts # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  La videoteca, pelis y series
+  La videoteca: pelis, series y podcasts
 
 # Public site URL for Vercel (default)
 url: "https://videoteca-wine.vercel.app"
