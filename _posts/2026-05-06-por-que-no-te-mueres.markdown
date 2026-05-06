@@ -1,7 +1,7 @@
 ---
 title: "¿Por qué no te mueres?"
 date: 2026-05-06 17:11:53 +0200
-categories: [Peliculas, "Comedia negraㅤ"] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
+categories: [Peliculas, "Comedia negra"] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
 tags: ["por que no te mueres", "comedia negra", "thriller", "kirill sokolov"]
 thumbnail: /assets/img/posts/por_que_no_te_mueres_1.jpg
 # sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
