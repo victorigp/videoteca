@@ -1,0 +1,25 @@
+---
+title: Primal
+date: 2026-05-26 09:56:00 +0200
+categories: [Series, Animaciónㅤ] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
+tags: ["primal", recomendada, aventura, animación, acción, "genndy tartakovsky"]
+thumbnail: /assets/img/posts/primal_1.jpg
+sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
+---
+
+<div class="row mb-4">
+  <div class="col-md-5" markdown="1">
+![Poster de la serie Primal](/assets/img/posts/primal_2.jpg){: .img-fluid .rounded }
+  </div>
+  <div class="col-md-7" markdown="1">
+... Y si no, animaos a ver [Primal](https://www.filmaffinity.com/es/film169730.html "Primal"){:target="_blank"}, una serie de animación de Genndy Tartakovsky, creador de [El laboratorio de Dexter](https://www.filmaffinity.com/es/film952447.html "El laboratorio de Dexter"){:target="_blank"} o de las pelis de [Hotel Transilvania](https://www.filmaffinity.com/es/film744102.html "Hotel Transilvania"){:target="_blank"}, pero aquí en versión adulta.
+
+Hombre perder familia. Dinosaurio perder familia. Hombre y dinosaurio tener dolor profundo. No haber palabras en su mundo. Solo rugidos. Solo instinto. Salvaje. Brutal.
+
+Tierra ser peligrosa. Monstruos grandes querer comer carne. Hombre golpear con lanza. Dinosaurio morder con fuerza. Hombre y dinosaurio caminar juntos. Salvar vida de compañero. Amigos.
+
+No haber diálogos. No necesitar explicaciones. Pero tú entender todo. Ojos de hombre llorar, tú sentir pena. Ojos de dinosaurio mirar con respeto, tú sentir unión. Música sonar fuerte, pecho vibrar.
+
+Tú ver Primal. Tú rugir de emoción.
+  </div>
+</div>
