@@ -1,0 +1,23 @@
+---
+title: "Hokum"
+date: 2026-06-03 19:30:00 +0200
+categories: [Peliculas, "Terror"] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
+tags: ["hokum", terror, intriga, "damian mcCarthy"]
+thumbnail: /assets/img/posts/hokum_1.jpg
+# sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
+---
+
+<div class="row mb-4">
+  <div class="col-md-5" markdown="1">
+![Poster de la película Hokum](/assets/img/posts/hokum_2.jpg){: .img-fluid .rounded }
+  </div>
+  <div class="col-md-7" markdown="1">
+... Y si no, animaos a ver [Hokum](https://www.filmaffinity.com/es/film273972.html "Hokum"){:target="_blank"}, otra peli de terror del director de [Oddity](https://www.filmaffinity.com/es/film413857.html "Oddity"){:target="_blank"}, que cuenta con Adam Scott ([The Monkey](/posts/the-monkey/) o [Separación](https://www.filmaffinity.com/es/film241711.html "Separación"){:target="_blank"}) como prota.
+
+La premisa sigue a un escritor famoso que viaja a un hotel en Irlanda para esparcir las cenizas de sus padres, considera todas las leyendas de brujas del lugar puras patrañas (Hokum), aunque se da cuenta de que a ver si va a ser que no.
+
+Una peli que cumple, con sustos aquí y allá que parecen puestos casi por obligación para justificar el género hasta llegar al desenlace, que es donde está la chicha. 
+
+Gracias a su buen ritmo, no te aburres en ningún momento y, si sois aprensivos, no os preocupéis, que tira más de tensión que de casquería.
+  </div>
+</div>

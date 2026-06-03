@@ -2,7 +2,7 @@
 title: "Mandíbulas"
 date: 2026-05-21 15:33:53 +0200
 categories: [Peliculas, "Comedia"] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
-tags: ["mandíbulas", "comedia", "fantástico", "quentin dupieux"]
+tags: ["mandíbulas", comedia, fantástico, "quentin dupieux"]
 thumbnail: /assets/img/posts/mandibles_1.jpg
 # sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
 ---
