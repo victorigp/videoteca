@@ -1,0 +1,22 @@
+{
+  "actions": [
+    {
+      "text": "$(repo-pull) Pull",
+      "command": "git pull",
+      "tooltip": "Pull changes from the remote repository",
+      "color": "#b0eb93"
+    },
+    {
+      "text": "$(repo-push) Push",
+      "command": "git add .; git commit; git push",
+      "tooltip": "Add, commit, and push changes to the remote repository",
+      "color": "#ffc384"
+    },
+    {
+      "text": "🖼️ Generar Firma Email",
+      "command": "python generar_firma.py",
+      "tooltip": "Lee el último post de la Videoteca y genera el PNG para la firma de Gmail",
+      "color": "#ff00d9ff"
+    }
+  ]
+}
