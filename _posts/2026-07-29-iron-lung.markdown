@@ -1,0 +1,25 @@
+---
+title: "Iron Lung: Océano de sangre"
+date: 2026-07-29 17:39:00 +0200
+categories: [Peliculas, Thriller] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
+tags: ["iron lung", thriller, terror, videojuego, postapocaliptico, "mark fischbach"]
+thumbnail: /assets/img/posts/iron_lung_1.jpg
+# sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
+---
+
+<div class="row mb-4">
+  <div class="col-md-5" markdown="1">
+![Poster de la pelicula Ghostland](/assets/img/posts/iron_lung_2.jpg){: .img-fluid .rounded }
+  </div>
+  <div class="col-md-7" markdown="1">
+... Y si no, animaos a ver [Iron Lung: Océano de sangre](https://www.filmaffinity.com/es/film227396.html "Iron Lung: Océano de sangre"){:target="_blank"}, una peli del youtuber [Markiplier](https://www.youtube.com/channel/UC7_YxT-KID8kRbqZo7MyscQ "Markiplier"){:target="_blank"} basada en un [videojuego indie del mismo nombre](https://store.steampowered.com/app/1846170/Iron_Lung/ "videojuego indie del mismo nombre"){:target="_blank"}. 
+
+La peli es bastante fiel al videojuego, donde un convicto es encerrado en un minúsculo submarino oxidado, sin ventanas, en el fondo de un océano de sangre de una luna alienígena, y que solo puede ver el exterior haciendo lentas fotografías.
+
+Igual que pasó con la peli [Backrooms](/posts/backrooms/ "Backrooms"), esta peli también fue un éxito de taquilla a pesar de su bajo presupuesto. Parece que están triunfando los youtubers en el mundo del cine.
+
+Como ocurre muchas veces, 1 hora y media estaría mejor que las 2 horas que dura. Supongo que al no disponer de mucho dinero, su fuerte era la carga psicológica del prota (el propio director) y la atmósfera que logra crear.
+
+Creo que es la típica peli que a algunos les puede llegar a aburrir. Yo he disfrutado el viaje.
+  </div>
+</div>
