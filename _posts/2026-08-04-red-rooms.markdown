@@ -12,7 +12,7 @@ sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
 ![Poster de la pelicula Las habitaciones rojas](/assets/img/posts/red_rooms_2.jpg){: .img-fluid .rounded }
   </div>
   <div class="col-md-7" markdown="1">
-... Y si no, animaos a ver [Las habitaciones rojas](https://www.filmaffinity.com/es/film923394.html "Las habitaciones rojas"){:target="_blank"}, película canadiense que nos muestra a una chica obsesionada con el juicio a un asesino en serie que emitía torturas en directo (snuff) en la Dark Web. 
+... Y si no, animaos a ver [Las habitaciones rojas](https://www.filmaffinity.com/es/film923394.html "Las habitaciones rojas"){:target="_blank"}, película canadiense que muestra a una chica obsesionada con el juicio a un asesino en serie que emitía torturas en directo (snuff) en la Dark Web. 
 
 Lo primero que se te puede venir a la cabeza es la peli de Amenábar, [Tesis](https://www.filmaffinity.com/es/film531662.html "Tesis"){:target="_blank"}, pero aquí juegan con las intenciones de la protagonista, que no están nada claras por su carácter enigmático y ambiguo. 
 
