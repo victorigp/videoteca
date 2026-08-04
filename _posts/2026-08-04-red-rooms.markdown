@@ -1,0 +1,23 @@
+---
+title: "Las habitaciones rojas"
+date: 2026-08-04 11:28:00 +0200
+categories: [Peliculas, Thriller] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
+tags: ["las habitaciones rojas", recomendada, terror, thriller, intriga, "asesinos en serie", "pascal plante"]
+thumbnail: /assets/img/posts/red_rooms_1.jpg
+sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
+---
+
+<div class="row mb-4">
+  <div class="col-md-5" markdown="1">
+![Poster de la pelicula Las habitaciones rojas](/assets/img/posts/red_rooms_2.jpg){: .img-fluid .rounded }
+  </div>
+  <div class="col-md-7" markdown="1">
+... Y si no, animaos a ver [Las habitaciones rojas](https://www.filmaffinity.com/es/film923394.html "Las habitaciones rojas"){:target="_blank"}, película canadiense que nos muestra a una chica obsesionada con el juicio a un asesino en serie que emitía torturas en directo (snuff) en la Dark Web. 
+
+Lo primero que se te puede venir a la cabeza es la peli de Amenábar, [Tesis](https://www.filmaffinity.com/es/film531662.html "Tesis"){:target="_blank"}, pero aquí juegan con las intenciones de la protagonista, que no están nada claras por su carácter enigmático y ambiguo. 
+
+Esto hace que alternes entre diversas teorías como la hibristofilia (atracción o fascinación por los asesinos), la venganza o la simple justicia. El desenlace es demoledor, porque su comportamiento ya no nos resulta tan ajeno, reflejo de una sociedad cada vez más insensible y anestesiada.
+
+Podéis verla tranquilamente: no muestra ni un ápice de violencia y deja todo el trabajo sucio a tu imaginación. Aunque acabarás preguntándote cuánta de esa oscuridad se esconde también dentro de tu propia cabeza.
+  </div>
+</div>
