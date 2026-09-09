@@ -1,6 +1,6 @@
 ---
 title: "Harry, un amigo que os quiere"
-date: 2026-09-09 15:20:00 +0200
+date: 2026-09-09 11:20:00 +0200
 categories: [Peliculas, Thriller] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
 tags: ["harry, un amigo que os quiere", thriller, intriga, "dóminik moll"]
 thumbnail: /assets/img/posts/harry_1.jpg
