@@ -1,0 +1,23 @@
+---
+title: "Harry, un amigo que os quiere"
+date: 2026-09-09 15:20:00 +0200
+categories: [Peliculas, Thriller] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
+tags: ["harry, un amigo que os quiere", thriller, intriga, "dóminik moll"]
+thumbnail: /assets/img/posts/harry_1.jpg
+# sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
+---
+
+<div class="row mb-4">
+  <div class="col-md-5" markdown="1">
+![Poster de la pelicula Harry, un amigo que os quiere](/assets/img/posts/harry_2.jpg){: .img-fluid .rounded }
+  </div>
+  <div class="col-md-7" markdown="1">
+... Y si no, animaos a ver [Harry, un amigo que os quiere](https://www.filmaffinity.com/es/film435245.html "Harry, un amigo que os quiere"){:target="_blank"}, una peli francesa del año 2000, con un Sergi López (al que vimos hace poco en [Sirât](https://www.filmaffinity.com/es/film780154.html "Sirât"){:target="_blank"}) al que le queda bien el papel de perturbado sonriente.
+
+La premisa arranca cuando un padre de familia desbordado por el estrés se reencuentra con un antiguo compañero de instituto. Este viejo amigo, ahora convertido en millonario, se empeña en que el protagonista vuelva a escribir, y para lograrlo decide empezar a solucionar todos sus problemas y distracciones. Por supuesto, usando métodos poco ortodoxos.
+
+Me sorprendió ver que la catalogan, además de thriller, como comedia negra. La verdad es que no le vi el humor por ningún lado. ¿El chiste era el baño rosa? ¿O cuándo en la versión francesa a Sergi López se le escapa un "Me siento mal" en perfecto castellano?
+
+A lo mejor el problema es mío por no pillarle el chiste, pero bueno, quizás a vosotros os entre mejor y, si no, merece la pena solo por ver al actor español bordando su papel.
+  </div>
+</div>

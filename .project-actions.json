@@ -17,6 +17,12 @@
       "command": "python generar_firma.py",
       "tooltip": "Lee el último post de la Videoteca y genera el PNG para la firma de Gmail",
       "color": "#ff00d9ff"
+    },
+    {
+      "text": "$(server) Ejecutar en local",
+      "command": "bundle exec jekyll serve --host 0.0.0.0",
+      "tooltip": "Inicia el servidor local de Jekyll",
+      "color": "#64B5F6"
     }
   ]
 }
