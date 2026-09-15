@@ -16,7 +16,7 @@ thumbnail: /assets/img/posts/the_end_of_oak_street_1.jpg
 
 En "El final de Oak Street" un vecindario suburbano típico americano se transforma, de la noche a la mañana, en un entorno jurásico. El estilo es de típica peli familiar de los años ochenta de aventuras y ciencia ficción con dinosaurios. De inicio, es una premisa que a Martiño y a mí nos llama poderosamente.
 
-Pero cambia determinados detalles para sorprender que no logran su objetivo, como las historias de amor que hay, ciertas escenas no tan familiares y un tratamiento demasiado superficial de la parte científica. Igual hubiera estado mejor la peli si evitase justamente dichas sorpresas y siguiera con la fórmula ya conocida.
+Pero cambia determinados detalles para sorprender que no logran su objetivo, como las historias de amor que hay, ciertas escenas no tan familiares y un tratamiento demasiado superficial de la parte científica. Igual hubiera estado mejor si evitase justamente dichas sorpresas y siguiera con la fórmula ya conocida.
 
 No os cambiará la vida, pero tiene buen ritmo y entretiene.
   </div>
