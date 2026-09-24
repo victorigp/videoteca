@@ -12,7 +12,7 @@ thumbnail: /assets/img/posts/resident_evil_1.jpg
 ![Poster de la pelicula Resident Evil](/assets/img/posts/resident_evil_2.jpg){: .img-fluid .rounded }
   </div>
   <div class="col-md-7" markdown="1">
-... Y si no, animaos a ver [Resident Evil](https://www.filmaffinity.com/es/film579353.html "Resident Evil"){:target="_blank"}, del director de [Weapons](https://videoteca-wine.vercel.app/posts/weapons/ "Weapons") y de [Barbarian](https://www.filmaffinity.com/es/film880123.html "Barbarian"){:target="_blank"}, se atreve con una de las peores sagas en cuanto a adaptaciones de videojuegos. Pero a él le sale bien.
+... Y si no, animaos a ver [Resident Evil](https://www.filmaffinity.com/es/film579353.html "Resident Evil"){:target="_blank"}, del director de [Weapons](https://videoteca-wine.vercel.app/posts/weapons/ "Weapons") y de [Barbarian](https://www.filmaffinity.com/es/film880123.html "Barbarian"){:target="_blank"}, que se atreve con una de las peores sagas en cuanto a adaptaciones de videojuegos. Pero a él le sale bien.
 
 La historia sigue a Bryan, un mensajero médico al que se le encarga un transporte rutinario hacia un hospital, pero el caos se desata a su alrededor por la propagación de un virus. Si, zombis.
 
