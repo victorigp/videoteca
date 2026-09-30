@@ -1,0 +1,23 @@
+---
+title: "Tiempo de victoria"
+date: 2026-09-30 17:00:00 +0200
+categories: [Peliculas, Bélico] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
+tags: ["tiempo de victoria", thriller, drama, bélico, "ii guerra mundial", "basado en hechos reales","anthony maras"]
+thumbnail: /assets/img/posts/pressure_1.jpg
+# sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
+---
+
+<div class="row mb-4">
+  <div class="col-md-5" markdown="1">
+![Poster de la pelicula Tiempo de victoria](/assets/img/posts/pressure_2.jpg){: .img-fluid .rounded }
+  </div>
+  <div class="col-md-7" markdown="1">
+... Y si no, animaos a ver [Tiempo de victoria](https://www.filmaffinity.com/es/film177067.html "Tiempo de victoria"){:target="_blank"}, que se centra en la tensa toma de decisiones de sí ir o no a la playa, porque hay dudas respecto al tiempo que va a hacer.
+
+Dicho así, parece que hablamos de un día cualquiera en Galicia, pero son las horas previas al desembarco de Normandía, donde un meteorólogo debe entregar al general Eisenhower la predicción climática de la cual dependerá el desenlace de la Segunda Guerra Mundial.
+
+Brendan Fraser vuelve a demostrar que está de nuevo al 100% en un papel que se aleja del que le vimos en [The Whale](https://www.filmaffinity.com/es/film160764.html "The Whale"){:target="_blank"}, pero que lo vuelve a bordar y nos da esperanzas nostálgicas para [La Momia 4](https://www.filmaffinity.com/es/film638023.html "La Momia 4"){:target="_blank"} en el 2027.
+    
+Dura 1 hora y media, como el viaje a la playa de Samil, pero sin tener que dar cuarenta vueltas para aparcar.
+  </div>
+</div>

@@ -2,7 +2,7 @@
 title: "Resident Evil"
 date: 2026-09-24 17:00:00 +0200
 categories: [Peliculas, Videojuego] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
-tags: ["resident evil", "terror", "comedia negra", "zombis", "videojuego", "zach cregger"]
+tags: ["resident evil", terror, "comedia negra", zombis, videojuego, "zach cregger"]
 thumbnail: /assets/img/posts/resident_evil_1.jpg
 # sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
 ---
