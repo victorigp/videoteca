@@ -2,7 +2,7 @@
 title: "Tiempo de victoria"
 date: 2026-09-30 17:00:00 +0200
 categories: [Peliculas, Bélico] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
-tags: ["tiempo de victoria", thriller, drama, bélico, "ii guerra mundial", "basado en hechos reales","anthony maras"]
+tags: ["tiempo de victoria", thriller, drama, bélico, "ii guerra mundial", "hechos reales","anthony maras"]
 thumbnail: /assets/img/posts/pressure_1.jpg
 # sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
 ---
