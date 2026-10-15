@@ -16,7 +16,7 @@ thumbnail: /assets/img/posts/ghost_in_the_cell_1.jpg
 
 La peli es una mezcla de géneros que van desde la comedia al gore, y donde el director critica la política, la sociedad, la religión... y todo lo relacionado con Indonesia. Si lo he pillado hasta yo, que no sé ni situar el país en el mapa, es que el mensaje no puede ser más evidente.
 
-Viene de ganar el Fantastic Fest a la mejor peli y acaba de estrenarse hace unos días en Sitges, pero a mí no me ha terminado de cuajar. Mi principal problema es el humor asiático, que es muy bobalicón, muy de poner caras hiperexpresivas y mucho slapstick.
+Viene de ganar el Fantastic Fest a la mejor peli de terror y acaba de estrenarse hace unos días en Sitges, pero a mí no me ha terminado de cuajar. Mi principal problema es el humor asiático, que es muy bobalicón, muy de poner caras hiperexpresivas y mucho slapstick.
 
 Por lo menos es entretenida, tiene momentos divertidos y gore de vez en cuando.
   </div>
