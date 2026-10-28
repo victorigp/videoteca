@@ -1,0 +1,30 @@
+---
+title: "Buddy"
+date: 2026-10-28 12:00:00 +01:00
+categories: [Peliculas, Comedia negra] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
+tags: ["buddy", terror, "comedia negra", "casper kelly"]
+thumbnail: /assets/img/posts/buddy_1.jpg
+# sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
+carousels:
+  - images:
+      - video: QrGrOK8oZG8
+        embed: true
+        title: Too Many Cooks
+---
+
+<div class="row mb-4">
+  <div class="col-md-5" markdown="1">
+![Poster de la pelicula Buddy](/assets/img/posts/buddy_2.jpg){: .img-fluid .rounded }
+  </div>
+  <div class="col-md-7" markdown="1">
+... Y si no, animaos a ver [Buddy](https://www.filmaffinity.com/es/film617747.html "Buddy"){:target="_blank"}, una película que responde a la típica pregunta que nos hacíamos de: ¿qué pasaría si a los muñecos de Barrio Sésamo se les fuera la cabeza y empezaran a masacrar a los niños del plató? ¿No?
+
+La dirige Casper Kelly, el chalado que hizo aquel corto de [Too Many Cooks](https://www.filmaffinity.com/es/film913042.html "Too Many Cooks"){:target="_blank"}, donde parodiaba las cabeceras de las sitcoms con una sintonía y una presentación de personajes que no termina nunca.
+
+Aquí vuelve a esa nostalgia televisiva con colores pastel y canciones absurdas para aprender a compartir, mientras que los chavales van desapareciendo de las formas más salvajes y el show continúa adelante como si nada.
+
+Al menos deja a los niños la lección básica de que si un muñeco gigante pide un abrazo, hay que salir por patas.
+  </div>
+  {% include carousel.html height="60" unit="%" number="1" %}
+</div>
+
