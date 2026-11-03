@@ -1,0 +1,24 @@
+---
+title: "Hope"
+date: 2026-11-03 20:00:00 +0100
+categories: [Peliculas, Acción] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
+tags: ["hope", "ciencia ficción", acción, thriller, monstruos, "na hong-jin"]
+thumbnail: /assets/img/posts/hope_1.jpg
+# sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
+---
+
+<div class="row mb-4">
+  <div class="col-md-5" markdown="1">
+![Poster de la pelicula Hope](/assets/img/posts/hope_2.jpg){: .img-fluid .rounded }
+  </div>
+  <div class="col-md-7" markdown="1">
+... Y si no, animaos a ver [Hope](https://www.filmaffinity.com/es/film761467.html "Hope"){:target="_blank"}, del director de [El extraño](https://www.filmaffinity.com/es/film689813.html "El extraño"){:target="_blank"} y [The Chaser](https://www.filmaffinity.com/es/film377285.html "The Chaser"){:target="_blank"}, que vuelve con una bestia destrozando un pueblo costero de Corea.
+
+Si queréis acción, aquí tenéis acción. 2 horas y media de persecuciones. No es exagerado, 2 horas y media de persecuciones. Lo único que cambia es que la primera hora no sabes qué persiguen y la segunda quién persigue a quién.
+
+Salen Michael Fassbender y Alicia Vikander, seguro que en uno de sus papeles más raros hasta la fecha. Y tiene pinta de que va a haber secuela, pese a no estar al nivel de las comentadas.
+
+2 horas y media de persecuciones. 
+  </div>
+</div>
+
