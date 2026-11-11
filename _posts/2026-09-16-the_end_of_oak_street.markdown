@@ -2,7 +2,7 @@
 title: "El final de Oak Street"
 date: 2026-09-16 00:00:00 +0200
 categories: [Peliculas, Ciencia Ficción] # SOLO PONER 1 SUBCATEGORÍA Y PARA LAS SERIES PONER UN CARACTER INVISIBLE, COPIALO DE ENTRE LOS PARÉNTESIS (ㅤ), AL FINAL DE LA SUBCATEGORÍA, POR EJEMPLO [Series, "Thrillerㅤ"]
-tags: ["el final de oak street", "ciencia ficción", "aventuras", "dinosaurios", "años 80", "david robert mitchell"]
+tags: ["el final de oak street", "ciencia ficción", aventura, dinosaurios, "años 80", "david robert mitchell"]
 thumbnail: /assets/img/posts/the_end_of_oak_street_1.jpg
 # sello: true # PARA QUE SE VEA EL "SE LO RECOMIENDO", PONER EL TAG: recomendada
 ---
